@@ -1,0 +1,6 @@
+{
+  "receipt_sha256": "5842c0e6d8ed5c81b91a3b105c047f070f68b53ad06772fb52f1bc925f48d5a8",
+  "verification_rule": "SHA256(canonical receipt.json bytes) must equal receipt_sha256",
+  "ibm_job_id": "da0jg772sl0c73bn5h5g",
+  "backend": "ibm_marrakesh"
+}
