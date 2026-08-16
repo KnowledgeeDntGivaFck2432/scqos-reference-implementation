@@ -1,0 +1,30 @@
+{
+  "schema": "scqos.ibm.completed-physical-consequence.v1",
+  "ibm_job_id": "da0jklv2sl0c73bn5ls0",
+  "backend": "ibm_marrakesh",
+  "status": "DONE",
+  "metrics": {
+    "caller": "qiskit_ibm_runtime~sampler.py",
+    "qiskit_version": "qiskit_ibm_runtime-0.46.1,qiskit-2.5.2*",
+    "timestamps": {
+      "created": "2026-08-16T04:19:35.774444Z",
+      "finished": "2026-08-16T04:21:49.299878Z",
+      "running": "2026-08-16T04:19:37.057171Z"
+    },
+    "bss": {
+      "seconds": 2
+    },
+    "usage": {
+      "quantum_seconds": 2,
+      "seconds": 2,
+      "status": "complete"
+    }
+  },
+  "captured_at_utc": "2026-08-16T04:42:12.339287+00:00",
+  "result_repr": "PrimitiveResult([SamplerPubResult(data=DataBin(syn0=BitArray(<shape=(), num_shots=512, num_bits=2>), out0=BitArray(<shape=(), num_shots=512, num_bits=3>)), metadata={'circuit_metadata': {}})], metadata={'execution': {'execution_spans': ExecutionSpans([DoubleSliceSpan(<start='2026-08-16 04:21:47', stop='2026-08-16 04:21:48', size=512>)])}, 'version': 2})",
+  "continuity": {
+    "resubmitted": false,
+    "source": "existing IBM Runtime job",
+    "claim": "Receipt binds the previously submitted job to its returned physical consequence."
+  }
+}
