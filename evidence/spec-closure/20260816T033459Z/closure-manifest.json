@@ -1,0 +1,16 @@
+{
+  "branch": "main",
+  "candidate_tag": "scqos-canonicalization-spec-v1.0.0-rc1",
+  "canonicalization_contract": "SCQOS-C14N-JCS-NFC-1",
+  "created_at_utc": "20260816T033459Z",
+  "independent_verification_issue": "https://github.com/KnowledgeeKZA3224/scqos-reference-implementation/issues/6",
+  "normative_spec": "spec/canonicalization/SCQOS-CANONICALIZATION-SPEC-v1.0.md",
+  "parent_commit": "412eefa19ad4636e8de4004a43e90694fa85314d",
+  "platform": "Linux-7.0.0-22-generic-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "quantum_tasks_submitted_by_this_closure": 0,
+  "repository": "git@github.com:KnowledgeeKZA3224/scqos-reference-implementation.git",
+  "schema": "scqos.specification.closure-manifest.v1",
+  "status": "SPECIFICATION_RC_PREPARED_FOR_FALSIFICATION",
+  "vector_manifest": "spec/canonicalization/vectors/adversarial-vectors.json"
+}
