@@ -1,0 +1,8 @@
+RFC 8785 — JSON Canonicalization Scheme
+https://www.rfc-editor.org/rfc/rfc8785
+
+Unicode UAX #15 — Unicode Normalization Forms
+https://www.unicode.org/reports/tr15/
+
+FIPS PUB 180-4 — Secure Hash Standard / SHA-256
+https://csrc.nist.gov/pubs/fips/180-4/upd1/final

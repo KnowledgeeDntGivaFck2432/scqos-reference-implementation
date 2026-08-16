@@ -1,0 +1,127 @@
+./Qiskit Adapter .py:129:                "canonical_bytes",
+./Qiskit Adapter .py:148:def canonical_hash(data: Dict[str, Any]) -> str:
+./Qiskit Adapter .py:152:    return _KERNEL.sha3_hash(_KERNEL.canonical_bytes(data))
+./Qiskit Adapter .py:227:        return canonical_hash(self.canonical())
+./Qiskit Adapter .py:254:        return json.dumps(asdict(self), indent=2, sort_keys=True)
+./Qiskit Adapter .py:454:                self.kernel.canonical_bytes(
+./Qiskit Adapter .py:474:                self.kernel.canonical_bytes(
+./Qiskit Adapter .py:638:        return json.dumps(asdict(self), indent=2, sort_keys=True)
+./Qiskit Adapter .py:1001:        raw = json.dumps(request.canonical(), sort_keys=True, default=str).encode("utf-8")
+./sc_final_workload.py:41:    state, sort_keys=True, separators=(",", ":")
+./sc_final_workload.py:44:state_sha256 = hashlib.sha256(canonical).hexdigest()
+./sc_final_workload.py:48:print("🔐 STATE SHA256:", state_sha256)
+./sc_final_workload.py:143:    bit = int(state_sha256[-1], 16) & 1
+./sc_final_workload.py:172:    "state_sha256": state_sha256,
+./sc_final_workload.py:180:    receipt, sort_keys=True, separators=(",", ":")
+./sc_final_workload.py:183:receipt["receipt_sha256"] = hashlib.sha256(unsigned).hexdigest()
+./sc_final_workload.py:200:print("🔐 RECEIPT SHA256:", receipt["receipt_sha256"])
+./sc_value_settlement.py:103:    state, sort_keys=True, separators=(",",":")
+./sc_value_settlement.py:106:state_sha = hashlib.sha256(state_bytes).hexdigest()
+./sc_value_settlement.py:252:    "before_state_sha256": state_sha,
+./sc_value_settlement.py:295:    receipt, sort_keys=True, separators=(",",":")
+./sc_value_settlement.py:298:receipt["receipt_sha256"] = hashlib.sha256(unsigned).hexdigest()
+./sc_value_settlement.py:332:print("🔐 RECEIPT SHA256:", receipt["receipt_sha256"])
+./sc_economic_action_settlement.py:34:        return json.loads(raw), hashlib.sha256(raw).hexdigest()
+./sc_economic_action_settlement.py:113:osv_sha = hashlib.sha256(osv_raw).hexdigest()
+./sc_economic_action_settlement.py:209:        "cisa_sha256": cisa_sha,
+./sc_economic_action_settlement.py:210:        "osv_sha256": osv_sha,
+./sc_economic_action_settlement.py:219:    sort_keys=True,
+./sc_economic_action_settlement.py:223:state_sha = hashlib.sha256(state_bytes).hexdigest()
+./sc_economic_action_settlement.py:409:    "state_sha256": state_sha,
+./sc_economic_action_settlement.py:430:    sort_keys=True,
+./sc_economic_action_settlement.py:434:settlement["receipt_sha256"] = hashlib.sha256(
+./sc_economic_action_settlement.py:475:print("🔐 RECEIPT SHA256:", settlement["receipt_sha256"])
+./SC Patch .py:211:def canonical_bytes(data: Dict[str, Any], max_bytes: int = 1_048_576) -> bytes:
+./SC Patch .py:215:        sort_keys=True,
+./SC Patch .py:217:        ensure_ascii=False,
+./SC Patch .py:218:        allow_nan=False,
+./SC Patch .py:248:    return hmac_sign(secret_key, canonical_bytes(policy_blob))
+./SC Patch .py:339:    return sha3_hash(canonical_bytes(raw))
+./SC Patch .py:418:                encoded = canonical_bytes(self._canonical_map(state))
+./SC Patch .py:573:    def _canonical_bytes(self, state: GenericState) -> bytes:
+./SC Patch .py:574:        return canonical_bytes(self._canonical_map(state), self.max_payload_bytes)
+./SC Patch .py:600:            state.signature = hmac_sign(self.secret_key, self._canonical_bytes(state))
+./SC Patch .py:606:                encoded = self._canonical_bytes(state)
+./SC Patch .py:732:        return sha3_hash(canonical_bytes(source))
+./SC Patch .py:977:        return sha3_hash(canonical_bytes(observation))
+./SC Patch .py:1028:        return sha3_hash(canonical_bytes(proof_bundle))
+./scqos_supreme_stack.py:224:def canonical_bytes(data: Dict[str, Any], max_bytes: int = 1_048_576) -> bytes:
+./scqos_supreme_stack.py:228:        sort_keys=True,
+./scqos_supreme_stack.py:230:        ensure_ascii=False,
+./scqos_supreme_stack.py:231:        allow_nan=False,
+./scqos_supreme_stack.py:237:def sha256_hash(encoded: bytes) -> str:
+./scqos_supreme_stack.py:238:    return hashlib.sha256(encoded).hexdigest()
+./scqos_supreme_stack.py:279:    return sha3_hash(canonical_bytes(raw))
+./scqos_supreme_stack.py:355:                encoded = canonical_bytes(self._canonical_map(state))
+./scqos_supreme_stack.py:474:    def _canonical_bytes(self, state: GenericState) -> bytes:
+./scqos_supreme_stack.py:475:        return canonical_bytes(self._canonical_map(state), self.max_payload_bytes)
+./scqos_supreme_stack.py:494:            state.signature = hmac_sign(self.secret_key, self._canonical_bytes(state))
+./scqos_supreme_stack.py:509:                encoded = self._canonical_bytes(state)
+./scqos_supreme_stack.py:602:        return sha3_hash(canonical_bytes(source))
+./scqos_supreme_stack.py:749:        return sha3_hash(canonical_bytes(observation))
+./scqos_supreme_stack.py:790:        return sha3_hash(canonical_bytes(proof_bundle))
+./API Gateway.py:158:        return json.dumps(out, indent=2, sort_keys=True)
+./sc-physical-quantum-evidence/sc-total-workload-receipt.json:3:  "state_sha256": "5127daadda56d109f3d9c0ef210ef603d1658a2fea3154ce6fecac548f0b96a3",
+./sc-physical-quantum-evidence/sc-total-workload-receipt.json:119:  "receipt_sha256": "d4f04688b0fc23fb95231045830f8738180844f0f52696c770413b958f2a69f4"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:5:  "market_sha256": "b258068baec794d65d27d34ad0dc96e0ccd5d587c7ac0bc34730712db5a6ee0d",
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:17:        "response_sha256": "31191c3ba40578b8a181a7c1f457918f417dd21e6555009e87940eefd80b633e"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:22:        "response_sha256": "35dce08fb1be9713df01fbe59d92ff623cde74fbcc0285c4a3bf9427ef290079"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:27:        "response_sha256": "b8b4396c0d09737f35b1e6581fcbba9d9fdceafb99bebe38370e810c170d7272"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:32:        "response_sha256": "587dff91fb822a13cfd34cc29fa0d61b6836af4f1c348a6f38e8d405cc5e8509"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:37:        "response_sha256": "fc757405485bafe627208795a5010df673f1db91aef27d86e0699fc9879b142a"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:42:        "response_sha256": "e2ec1b3cbdc6c70d2f486c0c94680daa788459ece4c1a6347c37f914b1b443f6"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:47:        "response_sha256": "99f86e30162963f6e2578a8e1a9c0945a314033665e505d3eb03a2ca467b8449"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:52:        "response_sha256": "fc757405485bafe627208795a5010df673f1db91aef27d86e0699fc9879b142a"
+./sc-physical-quantum-evidence/sc-final-economic-discovery-receipt.json:542:  "receipt_sha256": "fa48d88914dbddef26d871f3fe6ab86156a8b8907b04cb8b90142fe6a33b1242"
+./sc-physical-quantum-evidence/scqos-workload-receipt-v1.json:8:    "sha256": "4361e24124de7c6273ff1ce27a7ae0709dfd2a0a88dea625e72fbeb1943253de",
+./sc-physical-quantum-evidence/scqos-workload-receipt-v1.json:20:    "sha256_valid": true,
+./sc-physical-quantum-evidence/scqos-workload-receipt-v1.json:44:  "receipt_sha256": "e00e68ad9d80c597edbd58a0e8542b18eb30261be16a720420040d095fef6eda"
+./sc-physical-quantum-evidence/sc-independent-consequence-proof.json:22:  "proof_sha256": "5bad84b2dfa7c9972329fd50c7b913a565a589a923aae7c316c9986626c46af7"
+./sc-physical-quantum-evidence/sc-decision-governor-v2-receipt.json:1220:  "state_sha256": "08599692a2b35c5d6452ea566c23a646f26e84ff1cb97a2d51715b74d2477293",
+./sc-physical-quantum-evidence/sc-decision-governor-v2-receipt.json:1228:  "receipt_sha256": "ac0fb5c8262c910f98072b8038d09f40f16134388bf195f1b923812070bcab38"
+./sc-physical-quantum-evidence/sc-final-physical-quantum-proof.json:68:  "state_sha256": "902b58d583270c72f8fcb6883e4f3ee7e8b786160d577929bd196d5e731b38f2",
+./sc-physical-quantum-evidence/sc-final-physical-quantum-proof.json:69:  "receipt_sha256": "e60150546c50f7c5a2f3116c82647eb880acfdf2c67918ebb950a7cd4646275f"
+./sc-physical-quantum-evidence/sc-closed-causal-execution-receipt.json:27:  "sha256": "c907698c43ca8b2f37a51259a08fa23cc2aed6dd30e42b613bb00f3385d62f42"
+./sc-physical-quantum-evidence/sc-final-workload-receipt.json:4:  "state_sha256": "66bc31465989f8c48923398f8cb18ee1a5f32c5bb82e931026a241e71746acdb",
+./sc-physical-quantum-evidence/sc-final-workload-receipt.json:26:  "receipt_sha256": "5d3a14842841f76af4a26bde1282a50404fc51c221f1a0ad481732abc0645f14"
+./sc-physical-quantum-evidence/knowledgee-kza-sc-final-physical-quantum-proof.json:68:  "state_sha256": "902b58d583270c72f8fcb6883e4f3ee7e8b786160d577929bd196d5e731b38f2",
+./sc-physical-quantum-evidence/knowledgee-kza-sc-final-physical-quantum-proof.json:69:  "receipt_sha256": "e60150546c50f7c5a2f3116c82647eb880acfdf2c67918ebb950a7cd4646275f"
+./sc-physical-quantum-evidence/sc-totality-continuity-receipt.json:330:  "state_sha256": "df4f765c42e89fb83f40078652abffca0d8cc077149e4dba36cedb50def1ed09",
+./sc-physical-quantum-evidence/sc-totality-continuity-receipt.json:331:  "previous_state_sha256": "3bcb10d25902e944975c16d7e21f89fa64b62e502228fc644ce5097ee3124850",
+./sc-physical-quantum-evidence/sc-totality-continuity-receipt.json:332:  "receipt_sha256": "9f90a5226e3b122644ccd3167b08c07ee9f081cc5ee786c35f9ec82248462ce8"
+./sc-physical-quantum-evidence/scqos-consequence-continuity-proof.json:78:  "receipt_sha256": "cea085d08708fee07352a7b95ba3e48e77f210f3107531af671c27a807c8c1c6"
+./sc-physical-quantum-evidence/sc-final-value-discovery-proof.json:448:  "state_sha256": "77d81021ba5b6d76a96a518867dff0dee33c9edb7661366da344bd67969d612a",
+./sc-physical-quantum-evidence/sc-final-value-discovery-proof.json:449:  "receipt_sha256": "20d01fb0c01f870ff6f5b2cdeb5bc6e5073756e567483b40c024d66c91f59c90"
+./sc-physical-quantum-evidence/sc-autonomous-closed-circuit-proof.json:15:  "initial_state_sha256": "3d2a76632d4628db3bfc3ce56cbd3faad18d45d1cb89b8fd03e993ca1def7246",
+./sc-physical-quantum-evidence/sc-autonomous-closed-circuit-proof.json:28:  "receipt_sha256": "d903a8c033b68447a1093e35b8309b9e75f44d4833c8310cf34890a5d1a6ad68"
+./sc-physical-quantum-evidence/sc-decision-governor-receipt.json:5:  "state_sha256": "12b80857ca6c16e10cce9ef63e9162798d92c26a92b3ee11b36eda5394787bfe",
+./sc-physical-quantum-evidence/sc-decision-governor-receipt.json:237:  "receipt_sha256": "0da62343f73474b851fb659db0e01bb4a757d50b49b730d350e44a96ed94a31e"
+./sc-physical-quantum-evidence/sc-value-settlement-receipt.json:371:    "before_state_sha256": "06da049c5b96f51863a89a6d657977444b767f959411524d5e836d84ff3bc63d",
+./sc-physical-quantum-evidence/sc-value-settlement-receipt.json:443:  "receipt_sha256": "155700daffdab2bc2b9f8257db97673b595f8497f9ca862740e07f250e2bcc19"
+./spec/canonicalization/SCQOS-CANONICALIZATION-SPEC-v1.0.md:47:If two distinct original property names normalize to the same NFC
+./spec/canonicalization/SCQOS-CANONICALIZATION-SPEC-v1.0.md:88:`sha256:<64 lowercase hexadecimal characters>`
+./spec/canonicalization/vectors/adversarial-vectors.json:33:      "required_property": "Both normalize to identical canonical UTF-8 bytes"
+./Root Adapter.py:63:                "canonical_bytes",
+./Root Adapter.py:163:        return KERNEL.sha3_hash(KERNEL.canonical_bytes(self.canonical()))
+./Root Adapter.py:190:        return json.dumps(asdict(self), indent=2, sort_keys=True)
+./Root Adapter.py:391:                KERNEL.canonical_bytes(
+./Root Adapter.py:412:                KERNEL.canonical_bytes(
+./Root Adapter.py:565:    print(json.dumps(result, indent=2, sort_keys=True))
+./sc_total_workload.py:43:canonical = json.dumps(state, sort_keys=True, separators=(",", ":")).encode()
+./sc_total_workload.py:44:state_sha = hashlib.sha256(canonical).hexdigest()
+./sc_total_workload.py:95:    "state_sha256": state_sha,
+./sc_total_workload.py:102:unsigned = json.dumps(receipt, sort_keys=True, separators=(",", ":")).encode()
+./sc_total_workload.py:103:receipt["receipt_sha256"] = hashlib.sha256(unsigned).hexdigest()
+./sc_total_workload.py:117:print("🔒 RECEIPT SHA256:", receipt["receipt_sha256"])
+./sc_final_economic_discovery.py:61:    return json.loads(body), hashlib.sha256(body).hexdigest()
+./sc_final_economic_discovery.py:92:            "response_sha256": body_sha,
+./sc_final_economic_discovery.py:98:                award_id = hashlib.sha256(
+./sc_final_economic_discovery.py:99:                    json.dumps(row, sort_keys=True).encode()
+./sc_final_economic_discovery.py:110:            normalized = {
+./sc_final_economic_discovery.py:126:                all_awards[award_id] = normalized
+./sc_final_economic_discovery.py:225:    sort_keys=True,
+./sc_final_economic_discovery.py:229:market_sha = hashlib.sha256(market_bytes).hexdigest()
+./sc_final_economic_discovery.py:421:    "market_sha256": market_sha,
+./sc_final_economic_discovery.py:437:    sort_keys=True,
+./sc_final_economic_discovery.py:441:receipt["receipt_sha256"] = hashlib.sha256(unsigned).hexdigest()
+./sc_final_economic_discovery.py:486:print("🔐 RECEIPT SHA256:", receipt["receipt_sha256"])

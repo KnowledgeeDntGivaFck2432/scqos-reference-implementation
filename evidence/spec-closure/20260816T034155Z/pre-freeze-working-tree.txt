@@ -1,0 +1,22 @@
+ M alignment_gate.audit
+ M boundary_gate.audit
+ M causality_gate.audit
+ M coherence_gate.audit
+ M consciousness_gate.audit
+ M continuity_gate.audit
+ M genesis_gate.audit
+ M reference_gate.audit
+?? __pycache__/
+?? evidence/spec-closure/20260816T034155Z/
+?? sc-physical-quantum-evidence.zip
+?? sc-physical-quantum-evidence/
+?? sc_economic_action_settlement.py
+?? sc_final_economic_discovery.py
+?? sc_final_workload.py
+?? sc_total_workload.py
+?? sc_value_settlement.py
+?? scqos_enforce.sh
+?? spec/canonicalization/vectors/CHALLENGE-PROTOCOL.md
+?? spec/canonicalization/vectors/challenge-matrix.json
+?? "sudo systemctl reboot -i"
+?? supreme-sandbox-billing-locked.json

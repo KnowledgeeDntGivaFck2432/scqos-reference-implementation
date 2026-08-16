@@ -1,0 +1,33 @@
+{
+  "contract": "SCQOS-C14N-JCS-NFC-1",
+  "authority": [
+    "SCQOS Canonicalization Contract v1.0",
+    "RFC 8785",
+    "Unicode UAX #15 NFC",
+    "FIPS 180-4 SHA-256"
+  ],
+  "forbidden_oracle": "SCQOS reference canonicalization implementation",
+  "rule": "Expected results MUST be frozen before candidate implementations execute.",
+  "challenges": [
+    "nfc_nfd_value_equivalence",
+    "nfc_nfd_key_equivalence",
+    "nfc_key_collision",
+    "reversed_key_insertion",
+    "nested_object_order",
+    "utf16_property_order",
+    "empty_object",
+    "empty_array",
+    "escaping_quote",
+    "escaping_backslash",
+    "escaping_control",
+    "float_shortest_round_trip",
+    "scientific_notation",
+    "nan_rejection",
+    "positive_infinity_rejection",
+    "negative_infinity_rejection",
+    "negative_zero_boundary",
+    "deep_nesting",
+    "malformed_json",
+    "invalid_unicode"
+  ]
+}
