@@ -1,0 +1,2 @@
+origin	git@github.com:KnowledgeeKZA3224/scqos-reference-implementation.git (fetch)
+origin	git@github.com:KnowledgeeKZA3224/scqos-reference-implementation.git (push)

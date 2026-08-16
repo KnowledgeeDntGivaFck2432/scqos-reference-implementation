@@ -1,0 +1,1 @@
+aws-cli/2.31.35 Python/3.14.4 Linux/7.0.0-22-generic source/x86_64.ubuntu.26

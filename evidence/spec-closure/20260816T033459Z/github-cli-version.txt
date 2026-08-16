@@ -1,0 +1,1 @@
+/tmp/close_nikolai_circuit.sh: line 41: gh: command not found

@@ -1,0 +1,114 @@
+{
+  "specification": "SCQOS-C14N-JCS-NFC-1",
+  "purpose": "Independent specification-derived falsification vectors",
+  "vectors": [
+    {
+      "id": "object-order-basic",
+      "class": "accepted",
+      "input_description": "Object containing keys z then a",
+      "required_property": "Canonical result is independent of insertion order"
+    },
+    {
+      "id": "nested-object-order",
+      "class": "accepted",
+      "input_description": "Objects nested at multiple depths with reversed insertion order",
+      "required_property": "Property ordering is recursive"
+    },
+    {
+      "id": "empty-object",
+      "class": "accepted",
+      "input_description": "Empty object",
+      "required_property": "Produces one deterministic canonical representation"
+    },
+    {
+      "id": "empty-array",
+      "class": "accepted",
+      "input_description": "Empty array",
+      "required_property": "Produces one deterministic canonical representation"
+    },
+    {
+      "id": "nfc-nfd-value-equivalence",
+      "class": "accepted",
+      "input_description": "String value café once as NFC and once as canonically equivalent NFD",
+      "required_property": "Both normalize to identical canonical UTF-8 bytes"
+    },
+    {
+      "id": "nfc-key-collision",
+      "class": "rejected",
+      "input_description": "Two distinct property names that collapse to one name under NFC",
+      "required_property": "Fail closed"
+    },
+    {
+      "id": "utf16-key-order",
+      "class": "accepted",
+      "input_description": "Property names selected so UTF-16 ordering is materially tested",
+      "required_property": "RFC 8785 UTF-16 code-unit ordering"
+    },
+    {
+      "id": "escaping",
+      "class": "accepted",
+      "input_description": "Property/value containing quote, backslash, newline, tab and control characters",
+      "required_property": "RFC 8785 escaping exactly"
+    },
+    {
+      "id": "number-shortest-round-trip",
+      "class": "accepted",
+      "input_description": "333333333.33333329",
+      "required_property": "RFC 8785 number serialization"
+    },
+    {
+      "id": "number-scientific-positive",
+      "class": "accepted",
+      "input_description": "1E30",
+      "required_property": "RFC 8785 number serialization"
+    },
+    {
+      "id": "number-decimal-reduction",
+      "class": "accepted",
+      "input_description": "4.50",
+      "required_property": "RFC 8785 number serialization"
+    },
+    {
+      "id": "number-small-decimal",
+      "class": "accepted",
+      "input_description": "2e-3",
+      "required_property": "RFC 8785 number serialization"
+    },
+    {
+      "id": "number-small-scientific",
+      "class": "accepted",
+      "input_description": "1e-27",
+      "required_property": "RFC 8785 number serialization"
+    },
+    {
+      "id": "nan",
+      "class": "rejected",
+      "input_description": "NaN",
+      "required_property": "Fail closed"
+    },
+    {
+      "id": "positive-infinity",
+      "class": "rejected",
+      "input_description": "Positive Infinity",
+      "required_property": "Fail closed"
+    },
+    {
+      "id": "negative-infinity",
+      "class": "rejected",
+      "input_description": "Negative Infinity",
+      "required_property": "Fail closed"
+    },
+    {
+      "id": "negative-zero",
+      "class": "rejected",
+      "input_description": "Preserved IEEE-754 negative zero",
+      "required_property": "Fail closed rather than silently collapse source distinction"
+    },
+    {
+      "id": "deep-nesting",
+      "class": "accepted-with-implementation-bound",
+      "input_description": "Deeply nested arrays and objects",
+      "required_property": "Result remains deterministic within documented resource limits"
+    }
+  ]
+}
