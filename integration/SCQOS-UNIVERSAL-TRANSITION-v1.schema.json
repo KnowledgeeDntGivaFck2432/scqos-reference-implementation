@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SCQOS-UNIVERSAL-TRANSITION-v1",
+  "title": "SCQOS Universal Governed Transition",
+  "type": "object",
+  "required": [
+    "tenant_id",
+    "external_system",
+    "subject",
+    "authority",
+    "intent",
+    "evidence",
+    "current_state",
+    "proposed_transition",
+    "expected_consequence"
+  ],
+  "properties": {
+    "tenant_id": {"type":"string","minLength":1},
+    "external_system": {"type":"string","minLength":1},
+    "subject": {"type":"string","minLength":1},
+    "authority": {
+      "type":"object",
+      "required":["principal_id","scope"],
+      "properties":{
+        "principal_id":{"type":"string","minLength":1},
+        "scope":{"type":"string","minLength":1}
+      },
+      "additionalProperties":true
+    },
+    "intent":{"type":"string","minLength":1},
+    "evidence":{"type":"object"},
+    "current_state":{"type":"object"},
+    "proposed_transition":{"type":"object"},
+    "expected_consequence":{"type":"object"},
+    "metadata":{"type":"object"}
+  },
+  "additionalProperties":false
+}
