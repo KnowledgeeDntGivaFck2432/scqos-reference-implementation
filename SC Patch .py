@@ -198,6 +198,8 @@ def validate_payload(value: Any, path: str = "payload") -> None:
     if isinstance(value, (list, tuple)):
         for i, item in enumerate(value):
             validate_payload(item, f"{path}[{i}]")
+        if value == 0.0 and math.copysign(1.0, value) < 0:
+            raise SCQOSCanonicalizationError(f"{path}: NEGATIVE_ZERO_REJECTED")
         return
     if isinstance(value, dict):
         for key, item in value.items():
@@ -208,19 +210,137 @@ def validate_payload(value: Any, path: str = "payload") -> None:
     raise TypeError(f"{path} unsupported type: {type(value).__name__}")
 
 
-def canonical_bytes(data: Dict[str, Any], max_bytes: int = 1_048_576) -> bytes:
+
+
+SCQOS_CANONICALIZATION_ID = "SCQOS-C14N-JCS-NFC-1"
+
+class SCQOSCanonicalizationError(ValueError):
+    pass
+
+class SCQOSNFCPropertyNameCollision(SCQOSCanonicalizationError):
+    pass
+
+def _scqos_reject_invalid_unicode(value: str, path: str) -> None:
+    for ch in value:
+        cp = ord(ch)
+        if 0xD800 <= cp <= 0xDFFF:
+            raise SCQOSCanonicalizationError(
+                f"{path}: invalid Unicode surrogate U+{cp:04X}"
+            )
+
+def _scqos_normalize_nfc(value: Any, path: str = "payload") -> Any:
+    import unicodedata
+
+    if value is None or isinstance(value, (bool, int)):
+        return value
+
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise SCQOSCanonicalizationError(
+                f"{path}: non-finite float rejected"
+            )
+        return value
+
+    if isinstance(value, str):
+        _scqos_reject_invalid_unicode(value, path)
+        normalized = unicodedata.normalize("NFC", value)
+        _scqos_reject_invalid_unicode(normalized, path)
+        return normalized
+
+    if isinstance(value, (list, tuple)):
+        return [
+            _scqos_normalize_nfc(item, f"{path}[{i}]")
+            for i, item in enumerate(value)
+        ]
+
+    if isinstance(value, dict):
+        out = {}
+        origins = {}
+
+        for original_key, item in value.items():
+            if not isinstance(original_key, str):
+                raise SCQOSCanonicalizationError(
+                    f"{path}: object keys must be strings"
+                )
+
+            _scqos_reject_invalid_unicode(original_key, f"{path}.<key>")
+
+            normalized_key = unicodedata.normalize("NFC", original_key)
+
+            if normalized_key in origins and origins[normalized_key] != original_key:
+                raise SCQOSNFCPropertyNameCollision(
+                    "NFC_PROPERTY_NAME_COLLISION: "
+                    f"{origins[normalized_key]!r} and {original_key!r} "
+                    f"normalize to {normalized_key!r}"
+                )
+
+            origins[normalized_key] = original_key
+            out[normalized_key] = _scqos_normalize_nfc(
+                item,
+                f"{path}.{normalized_key}"
+            )
+
+        return out
+
+    raise SCQOSCanonicalizationError(
+        f"{path}: unsupported type {type(value).__name__}"
+    )
+
+def _scqos_reject_negative_zero(value: Any, path: str = "payload") -> None:
+    """Reject IEEE-754 negative zero recursively before canonicalization."""
+    if isinstance(value, float):
+        if value == 0.0 and math.copysign(1.0, value) < 0:
+            raise SCQOSCanonicalizationError(
+                f"{path}: NEGATIVE_ZERO_REJECTED"
+            )
+        return
+
+    if isinstance(value, (list, tuple)):
+        for index, item in enumerate(value):
+            _scqos_reject_negative_zero(item, f"{path}[{index}]")
+        return
+
+    if isinstance(value, dict):
+        for key, item in value.items():
+            _scqos_reject_negative_zero(item, f"{path}.{key}")
+        return
+
+def canonical_bytes(
+    data: Dict[str, Any],
+    max_bytes: int = 1_048_576,
+    *,
+    canonicalization_id: str = SCQOS_CANONICALIZATION_ID,
+) -> bytes:
+
+    if canonicalization_id != SCQOS_CANONICALIZATION_ID:
+        raise SCQOSCanonicalizationError(
+            "CANONICALIZATION_AUTHORITY_MISMATCH: "
+            f"required={SCQOS_CANONICALIZATION_ID} "
+            f"received={canonicalization_id}"
+        )
+
+    _scqos_reject_negative_zero(data)
     validate_payload(data)
-    encoded = json.dumps(
-        data,
-        sort_keys=True,
-        separators=(",", ":"),
-        ensure_ascii=False,
-        allow_nan=False,
-    ).encode("utf-8")
+
+    normalized = _scqos_normalize_nfc(data)
+
+    try:
+        import rfc8785
+        encoded = rfc8785.dumps(normalized)
+    except Exception as exc:
+        raise SCQOSCanonicalizationError(
+            f"JCS_CANONICALIZATION_FAILED: {exc}"
+        ) from exc
+
     if len(encoded) > max_bytes:
-        raise ValueError(f"state size {len(encoded)} exceeds limit {max_bytes}")
+        raise SCQOSCanonicalizationError(
+            f"state size {len(encoded)} exceeds limit {max_bytes}"
+        )
+
     return encoded
 
+def sha256_hash(encoded: bytes) -> str:
+    return hashlib.sha256(encoded).hexdigest()
 
 def sha3_hash(encoded: bytes) -> str:
     return hashlib.sha3_512(encoded).hexdigest()
@@ -336,7 +456,7 @@ def compute_substrate_fingerprint(
         "observer_id": observer_id,
         "substrate_id": substrate_id,
     }
-    return sha3_hash(canonical_bytes(raw))
+    return sha256_hash(canonical_bytes(raw))
 
 
 @dataclass
@@ -416,7 +536,7 @@ class TimeGate:
                 wall_drift = abs(now_wall - state.submitted_at) * 1000
                 mono_drift = abs(now_mono - state.submitted_monotonic) * 1000
                 encoded = canonical_bytes(self._canonical_map(state))
-                current_hash = sha3_hash(encoded)
+                current_hash = sha256_hash(encoded)
                 mono_ok = mono_drift <= self.max_monotonic_drift_ms
                 wall_ok = (
                     wall_drift <= self.max_wall_drift_ms
@@ -607,7 +727,7 @@ class GenericSignedGate:
                 expected = hmac_sign(self.secret_key, encoded)
                 if not hmac.compare_digest(str(state.signature), expected):
                     raise ValueError("signature mismatch")
-                candidate_hash = sha3_hash(encoded)
+                candidate_hash = sha256_hash(encoded)
                 if candidate_hash in self._chain_hashes:
                     raise ValueError("replay detected: hash already in invariant chain")
                 key = self._key(state.session_id, state.gate_id, state.module_id)
@@ -729,7 +849,7 @@ class GenesisGate(GenericSignedGate):
         self._origin_seen: Dict[str, str] = {}
 
     def source_hash(self, source):
-        return sha3_hash(canonical_bytes(source))
+        return sha256_hash(canonical_bytes(source))
 
     def _validate_data(self, state):
         source_type = state.data.get("source_type", "")
@@ -974,7 +1094,7 @@ class ConsciousnessGate(GenericSignedGate):
         self._observations: Dict[str, str] = {}
 
     def observation_hash(self, observation):
-        return sha3_hash(canonical_bytes(observation))
+        return sha256_hash(canonical_bytes(observation))
 
     def _validate_data(self, state):
         if state.data.get("observer_id") != self.observer_id:
@@ -1025,7 +1145,7 @@ class CoherenceGate(GenericSignedGate):
         self._module_coherence: Dict[str, str] = {}
 
     def combined_hash(self, proof_bundle):
-        return sha3_hash(canonical_bytes(proof_bundle))
+        return sha256_hash(canonical_bytes(proof_bundle))
 
     def _validate_data(self, state):
         for name in [

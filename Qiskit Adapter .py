@@ -127,6 +127,7 @@ def load_scqos_kernel() -> Any:
                 "get_secret_key",
                 "get_substrate_fingerprint_override",
                 "canonical_bytes",
+        "sha256_hash",
                 "sha3_hash",
             ]
             missing = [item for item in required if not hasattr(module, item)]
@@ -149,7 +150,7 @@ def canonical_hash(data: Dict[str, Any]) -> str:
     global _KERNEL
     if _KERNEL is None:
         _KERNEL = load_scqos_kernel()
-    return _KERNEL.sha3_hash(_KERNEL.canonical_bytes(data))
+    return _KERNEL.sha256_hash(_KERNEL.canonical_bytes(data))
 
 
 # =============================================================================
@@ -450,8 +451,7 @@ class SCQOSRootAdmissionAdapter:
             )
             boundary_hash = boundary_result.state_hash
 
-            reference_anchor = self.kernel.sha3_hash(
-                self.kernel.canonical_bytes(
+            reference_anchor = self.kernel.sha256_hash(self.kernel.canonical_bytes(
                     {
                         "packet_hash": packet_hash,
                         "external_reference": packet.external_reference,
@@ -470,8 +470,7 @@ class SCQOSRootAdmissionAdapter:
             )
             reference_hash = reference_result.state_hash
 
-            cause_hash = self.kernel.sha3_hash(
-                self.kernel.canonical_bytes(
+            cause_hash = self.kernel.sha256_hash(self.kernel.canonical_bytes(
                     {
                         "cause_id": packet.cause_id,
                         "packet_hash": packet_hash,

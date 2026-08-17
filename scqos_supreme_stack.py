@@ -3,7 +3,7 @@ SCQOS — Substrate-Proof Single-Node Reference Implementation
 Supreme Full Stack / Nine-Gate Pre-Execution Coherence OS Stack
 
 Python: 3.10+
-Runtime dependencies: none
+Runtime dependencies: rfc8785
 Boot behavior: one successful boot per stack instance; create a new instance for a fresh boot.
 
 Gates:
@@ -212,6 +212,8 @@ def validate_payload(value: Any, path: str = "payload") -> None:
     if isinstance(value, (list, tuple)):
         for index, item in enumerate(value):
             validate_payload(item, f"{path}[{index}]")
+        if value == 0.0 and math.copysign(1.0, value) < 0:
+            raise SCQOSCanonicalizationError(f"{path}: NEGATIVE_ZERO_REJECTED")
         return
     if isinstance(value, dict):
         for key, item in value.items():
@@ -300,6 +302,25 @@ def _scqos_normalize_nfc(value: Any, path: str = "payload") -> Any:
     )
 
 
+def _scqos_reject_negative_zero(value: Any, path: str = "payload") -> None:
+    """Reject IEEE-754 negative zero recursively before canonicalization."""
+    if isinstance(value, float):
+        if value == 0.0 and math.copysign(1.0, value) < 0:
+            raise SCQOSCanonicalizationError(
+                f"{path}: NEGATIVE_ZERO_REJECTED"
+            )
+        return
+
+    if isinstance(value, (list, tuple)):
+        for index, item in enumerate(value):
+            _scqos_reject_negative_zero(item, f"{path}[{index}]")
+        return
+
+    if isinstance(value, dict):
+        for key, item in value.items():
+            _scqos_reject_negative_zero(item, f"{path}.{key}")
+        return
+
 def canonical_bytes(
     data: Dict[str, Any],
     max_bytes: int = 1_048_576,
@@ -314,6 +335,7 @@ def canonical_bytes(
             f"received={canonicalization_id}"
         )
 
+    _scqos_reject_negative_zero(data)
     validate_payload(data)
 
     normalized = _scqos_normalize_nfc(data)
@@ -376,7 +398,7 @@ def compute_substrate_hash(
         "observer_id": observer_id,
         "substrate_id": substrate_id,
     }
-    return sha3_hash(canonical_bytes(raw))
+    return sha256_hash(canonical_bytes(raw))
 
 @dataclass
 class TimeState:
@@ -453,7 +475,7 @@ class TimeGate:
                 drift_ms = abs(now - float(state.submitted_at)) * 1000
                 mono_drift_ms = abs(mono_now - float(state.submitted_monotonic)) * 1000
                 encoded = canonical_bytes(self._canonical_map(state))
-                current_hash = sha3_hash(encoded)
+                current_hash = sha256_hash(encoded)
                 drift_ok = drift_ms <= self.max_drift_ms and mono_drift_ms <= self.max_drift_ms
                 last_seq = self._sequence.get(state.module_id, -1)
                 sequence_ok = state.sequence_index == last_seq + 1
@@ -619,7 +641,7 @@ class GenericSignedGate:
                     raise ValueError(f"invalid genesis {self.gate_name}")
                 if last_hash is not None and state.prior_hash != last_hash:
                     raise ValueError(f"{self.gate_name} lineage broken")
-                state_hash = sha3_hash(encoded)
+                state_hash = sha256_hash(encoded)
                 self._index[key] = state.index
                 self._chain[key] = state_hash
                 self._remember_nonce(state.nonce)
@@ -699,7 +721,7 @@ class GenesisGate(GenericSignedGate):
         self._origin_seen: Dict[str, str] = {}
 
     def source_hash(self, source: Dict[str, Any]) -> str:
-        return sha3_hash(canonical_bytes(source))
+        return sha256_hash(canonical_bytes(source))
 
     def _validate_data(self, state: GenericState) -> None:
         source_type = state.data.get("source_type", "")
@@ -846,7 +868,7 @@ class ConsciousnessGate(GenericSignedGate):
         self._observations: Dict[str, str] = {}
 
     def observation_hash(self, observation: Dict[str, Any]) -> str:
-        return sha3_hash(canonical_bytes(observation))
+        return sha256_hash(canonical_bytes(observation))
 
     def _validate_data(self, state: GenericState) -> None:
         if state.data.get("observer_id") != self.observer_id:
@@ -887,7 +909,7 @@ class CoherenceGate(GenericSignedGate):
         self._module_coherence: Dict[str, str] = {}
 
     def combined_hash(self, proof_bundle: Dict[str, Any]) -> str:
-        return sha3_hash(canonical_bytes(proof_bundle))
+        return sha256_hash(canonical_bytes(proof_bundle))
 
     def _validate_data(self, state: GenericState) -> None:
         for name in [

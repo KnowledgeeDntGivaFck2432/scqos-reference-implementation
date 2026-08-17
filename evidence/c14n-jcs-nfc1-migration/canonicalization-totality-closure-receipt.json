@@ -1,0 +1,30 @@
+{
+  "contract": "SCQOS-C14N-JCS-NFC-1",
+  "transition": "canonicalization-totality-closure",
+  "historical_receipts_rewritten": false,
+  "six_local_failures": {
+    "sc_patch_canonicalization": "PASS",
+    "negative_zero": "PASS",
+    "kernel_sha256_evidence": "PASS",
+    "root_adapter_sha256_evidence": "PASS",
+    "qiskit_adapter_sha256_evidence": "PASS",
+    "rfc8785_dependency": "PASS"
+  },
+  "negative_zero": {
+    "top_level": "REJECT",
+    "array": "REJECT",
+    "nested": "REJECT"
+  },
+  "nikolai_disclosed_vectors": "PASS",
+  "cross_implementation_bytes": "IDENTICAL",
+  "complete_frozen_23_vector_artifact": "PENDING_NIKOLAI_PRE_REGISTERED_ARTIFACT",
+  "source_sha256": {
+    "scqos_supreme_stack.py": "9e6ff9fe4ab00f8328889c8437d0217a56ac94310ae4dd71e014a411d555fc06",
+    "SC Patch .py": "985953f1a38f548a72d081242091397cd3cb75619e2674b051ca039db191efc2",
+    "Root Adapter.py": "5b64064b27fa60dec6d507a44cf625a5bc1d93caf73868bd46eed86c35b69862",
+    "Qiskit Adapter .py": "9976d336fe9599e61983a4023a0d44f1bb4d0f8bf09417c6cd8daad13d92b04f",
+    "requirements.txt": "3c107420df879ffd72e3f705859e26f2073c19884c6fff37c342a3be4f600b9e"
+  },
+  "generated_utc": "2026-08-17T13:03:47.378111+00:00",
+  "receipt_sha256": "2161cd54506dea7df254cb5d5dd55b6bbebb09579b5ea5dfa13fa4eb397aaaa9"
+}
