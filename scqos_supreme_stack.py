@@ -221,18 +221,118 @@ def validate_payload(value: Any, path: str = "payload") -> None:
         return
     raise TypeError(f"{path} unsupported type: {type(value).__name__}")
 
-def canonical_bytes(data: Dict[str, Any], max_bytes: int = 1_048_576) -> bytes:
+SCQOS_CANONICALIZATION_ID = "SCQOS-C14N-JCS-NFC-1"
+
+
+class SCQOSCanonicalizationError(ValueError):
+    pass
+
+
+class SCQOSNFCPropertyNameCollision(SCQOSCanonicalizationError):
+    pass
+
+
+def _scqos_reject_invalid_unicode(value: str, path: str) -> None:
+    for ch in value:
+        cp = ord(ch)
+        if 0xD800 <= cp <= 0xDFFF:
+            raise SCQOSCanonicalizationError(
+                f"{path}: invalid Unicode surrogate U+{cp:04X}"
+            )
+
+
+def _scqos_normalize_nfc(value: Any, path: str = "payload") -> Any:
+    import unicodedata
+
+    if value is None or isinstance(value, (bool, int)):
+        return value
+
+    if isinstance(value, float):
+        if not math.isfinite(value):
+            raise SCQOSCanonicalizationError(
+                f"{path}: non-finite float rejected"
+            )
+        return value
+
+    if isinstance(value, str):
+        _scqos_reject_invalid_unicode(value, path)
+        normalized = unicodedata.normalize("NFC", value)
+        _scqos_reject_invalid_unicode(normalized, path)
+        return normalized
+
+    if isinstance(value, (list, tuple)):
+        return [
+            _scqos_normalize_nfc(item, f"{path}[{i}]")
+            for i, item in enumerate(value)
+        ]
+
+    if isinstance(value, dict):
+        out = {}
+        origins = {}
+
+        for original_key, item in value.items():
+            if not isinstance(original_key, str):
+                raise SCQOSCanonicalizationError(
+                    f"{path}: object keys must be strings"
+                )
+
+            _scqos_reject_invalid_unicode(original_key, f"{path}.<key>")
+
+            normalized_key = unicodedata.normalize("NFC", original_key)
+
+            if normalized_key in origins and origins[normalized_key] != original_key:
+                raise SCQOSNFCPropertyNameCollision(
+                    "NFC_PROPERTY_NAME_COLLISION: "
+                    f"{origins[normalized_key]!r} and {original_key!r} "
+                    f"normalize to {normalized_key!r}"
+                )
+
+            origins[normalized_key] = original_key
+            out[normalized_key] = _scqos_normalize_nfc(
+                item,
+                f"{path}.{normalized_key}"
+            )
+
+        return out
+
+    raise SCQOSCanonicalizationError(
+        f"{path}: unsupported type {type(value).__name__}"
+    )
+
+
+def canonical_bytes(
+    data: Dict[str, Any],
+    max_bytes: int = 1_048_576,
+    *,
+    canonicalization_id: str = SCQOS_CANONICALIZATION_ID,
+) -> bytes:
+
+    if canonicalization_id != SCQOS_CANONICALIZATION_ID:
+        raise SCQOSCanonicalizationError(
+            "CANONICALIZATION_AUTHORITY_MISMATCH: "
+            f"required={SCQOS_CANONICALIZATION_ID} "
+            f"received={canonicalization_id}"
+        )
+
     validate_payload(data)
-    encoded = json.dumps(
-        data,
-        sort_keys=True,
-        separators=(",", ":"),
-        ensure_ascii=False,
-        allow_nan=False,
-    ).encode("utf-8")
+
+    normalized = _scqos_normalize_nfc(data)
+
+    try:
+        import rfc8785
+        encoded = rfc8785.dumps(normalized)
+    except Exception as exc:
+        raise SCQOSCanonicalizationError(
+            f"JCS_CANONICALIZATION_FAILED: {exc}"
+        ) from exc
+
     if len(encoded) > max_bytes:
-        raise ValueError(f"state size {len(encoded)} exceeds limit {max_bytes}")
+        raise SCQOSCanonicalizationError(
+            f"state size {len(encoded)} exceeds limit {max_bytes}"
+        )
+
     return encoded
+
 
 def sha256_hash(encoded: bytes) -> str:
     return hashlib.sha256(encoded).hexdigest()
