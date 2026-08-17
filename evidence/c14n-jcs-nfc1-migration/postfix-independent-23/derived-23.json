@@ -1,0 +1,196 @@
+{
+  "artifact_id": "SCQOS-C14N-JCS-NFC-1-POSTFIX-CROSS-SUBSTRATE-23",
+  "artifact_class": "post-fix cross-substrate conformance oracle",
+  "normative_basis": [
+    "SCQOS-C14N-JCS-NFC-1",
+    "RFC 8785",
+    "Unicode UAX #15 NFC",
+    "FIPS 180-4 SHA-256"
+  ],
+  "oracle_language": "JavaScript",
+  "oracle_runtime": "v22.22.1",
+  "reference_implementation_imported": false,
+  "vector_count": 23,
+  "historical_boundary": "Created after implementation repair; does not replace Nikolai Nedovodin's earlier pre-registered artifact.",
+  "vectors": {
+    "B01": {
+      "id": "B01",
+      "description": "NFC string",
+      "input_descriptor": "nfc-string",
+      "status": "ACCEPT",
+      "canonical": "{\"k\":\"é\"}",
+      "digest": "sha256:0ca09f1dffb485d259fc791100d48ad7ae9c17f52a2bb07b608c0e28fbca34a1"
+    },
+    "B02": {
+      "id": "B02",
+      "description": "NFD string folds to NFC",
+      "input_descriptor": "nfd-string",
+      "status": "ACCEPT",
+      "canonical": "{\"k\":\"é\"}",
+      "digest": "sha256:0ca09f1dffb485d259fc791100d48ad7ae9c17f52a2bb07b608c0e28fbca34a1"
+    },
+    "B03": {
+      "id": "B03",
+      "description": "NFC property name",
+      "input_descriptor": "nfc-key",
+      "status": "ACCEPT",
+      "canonical": "{\"é\":1}",
+      "digest": "sha256:ddcfcf4765da163969972bb20660092ca2787782d9352d1d8a38e93f70acf3bf"
+    },
+    "B04": {
+      "id": "B04",
+      "description": "NFD property name folds to NFC",
+      "input_descriptor": "nfd-key",
+      "status": "ACCEPT",
+      "canonical": "{\"é\":1}",
+      "digest": "sha256:ddcfcf4765da163969972bb20660092ca2787782d9352d1d8a38e93f70acf3bf"
+    },
+    "B05": {
+      "id": "B05",
+      "description": "NFC property collision rejects",
+      "input_descriptor": "nfc-collision",
+      "status": "REJECT",
+      "reason": "payload: NFC_PROPERTY_NAME_COLLISION"
+    },
+    "B06": {
+      "id": "B06",
+      "description": "Negative zero rejects",
+      "input_descriptor": "negative-zero",
+      "status": "REJECT",
+      "reason": "payload.z: NEGATIVE_ZERO_REJECTED"
+    },
+    "B07": {
+      "id": "B07",
+      "description": "Positive zero accepts",
+      "input_descriptor": "positive-zero",
+      "status": "ACCEPT",
+      "canonical": "{\"z\":0}",
+      "digest": "sha256:e313adcae40818c4a48a6f5a32c7ab937365ffb0962282a5bf1a629f8d456b63"
+    },
+    "B08": {
+      "id": "B08",
+      "description": "Integer one",
+      "input_descriptor": "integer-one",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":1}",
+      "digest": "sha256:2bfd14f43d17fc7cea24e0917a8879b4b2f880b8baeec1b9d90fbaad655e71bd"
+    },
+    "B09": {
+      "id": "B09",
+      "description": "Float-source one converges",
+      "input_descriptor": "float-one",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":1}",
+      "digest": "sha256:2bfd14f43d17fc7cea24e0917a8879b4b2f880b8baeec1b9d90fbaad655e71bd"
+    },
+    "B10": {
+      "id": "B10",
+      "description": "RFC number 333333333.3333333",
+      "input_descriptor": "num-333",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":333333333.3333333}",
+      "digest": "sha256:8e1aa496328ac7acbd045b34464ae11d72d8b525c355b85099382ffcb499143b"
+    },
+    "B11": {
+      "id": "B11",
+      "description": "RFC number 1e30",
+      "input_descriptor": "num-1e30",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":1e+30}",
+      "digest": "sha256:53bcca850cd9028c384aef303539ce41d82d7fb56fbfa1e5289fe51caef28f93"
+    },
+    "B12": {
+      "id": "B12",
+      "description": "RFC number 4.5",
+      "input_descriptor": "num-4.5",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":4.5}",
+      "digest": "sha256:b3ccf096aa1a16f7f3d09252c1eacaa1e4be5a827c273f1112b537ce81182b11"
+    },
+    "B13": {
+      "id": "B13",
+      "description": "RFC number 0.002",
+      "input_descriptor": "num-.002",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":0.002}",
+      "digest": "sha256:ee4174f747859aa58befc9f5d5a71c195b42f4b5401167657ec9ef8c5a90cec2"
+    },
+    "B14": {
+      "id": "B14",
+      "description": "RFC number 1e-27",
+      "input_descriptor": "num-1e-27",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":1e-27}",
+      "digest": "sha256:c69ca3afb2212f58576e9ee6df989807e9a612fe44402bf8e8e6baa6482066a5"
+    },
+    "B15": {
+      "id": "B15",
+      "description": "Exponent formatting 1e-7",
+      "input_descriptor": "num-1e-7",
+      "status": "ACCEPT",
+      "canonical": "{\"n\":1e-7}",
+      "digest": "sha256:747d6d23b64d1b2d579adb832b44de31c91c875bbef7a8e397f5d183a746b54b"
+    },
+    "B16": {
+      "id": "B16",
+      "description": "UTF-16 key ordering",
+      "input_descriptor": "utf16-order",
+      "status": "ACCEPT",
+      "canonical": "{\"😀\":2,\"Ｚ\":1}",
+      "digest": "sha256:d0044d5452bc6cacd54894da533ae405d6d3d8063f9bc4ba7546a6d84faafc8f"
+    },
+    "B17": {
+      "id": "B17",
+      "description": "Array order preserved",
+      "input_descriptor": "array",
+      "status": "ACCEPT",
+      "canonical": "{\"a\":[3,2,1]}",
+      "digest": "sha256:1956211cdd1b997e12419186832911195c511ff444db406c7e53fd35b600e21d"
+    },
+    "B18": {
+      "id": "B18",
+      "description": "Nested recursive object",
+      "input_descriptor": "nested",
+      "status": "ACCEPT",
+      "canonical": "{\"a\":{\"a\":1,\"z\":2},\"b\":[{\"x\":1,\"y\":2}],\"z\":3}",
+      "digest": "sha256:3d1ae98ddbb7cbfb2f140ed26da4376a2b47786b1e0a5e059e417c01353aae75"
+    },
+    "B19": {
+      "id": "B19",
+      "description": "JSON literals",
+      "input_descriptor": "literals",
+      "status": "ACCEPT",
+      "canonical": "{\"f\":false,\"n\":null,\"t\":true}",
+      "digest": "sha256:22e00dc2f7b01420f940fbdbfbdf34fa0667cc6500186495023ba37722cbd05e"
+    },
+    "B20": {
+      "id": "B20",
+      "description": "String escaping",
+      "input_descriptor": "escaping",
+      "status": "ACCEPT",
+      "canonical": "{\"s\":\"quote:\\\" slash:\\\\ newline:\\n\"}",
+      "digest": "sha256:70281cd942c5a84e636a46d43c2391eddccbfc8afcbc089e78471c1a4ef563d2"
+    },
+    "B21": {
+      "id": "B21",
+      "description": "Invalid Unicode rejects",
+      "input_descriptor": "invalid-unicode",
+      "status": "REJECT",
+      "reason": "payload.s: INVALID_UNICODE"
+    },
+    "B22": {
+      "id": "B22",
+      "description": "NaN rejects",
+      "input_descriptor": "nan",
+      "status": "REJECT",
+      "reason": "payload.n: NON_FINITE_REJECTED"
+    },
+    "B23": {
+      "id": "B23",
+      "description": "Positive infinity rejects",
+      "input_descriptor": "infinity",
+      "status": "REJECT",
+      "reason": "payload.n: NON_FINITE_REJECTED"
+    }
+  }
+}

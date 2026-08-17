@@ -1,0 +1,20 @@
+{
+  "contract": "SCQOS-C14N-JCS-NFC-1",
+  "transition": "postfix-cross-substrate-23-vector-conformance",
+  "implementation_commit": "3f6cf98750dfca32302ff74f42f921e9e53a669e",
+  "oracle_language": "JavaScript",
+  "oracle_reference_implementation_imported": false,
+  "artifact_frozen_before_scqos_challenge": true,
+  "vectors_total": 23,
+  "vectors_passed": 23,
+  "vectors_failed": 0,
+  "canonical_bytes": "EXACT_MATCH",
+  "sha256_digests": "EXACT_MATCH",
+  "verdict": "PERMIT",
+  "artifact_sha256": "08a3f86abfc1a61c6fe7ecf9133bbb8de0f310253d200012f5813d4dacd0c129",
+  "challenge_report_sha256": "e9e383e7ba7ba2ebb20a1c5a04c94c6b7cc06bda4aaf3b288ccdfb74173bc1aa",
+  "historical_receipts_rewritten": false,
+  "historical_boundary": "This new post-fix artifact does not impersonate or replace Nikolai's earlier pre-registered artifact.",
+  "generated_utc": "2026-08-17T13:12:23.771892+00:00",
+  "receipt_sha256": "6a64b57fcb9310271afddaa14c8dedc2f5ed7ffa32ac44492ecd779a62bec369"
+}
