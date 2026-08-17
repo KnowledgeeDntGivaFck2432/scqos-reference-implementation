@@ -1,0 +1,12 @@
+{
+  "commercial_signature_state": "HOLD",
+  "evidence_directory": "/home/knowledgee-kza/scqos-reference-implementation/licensing-closure/20260817T014652Z",
+  "holds": [
+    "WORKING_TREE_NOT_CLEAN: live repository contains modified/untracked state outside the frozen commercial commit.",
+    "LEGAL_ENTITY_HOLD: machine inspection cannot decide which legal entity will grant the customer license.",
+    "CONTRIBUTOR_RIGHTS_HOLD: Git history proves contribution provenance, not legal assignment/ownership.",
+    "COMMERCIAL_SCOPE_HOLD: humans must approve exactly which services/private components constitute the paid layer."
+  ],
+  "machine_verifiable_technical_state": "PERMIT",
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414"
+}

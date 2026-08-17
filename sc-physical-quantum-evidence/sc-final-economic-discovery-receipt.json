@@ -1,0 +1,543 @@
+{
+  "schema": "sc-economic-discovery-v1",
+  "transaction_id": "f3f3ff01-0d3c-48bc-852c-20f8d56fe44f",
+  "timestamp_utc": "2026-08-15T16:59:59.235967+00:00",
+  "market_sha256": "b258068baec794d65d27d34ad0dc96e0ccd5d587c7ac0bc34730712db5a6ee0d",
+  "market": {
+    "retrieved_utc": "2026-08-15T16:59:59.235967+00:00",
+    "window": {
+      "start": "2025-08-15",
+      "end": "2026-08-15"
+    },
+    "source": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+    "queries": [
+      {
+        "query": "artificial intelligence",
+        "results": 100,
+        "response_sha256": "31191c3ba40578b8a181a7c1f457918f417dd21e6555009e87940eefd80b633e"
+      },
+      {
+        "query": "AI governance",
+        "results": 4,
+        "response_sha256": "35dce08fb1be9713df01fbe59d92ff623cde74fbcc0285c4a3bf9427ef290079"
+      },
+      {
+        "query": "cybersecurity artificial intelligence",
+        "results": 1,
+        "response_sha256": "b8b4396c0d09737f35b1e6581fcbba9d9fdceafb99bebe38370e810c170d7272"
+      },
+      {
+        "query": "zero trust",
+        "results": 64,
+        "response_sha256": "587dff91fb822a13cfd34cc29fa0d61b6836af4f1c348a6f38e8d405cc5e8509"
+      },
+      {
+        "query": "machine learning cybersecurity",
+        "results": 0,
+        "response_sha256": "fc757405485bafe627208795a5010df673f1db91aef27d86e0699fc9879b142a"
+      },
+      {
+        "query": "cloud security",
+        "results": 4,
+        "response_sha256": "e2ec1b3cbdc6c70d2f486c0c94680daa788459ece4c1a6347c37f914b1b443f6"
+      },
+      {
+        "query": "identity access management",
+        "results": 4,
+        "response_sha256": "99f86e30162963f6e2578a8e1a9c0945a314033665e505d3eb03a2ca467b8449"
+      },
+      {
+        "query": "autonomous systems cybersecurity",
+        "results": 0,
+        "response_sha256": "fc757405485bafe627208795a5010df673f1db91aef27d86e0699fc9879b142a"
+      }
+    ],
+    "unique_awards": 176,
+    "sampled_award_value_usd": 1236506211.08,
+    "top_agencies": [
+      {
+        "agency": "Department of Defense",
+        "sampled_value_usd": 741284275.44
+      },
+      {
+        "agency": "Department of the Interior",
+        "sampled_value_usd": 113197768.76
+      },
+      {
+        "agency": "Department of the Treasury",
+        "sampled_value_usd": 57723061.32
+      },
+      {
+        "agency": "Department of Commerce",
+        "sampled_value_usd": 53952134.94
+      },
+      {
+        "agency": "Department of Veterans Affairs",
+        "sampled_value_usd": 53738720.65
+      },
+      {
+        "agency": "Department of Health and Human Services",
+        "sampled_value_usd": 47725238.62
+      },
+      {
+        "agency": "General Services Administration",
+        "sampled_value_usd": 46862229.04
+      },
+      {
+        "agency": "Department of Homeland Security",
+        "sampled_value_usd": 31602345.44
+      },
+      {
+        "agency": "Department of Transportation",
+        "sampled_value_usd": 21068037.9
+      },
+      {
+        "agency": "Department of Labor",
+        "sampled_value_usd": 19413396.08
+      }
+    ],
+    "top_recipients": [
+      {
+        "recipient": "ECS FEDERAL, LLC",
+        "sampled_value_usd": 193394463.55
+      },
+      {
+        "recipient": "TUKNIK GOVERNMENT SERVICES LLC",
+        "sampled_value_usd": 106725460.68
+      },
+      {
+        "recipient": "MORSECORP, INC",
+        "sampled_value_usd": 54299748.99
+      },
+      {
+        "recipient": "BOOZ ALLEN HAMILTON INC",
+        "sampled_value_usd": 40117389.8
+      },
+      {
+        "recipient": "FOUR POINTS TECHNOLOGY, L.L.C.",
+        "sampled_value_usd": 38596365.39
+      },
+      {
+        "recipient": "ACCENTURE FEDERAL SERVICES LLC",
+        "sampled_value_usd": 36715247.22
+      },
+      {
+        "recipient": "BYTECUBED, LLC",
+        "sampled_value_usd": 34571375.28
+      },
+      {
+        "recipient": "ENLIGHTEN IT CONSULTING LLC",
+        "sampled_value_usd": 34179835.95
+      },
+      {
+        "recipient": "KONIAG IT SYSTEMS, LLC",
+        "sampled_value_usd": 29677394.98
+      },
+      {
+        "recipient": "INSIGNIA TECHNOLOGY SERVICES, LLC",
+        "sampled_value_usd": 22004098.64
+      }
+    ],
+    "themes": [
+      {
+        "theme": "artificial intelligence",
+        "sampled_value_usd": 961946774.27
+      },
+      {
+        "theme": "zero trust",
+        "sampled_value_usd": 243967506.54
+      },
+      {
+        "theme": "AI governance",
+        "sampled_value_usd": 12525945.46
+      },
+      {
+        "theme": "cloud security",
+        "sampled_value_usd": 9097109.22
+      },
+      {
+        "theme": "identity access management",
+        "sampled_value_usd": 8154135.69
+      },
+      {
+        "theme": "cybersecurity artificial intelligence",
+        "sampled_value_usd": 1538850.0
+      }
+    ],
+    "largest_awards": [
+      {
+        "award_id": "W911QX20C0023",
+        "recipient": "ECS FEDERAL, LLC",
+        "award_amount": 120575059.35,
+        "description": "RESEARCH AND DEVELOPMENT EFFORT TO DESIGN AND DEVELOP PROTOTYPES TO ARTIFICIAL INTELLIGENCE/MACHINE LEARNING ALGORITHMS.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2020-04-23",
+        "end_date": "2027-03-11",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "140D0421C0002",
+        "recipient": "TUKNIK GOVERNMENT SERVICES LLC",
+        "award_amount": 106725460.68,
+        "description": "INFORMATION TECHNOLOGY (IT), ARTIFICIAL INTELLIGENCE (AI), AND MACHINE LEARNING (ML) PROGRAMMATIC SUPPORT SERVICES FOR THE DEPARTMENT OF DEFENSE CHIEF INFORMATION OFFICER (DOD CIO) JOINT ARTIFICIAL INTELLIGENCE CENTER (JAIC)",
+        "awarding_agency": "Department of the Interior",
+        "awarding_subagency": "Departmental Offices",
+        "start_date": "2020-12-23",
+        "end_date": "2025-03-10",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "W911QX25C0002",
+        "recipient": "ECS FEDERAL, LLC",
+        "award_amount": 72819404.2,
+        "description": "CONTRACT TO RESEARCH, DEVELOP, MODIFY, DEPLOY, OPERATE, AND MAINTAIN ARTIFICIAL INTELLIGENCE/MACHINE LEARNING (AI/ML) ALGORITHMS AND MODELS.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2025-01-30",
+        "end_date": "2027-05-12",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "W911QX22C0029",
+        "recipient": "MORSECORP, INC",
+        "award_amount": 41434075.13,
+        "description": "ADVANCED TEST AND EVALUATION (T&E) FOR THE EXPONENTIAL PACE OF ARTIFICIAL INTELLIGENCE / MACHINE LEARNING (AI/ML) PROGRESS.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2022-08-26",
+        "end_date": "2026-09-30",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "47QFMA24F0029",
+        "recipient": "BOOZ ALLEN HAMILTON INC",
+        "award_amount": 40117389.8,
+        "description": "DMDC ZERO TRUST ENTERPRISE DATA SERVICES ZTEDS",
+        "awarding_agency": "General Services Administration",
+        "awarding_subagency": "Federal Acquisition Service",
+        "start_date": "2024-09-25",
+        "end_date": "2026-09-24",
+        "matched_queries": [
+          "zero trust"
+        ]
+      },
+      {
+        "award_id": "W519TC25F0241",
+        "recipient": "BYTECUBED, LLC",
+        "award_amount": 34571375.28,
+        "description": "12MONTH BASE PERIOD 12MONTH OP. EST ACCELERATING DATA AND ARTIFICIAL INTELLIGENCE(ADA)INCIDENT RESPONSE(IR)TEAMS SUPPORT DATA DRIVEN DECISION MAKING TO SCALE DATA, ANALYTICS, AND AI AT THE CHIEF DIGITAL AND ARTIFICIAL INTELLIGENCE (AI) OFFICE (CDAO)",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2025-06-03",
+        "end_date": "2027-06-02",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "W909MY26F0009",
+        "recipient": "ENLIGHTEN IT CONSULTING LLC",
+        "award_amount": 34179835.95,
+        "description": "CYBER ANALYTICS AND DETECTION (CAD) OMNIBUS PROCUREMENT FOR MAINTENANCE, DEVELOPMENT, AND ARTIFICIAL INTELLIGENCE/MACHINE LEARNING (AI/ML) INTEGRATION.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2026-03-01",
+        "end_date": "2027-02-28",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "1333BJ24C00280005",
+        "recipient": "ACCENTURE FEDERAL SERVICES LLC",
+        "award_amount": 28378495.75,
+        "description": "PATENT SEARCH ARTIFICIAL INTELLIGENCE MODELS AND LABOR. THIS ACTION IS AWARDED PURSUANT TO THE USPTO EFFICIENCY ACT.",
+        "awarding_agency": "Department of Commerce",
+        "awarding_subagency": "U.S. Patent and Trademark Office",
+        "start_date": "2024-07-01",
+        "end_date": "2027-03-31",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "HQ003425CE074",
+        "recipient": "KONIAG IT SYSTEMS, LLC",
+        "award_amount": 24617208.06,
+        "description": "SPECIALIZED SERVICES TO SUPPORT CYBERSECURITY AND THE ZERO TRUST PORTFOLIO MANAGEMENT OFFICE FOR THE DEPUTY CHIEF INFORMATION OFFICER.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Washington Headquarters Services",
+        "start_date": "2025-09-06",
+        "end_date": "2028-03-05",
+        "matched_queries": [
+          "zero trust"
+        ]
+      },
+      {
+        "award_id": "W56KGU25C0004",
+        "recipient": "CAMGIAN CORPORATION",
+        "award_amount": 21112575.0,
+        "description": "DEVELOPMENT OF ADVANCED DATA-DRIVEN COGNITIVE DECISION AIDS AND THE ASSOCIATED TOOLS/INFRASTRUCTURE TO DEMONSTRATE THESE AIDS. ARTIFICIAL INTELLIGENCE BASED SYSTEM FRAMEWORK AND ENABLING TOOLS TO SUPPORT THE IMPLEMENTATION OF MACHINE LEARNING (ML).",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2025-02-14",
+        "end_date": "2027-11-13",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "W911QX24C0009",
+        "recipient": "EXPEDITION TECHNOLOGY, LLC",
+        "award_amount": 17991359.64,
+        "description": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING-ENABLING TECHNOLOGIES FOR EXPEDITIONARY MANEUVER AND AIR/GROUND RECONNAISSANCE TITLED SPOONMAN UNDER BAA TOPIC ID: ARL-BAA-0037",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2024-04-05",
+        "end_date": "2029-04-04",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "1605TB24F00035",
+        "recipient": "FOUR POINTS TECHNOLOGY, L.L.C.",
+        "award_amount": 17514929.65,
+        "description": "SOFTWARE: THE PURPOSE OF THIS REQUIREMENT IS TO PROCURE/RENEW ZSCALER LICENSES IN SUPPORT OF OCIO'S TRANSITION TO ZERO TRUST ARCHITECTURE IN ACCORDANCE WITH EXECUTIVE ORDER 14028.  THE PERIOD OF PERFORMANCE IS FOR ONE TWELVE (12) MONTH BASE PERI",
+        "awarding_agency": "Department of Labor",
+        "awarding_subagency": "Office of the Assistant Secretary for Administration and Management",
+        "start_date": "2024-03-01",
+        "end_date": "2027-02-28",
+        "matched_queries": [
+          "zero trust"
+        ]
+      },
+      {
+        "award_id": "HQ003425CE092",
+        "recipient": "LEISNOI PROFESSIONAL SERVICES, LLC",
+        "award_amount": 17447231.69,
+        "description": "THIS IS A NON-PERSONAL SERVICES CONTRACT TO PROVIDE INFORMATION TECHNOLOGY, ARTIFICIAL INTELLIGENCE, AND MACHINE LEARNING PROGRAM SUPPORT SERVICES.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Washington Headquarters Services",
+        "start_date": "2025-09-11",
+        "end_date": "2026-06-10",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "W911QX25C0005",
+        "recipient": "METRON INCORPORATED",
+        "award_amount": 17110543.93,
+        "description": "BROAD AGENCY ANNOUNCEMENT CONTRACT FOR RESEARCH, DEVELOPMENT, TEST, AND EVALUATION OF ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING-ENABLING TECHNOLOGIES FOR EXPEDITIONARY MANEUVER AND AIR/GROUND RECONNAISSANCE.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2025-08-18",
+        "end_date": "2027-12-03",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "36C10B23N10250025",
+        "recipient": "INSIGNIA TECHNOLOGY SERVICES, LLC",
+        "award_amount": 16915375.38,
+        "description": "ZERO TRUST ARCHITECTURE ACCELERATION",
+        "awarding_agency": "Department of Veterans Affairs",
+        "awarding_subagency": "Department of Veterans Affairs",
+        "start_date": "2023-09-25",
+        "end_date": "2026-09-24",
+        "matched_queries": [
+          "zero trust"
+        ]
+      },
+      {
+        "award_id": "75FCMC23F0001",
+        "recipient": "INDEX ANALYTICS LLC",
+        "award_amount": 16567088.71,
+        "description": "ARTIFICIAL INTELLIGENCE THROUGH MACHINE LEARNED MODELING (AIMM)",
+        "awarding_agency": "Department of Health and Human Services",
+        "awarding_subagency": "Centers for Medicare and Medicaid Services",
+        "start_date": "2023-09-28",
+        "end_date": "2026-09-27",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "HR001124C0310",
+        "recipient": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+        "award_amount": 15915495.0,
+        "description": "ARTIFICIAL INTELLIGENCE REINFORCEMENTS (AIR)",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Defense Advanced Research Projects Agency",
+        "start_date": "2024-02-07",
+        "end_date": "2028-02-06",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "1333BJ26F00284002",
+        "recipient": "FOUR POINTS TECHNOLOGY, L.L.C.",
+        "award_amount": 13651931.0,
+        "description": "ARTIFICIAL INTELLIGENCE (AI) ASSISTANT TOOLS PATENT EXAMINATION MODERNIZATION (PATENT AI)",
+        "awarding_agency": "Department of Commerce",
+        "awarding_subagency": "U.S. Patent and Trademark Office",
+        "start_date": "2026-06-29",
+        "end_date": "2027-06-28",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "2032H520F00810",
+        "recipient": "ASR ANALYTICS, LLC",
+        "award_amount": 12874958.89,
+        "description": "EMERGING COMPLIANCE ISSUES: DEMAND FOR DATA AND ANALYTICAL SERVICES CONTINUES TO INCREASE ACROSS ALL IRS BUSINESS UNITS, INCLUDING REQUESTS FOR NEW DATA SOURCES THAT ARE NEEDED FOR ANALYTICS AND ARTIFICIAL INTELLIGENCE.",
+        "awarding_agency": "Department of the Treasury",
+        "awarding_subagency": "Internal Revenue Service",
+        "start_date": "2020-09-30",
+        "end_date": "2026-03-28",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "W911QX25F0024",
+        "recipient": "MORSECORP, INC",
+        "award_amount": 12865673.86,
+        "description": "COMMERCIAL SOLUTIONS OPENING FOR RESEARCH AND DEVELOPMENT FOR SYSTEM-WIDE TEST AND EVALUATION (T&E) AND APPLIED ARTIFICIAL INTELLIGENCE (AI) AND MACHINE LEARNING (ML), TASK ORDER #1.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2025-03-10",
+        "end_date": "2028-03-10",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "FA865023C7318",
+        "recipient": "CACI, INC. - FEDERAL",
+        "award_amount": 12809769.0,
+        "description": "FRAMEWORK FOR ARTIFICIAL INTELLIGENCE TRUSTWORTHINESS IN HUMAN-MACHINE DELEGATION (FAITH-MD)",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Air Force",
+        "start_date": "2023-04-13",
+        "end_date": "2026-12-14",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "FA703726F0033",
+        "recipient": "WORLD WIDE TECHNOLOGY LLC",
+        "award_amount": 11299302.44,
+        "description": "ARTIFICIAL INTELLIGENCE-ENABLED ENTERPRISE SECURITY OPERATIONS CENTER (AI-ESOC) SUPPORT, TASK ORDER 1.",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Air Force",
+        "start_date": "2026-05-18",
+        "end_date": "2027-05-17",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "FA239125CB010",
+        "recipient": "UNIVERSITY OF DAYTON",
+        "award_amount": 11267487.19,
+        "description": "HYBRID ARTIFICIAL INTELLIGENCE AND AUTONOMY RESEARCH AND DEVELOPMENT CONSIDERED OPERATIONALLY RELEVANT AND EXPLAINABLE (HAARDCORE)",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Air Force",
+        "start_date": "2025-08-25",
+        "end_date": "2028-02-24",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      },
+      {
+        "award_id": "692M1523F00077",
+        "recipient": "CYBER SECURITY SOLUTIONS LLC",
+        "award_amount": 11131588.5,
+        "description": "AIS GOVERNANCE SUPPORT SERVICES",
+        "awarding_agency": "Department of Transportation",
+        "awarding_subagency": "Federal Aviation Administration",
+        "start_date": "2023-04-27",
+        "end_date": "2027-04-30",
+        "matched_queries": [
+          "AI governance"
+        ]
+      },
+      {
+        "award_id": "W15QKN24C0004",
+        "recipient": "THE TRUSTEES OF THE STEVENS INSTITUTE OF TECHNOLOGY",
+        "award_amount": 10484496.0,
+        "description": "QUANTUM & ARTIFICIAL INTELLIGENCE TECHNOLOGIES FOR NEXT GENERATION ARMAMENT SYSTEMS",
+        "awarding_agency": "Department of Defense",
+        "awarding_subagency": "Department of the Army",
+        "start_date": "2023-10-23",
+        "end_date": "2026-12-22",
+        "matched_queries": [
+          "artificial intelligence"
+        ]
+      }
+    ],
+    "public_market_context": [
+      {
+        "source": "OWASP GenAI Security Project",
+        "fact": "OWASP maintains a 2026 Top 10 specifically for security risks in autonomous and agentic AI applications."
+      },
+      {
+        "source": "FinOps Foundation State of FinOps 2026",
+        "fact": "98% of respondents report managing AI spend and FinOps for AI is a top forward-looking priority."
+      }
+    ]
+  },
+  "bedrock_model": "amazon.nova-lite-v1:0",
+  "economic_conclusion": {
+    "total_problem": "The economic failure of fragmented cybersecurity, cloud cost, AI governance, authorization, operational reliability, and auditability in AI/software systems leads to significant financial losses and operational inefficiencies.",
+    "economic_failure": "The inability to unify these critical aspects results in increased risk of breaches, higher operational costs, non-compliance with regulations, and reduced trust in AI systems.",
+    "live_dollar_signal": {
+      "sampled_award_value_usd": 1236506211.08,
+      "strongest_theme": "artificial intelligence",
+      "top_buyer_signals": [
+        "Department of Defense",
+        "Department of the Interior",
+        "Department of the Treasury"
+      ]
+    },
+    "buyer": "Federal Agencies",
+    "supreme_solution": "SCQOS provides a unified platform that integrates cybersecurity, cloud cost management, AI governance, authorization, operational reliability, and auditability into a single, cohesive system.",
+    "why_point_solutions_fail": "Existing point solutions address these issues in isolation, leading to gaps in coverage, increased complexity, and higher costs. They fail to provide a holistic approach that ensures seamless integration and continuous compliance.",
+    "pilot": {
+      "name": "SCQOS Unified AI Governance and Security Pilot",
+      "customer_workflow": "Federal agencies will implement SCQOS to manage their AI systems, ensuring that all aspects from authorization to auditability are covered under a single framework.",
+      "what_scqos_governs": "Authorization, operational reliability, and auditability of AI systems from decision time through execution and consequence.",
+      "success_condition": "Federal agencies achieve a 30% reduction in security incidents and a 20% reduction in operational costs within the first year of implementation.",
+      "proposed_price_range_usd": [
+        500000,
+        1500000
+      ]
+    },
+    "immediate_sales_statement": "SCQOS offers a comprehensive solution to unify and secure AI systems for federal agencies, ensuring compliance, reducing costs, and enhancing operational efficiency.",
+    "decision": "PERMIT"
+  },
+  "proof": {
+    "live_public_money_present": true,
+    "live_buyer_signal_present": true,
+    "single_problem_present": true,
+    "pilot_success_condition_present": true,
+    "scqos_nine_gate_coherence": true
+  },
+  "final_decision": "PERMIT",
+  "receipt_sha256": "fa48d88914dbddef26d871f3fe6ab86156a8b8907b04cb8b90142fe6a33b1242"
+}

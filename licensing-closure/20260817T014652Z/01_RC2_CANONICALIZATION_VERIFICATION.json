@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "mentions_collision": true,
+      "mentions_nfc": true,
+      "mentions_nfd": true,
+      "mentions_pass": false,
+      "mentions_pass_with_boundary": false,
+      "mentions_rc2": false,
+      "mentions_scqos_c14n": true,
+      "path": "spec/canonicalization/SCQOS-CANONICALIZATION-SPEC-v1.0.md",
+      "sha256": "881998ab51b631876965ca94f48499e0d6c2a24e187505270414121d065f7833"
+    },
+    {
+      "mentions_collision": true,
+      "mentions_nfc": true,
+      "mentions_nfd": true,
+      "mentions_pass": true,
+      "mentions_pass_with_boundary": false,
+      "mentions_rc2": false,
+      "mentions_scqos_c14n": true,
+      "path": "spec/canonicalization/vectors/CHALLENGE-PROTOCOL.md",
+      "sha256": "47261bf410478c8666e8dab99d892436a05ff9947bc0481834680f243d3f1f89"
+    },
+    {
+      "mentions_collision": false,
+      "mentions_nfc": false,
+      "mentions_nfd": false,
+      "mentions_pass": false,
+      "mentions_pass_with_boundary": false,
+      "mentions_rc2": false,
+      "mentions_scqos_c14n": false,
+      "path": "spec/canonicalization/vectors/README.md",
+      "sha256": "906e10f207a0198772851838f01866ae3cb32f7374d32fd0dcbea19e8d821d0e"
+    },
+    {
+      "mentions_collision": true,
+      "mentions_nfc": true,
+      "mentions_nfd": true,
+      "mentions_pass": false,
+      "mentions_pass_with_boundary": false,
+      "mentions_rc2": false,
+      "mentions_scqos_c14n": true,
+      "path": "spec/canonicalization/vectors/adversarial-vectors.json",
+      "sha256": "c6ae5e65bbc21002a6ec18662cad81921c8f0646db33a1f8a80b901aa1775825"
+    },
+    {
+      "mentions_collision": true,
+      "mentions_nfc": true,
+      "mentions_nfd": false,
+      "mentions_pass": false,
+      "mentions_pass_with_boundary": false,
+      "mentions_rc2": false,
+      "mentions_scqos_c14n": true,
+      "path": "spec/canonicalization/vectors/challenge-matrix.json",
+      "sha256": "e87c5c2d102df466dd34a7746058629a801681e533d717532fff4b35398f7231"
+    }
+  ],
+  "head_commit": "6c156be369b344be99c721c44eeba863eac02414",
+  "live_reference_test": {
+    "attempted": true,
+    "passed": true,
+    "stderr": "",
+    "stdout": "AUTHORITY: SCQOS-C14N-JCS-NFC-1\nNFC_STRING_EQUIVALENCE: PASS\nNFC_STRING_SHA256: 69e46f3f0688000ab7eeb9e40e6a516a254268cd644a24f4f69cf7ad063cf479\nNFC_PROPERTY_EQUIVALENCE: PASS\nNFC_COLLISION_REJECTION: PASS\nAUTHORITY_FAIL_CLOSED: PASS\nSCQOS-C14N-JCS-NFC-1: ADMISSIBLE\n"
+  }
+}

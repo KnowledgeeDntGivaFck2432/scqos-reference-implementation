@@ -1,0 +1,9 @@
+{
+  "branch": "main",
+  "generated_at_utc": "20260817T014652Z",
+  "git_remote": "origin\tgit@github.com:KnowledgeeKZA3224/scqos-reference-implementation.git (fetch)\norigin\tgit@github.com:KnowledgeeKZA3224/scqos-reference-implementation.git (push)\n",
+  "head_commit": "6c156be369b344be99c721c44eeba863eac02414",
+  "repository_root": "/home/knowledgee-kza/scqos-reference-implementation",
+  "tags_at_head": [],
+  "working_tree_status": " M alignment_gate.audit\n M boundary_gate.audit\n M causality_gate.audit\n M coherence_gate.audit\n M consciousness_gate.audit\n M continuity_gate.audit\n M genesis_gate.audit\n M reference_gate.audit\n?? __pycache__/\n?? evidence/quantum-governance-frontier10/\n?? evidence/quantum-qec-governance/20260816T034800Z/\n?? sc-evidence/\n?? sc-physical-quantum-evidence.zip\n?? sc-physical-quantum-evidence/\n?? sc_absolute_totality.py\n?? sc_economic_action_settlement.py\n?? sc_final_economic_discovery.py\n?? sc_final_workload.py\n?? sc_live_totality.py\n?? sc_total_workload.py\n?? sc_totality_cross_substrate.py\n?? sc_totality_final.py\n?? sc_totality_live.py\n?? sc_totality_universe.py\n?? sc_value_settlement.py\n?? scqos_enforce.sh\n?? scqos_supreme_stack.py.pre-rc2-1786930196.bak\n?? \"sudo systemctl reboot -i\"\n?? supreme-sandbox-billing-locked.json\n?? \"ystemctl list-unit-files --type=service --no-legend | awk '{print $1}' | grep -i scqos); do\"\n?? \"ystemctl list-units --all --type=service | grep -i scqos\"\n"
+}

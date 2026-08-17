@@ -1,0 +1,59 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowFullReadExploration",
+      "Effect": "Allow",
+      "Action": [
+        "iam:Get*",
+        "iam:List*",
+        "iam:Generate*",
+        "ec2:Describe*",
+        "s3:Get*",
+        "s3:List*",
+        "lambda:Get*",
+        "lambda:List*",
+        "apigateway:GET",
+        "eks:Describe*",
+        "eks:List*",
+        "cloudwatch:Get*",
+        "cloudwatch:List*",
+        "cloudwatch:Describe*",
+        "logs:Get*",
+        "logs:List*",
+        "logs:Describe*",
+        "braket:Get*",
+        "braket:Search*",
+        "cognito-idp:Describe*",
+        "cognito-idp:List*",
+        "sts:GetCallerIdentity"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DenyBillingImpactActions",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:RunInstances",
+        "ec2:StartInstances",
+        "ec2:Create*",
+        "ec2:Modify*",
+        "ec2:Delete*",
+        "rds:Create*",
+        "eks:Create*",
+        "lambda:Create*",
+        "lambda:Update*",
+        "sagemaker:Create*",
+        "braket:CreateQuantumTask",
+        "bedrock:*",
+        "aws-marketplace:*",
+        "budgets:*",
+        "ce:*",
+        "cur:*",
+        "account:*",
+        "organizations:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

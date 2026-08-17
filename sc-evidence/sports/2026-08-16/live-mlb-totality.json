@@ -1,0 +1,562 @@
+{
+  "generated": "2026-08-16T13:11:11.817278+00:00",
+  "date": "2026-08-16",
+  "events": [
+    {
+      "gamePk": 822940,
+      "event": "Baltimore Orioles @ Tampa Bay Rays",
+      "start": "2026-08-16T16:15:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 669432,
+        "fullName": "Trevor Rogers",
+        "link": "/api/v1/people/669432"
+      },
+      "home_pitcher": {
+        "id": 642547,
+        "fullName": "Freddy Peralta",
+        "link": "/api/v1/people/642547"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:09.943070+00:00",
+      "sha256": "0ea289ddad94f1cc3eb383990f7f538e7d76cc744d81b91a195f3175d21d26e4"
+    },
+    {
+      "gamePk": 823344,
+      "event": "Boston Red Sox @ Pittsburgh Pirates",
+      "start": "2026-08-16T17:35:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 663776,
+        "fullName": "Patrick Sandoval",
+        "link": "/api/v1/people/663776"
+      },
+      "home_pitcher": {
+        "id": 669199,
+        "fullName": "Lake Bachar",
+        "link": "/api/v1/people/669199"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.046656+00:00",
+      "sha256": "4dc1d75486119a6ed9a822856ce5f46f7b39ca0b582ab3516051facd3807de1b"
+    },
+    {
+      "gamePk": 824880,
+      "event": "Arizona Diamondbacks @ Atlanta Braves",
+      "start": "2026-08-16T17:35:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 647336,
+        "fullName": "Michael Soroka",
+        "link": "/api/v1/people/647336"
+      },
+      "home_pitcher": {
+        "id": 693821,
+        "fullName": "Bryce Elder",
+        "link": "/api/v1/people/693821"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.161438+00:00",
+      "sha256": "55ecbfc89f29d858dea11426d6cdb00a806471611d6ac1c593904d1eb883f7ef"
+    },
+    {
+      "gamePk": 822774,
+      "event": "New York Yankees @ Toronto Blue Jays",
+      "start": "2026-08-16T17:37:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 677960,
+        "fullName": "Ryan Weathers",
+        "link": "/api/v1/people/677960"
+      },
+      "home_pitcher": {
+        "id": 656302,
+        "fullName": "Dylan Cease",
+        "link": "/api/v1/people/656302"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.244430+00:00",
+      "sha256": "140e25e8cc9d50ddd1d399054ca81488fbdb437c2eb44b7a919fad931c480aad"
+    },
+    {
+      "gamePk": 823590,
+      "event": "Washington Nationals @ New York Mets",
+      "start": "2026-08-16T17:40:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 663623,
+        "fullName": "Jake Irvin",
+        "link": "/api/v1/people/663623"
+      },
+      "home_pitcher": {
+        "id": 681035,
+        "fullName": "Christian Scott",
+        "link": "/api/v1/people/681035"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.325894+00:00",
+      "sha256": "a4ea20ee4fd6e3927d5c7fe7fd8f385f640e6018d7b07c15fafa93a125555026"
+    },
+    {
+      "gamePk": 824397,
+      "event": "San Diego Padres @ Cleveland Guardians",
+      "start": "2026-08-16T17:40:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 663554,
+        "fullName": "Casey Mize",
+        "link": "/api/v1/people/663554"
+      },
+      "home_pitcher": {
+        "id": 676440,
+        "fullName": "Tanner Bibee",
+        "link": "/api/v1/people/676440"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.462320+00:00",
+      "sha256": "fa0e7464c7e41aa0a9a5f39d636bf24235d575599577cd4a01af0bb613711b12"
+    },
+    {
+      "gamePk": 824236,
+      "event": "Chicago White Sox @ Detroit Tigers",
+      "start": "2026-08-16T17:40:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 680732,
+        "fullName": "Sean Burke",
+        "link": "/api/v1/people/680732"
+      },
+      "home_pitcher": {
+        "id": 623454,
+        "fullName": "Drew Anderson",
+        "link": "/api/v1/people/623454"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.601818+00:00",
+      "sha256": "7c8fc5a6abcdc7002cf9f0f8fb6bd2e6197d67898c82318fb2fd731c6b88d08c"
+    },
+    {
+      "gamePk": 824477,
+      "event": "Miami Marlins @ Cincinnati Reds",
+      "start": "2026-08-16T17:40:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 691587,
+        "fullName": "Eury P\u00e9rez",
+        "link": "/api/v1/people/691587"
+      },
+      "home_pitcher": {
+        "id": 666157,
+        "fullName": "Nick Lodolo",
+        "link": "/api/v1/people/666157"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.746402+00:00",
+      "sha256": "40e2b8ac2f9602c35c86207e701ce6757bd585982f74d42f3a311b189c64e53f"
+    },
+    {
+      "gamePk": 823670,
+      "event": "Philadelphia Phillies @ Minnesota Twins",
+      "start": "2026-08-16T18:10:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 691725,
+        "fullName": "Andrew Painter",
+        "link": "/api/v1/people/691725"
+      },
+      "home_pitcher": {
+        "id": 665152,
+        "fullName": "Dean Kremer",
+        "link": "/api/v1/people/665152"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.879954+00:00",
+      "sha256": "c30277053957c0e450a2dafa8d6f1dc4f04ae7bec2f35eeb1c7b58fb1bb9b6db"
+    },
+    {
+      "gamePk": 824642,
+      "event": "St. Louis Cardinals @ Chicago Cubs",
+      "start": "2026-08-16T19:15:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 690928,
+        "fullName": "Hunter Dobbins",
+        "link": "/api/v1/people/690928"
+      },
+      "home_pitcher": {
+        "id": 665795,
+        "fullName": "Edward Cabrera",
+        "link": "/api/v1/people/665795"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:10.964652+00:00",
+      "sha256": "905f3fd487d2a113beadb31ce3902afbc66e833762719f5c1e0b82ccc2f9e25e"
+    },
+    {
+      "gamePk": 823182,
+      "event": "Colorado Rockies @ San Francisco Giants",
+      "start": "2026-08-16T20:05:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 687312,
+        "fullName": "Gabriel Hughes",
+        "link": "/api/v1/people/687312"
+      },
+      "home_pitcher": {
+        "id": 694918,
+        "fullName": "Blade Tidwell",
+        "link": "/api/v1/people/694918"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:11.099287+00:00",
+      "sha256": "9513d7486ed348d4b575af0f9a14bf58d1b7c6883f54c331a984a6ac9de055ef"
+    },
+    {
+      "gamePk": 824965,
+      "event": "Texas Rangers @ Athletics",
+      "start": "2026-08-16T20:05:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 674003,
+        "fullName": "Cody Bradford",
+        "link": "/api/v1/people/674003"
+      },
+      "home_pitcher": {
+        "id": 682052,
+        "fullName": "Jacob Lopez",
+        "link": "/api/v1/people/682052"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:11.245172+00:00",
+      "sha256": "cbbe7b743d32fa7ab204cec33d8867db3c99ed350f67c3b7be76bb5304fa76ef"
+    },
+    {
+      "gamePk": 823991,
+      "event": "Kansas City Royals @ Los Angeles Angels",
+      "start": "2026-08-16T20:07:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 702070,
+        "fullName": "Noah Cameron",
+        "link": "/api/v1/people/702070"
+      },
+      "home_pitcher": {
+        "id": 696270,
+        "fullName": "Ryan Johnson",
+        "link": "/api/v1/people/696270"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:11.513479+00:00",
+      "sha256": "b2dcdd0c4ac45c7f1f10261ddf7a1f2b04b2fbc05b8c08515a5bad6ad78da140"
+    },
+    {
+      "gamePk": 823912,
+      "event": "Milwaukee Brewers @ Los Angeles Dodgers",
+      "start": "2026-08-16T20:10:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 701656,
+        "fullName": "Logan Henderson",
+        "link": "/api/v1/people/701656"
+      },
+      "home_pitcher": {
+        "id": 669373,
+        "fullName": "Tarik Skubal",
+        "link": "/api/v1/people/669373"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:11.662958+00:00",
+      "sha256": "1978ba56c071f207474c4e128e11a2f73a650c8dcabfcddd8c49740d100693ad"
+    },
+    {
+      "gamePk": 824156,
+      "event": "Seattle Mariners @ Houston Astros",
+      "start": "2026-08-16T23:20:00Z",
+      "status": "Scheduled",
+      "away_pitcher": {
+        "id": 693433,
+        "fullName": "Bryan Woo",
+        "link": "/api/v1/people/693433"
+      },
+      "home_pitcher": {
+        "id": 686613,
+        "fullName": "Hunter Brown",
+        "link": "/api/v1/people/686613"
+      },
+      "away_lineup": [],
+      "home_lineup": [],
+      "market": [],
+      "gates": {
+        "event_identity": true,
+        "official_start_time": true,
+        "away_pitcher": true,
+        "home_pitcher": true,
+        "away_lineup_complete": false,
+        "home_lineup_complete": false,
+        "multi_book_market": false
+      },
+      "failed_gates": [
+        "away_lineup_complete",
+        "home_lineup_complete",
+        "multi_book_market"
+      ],
+      "totality_product": 0,
+      "decision": "HOLD",
+      "timestamp": "2026-08-16T13:11:11.816346+00:00",
+      "sha256": "fc03feb3fa3fa761890ef1806bceeae4ebb8d156de95f1b2f15667caaf1b2a04"
+    }
+  ],
+  "receipt_sha256": "bcabe6da74ef7ec974d99d4f2483c50744c841dfa76dc4b632af8cf3531cb8c2"
+}

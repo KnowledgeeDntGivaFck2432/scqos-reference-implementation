@@ -1,0 +1,120 @@
+{
+  "schema": "sc-total-workload-v1",
+  "state_sha256": "5127daadda56d109f3d9c0ef210ef603d1658a2fea3154ce6fecac548f0b96a3",
+  "state": {
+    "timestamp": "2026-08-15T16:38:27.788469+00:00",
+    "aws_account": "327453383912",
+    "region": "us-east-1",
+    "lambda_functions": [
+      {
+        "name": "sc-gatekeeper",
+        "runtime": "python3.14",
+        "modified": "2026-05-15T13:32:38.000+0000"
+      },
+      {
+        "name": "scqos-phase4-9-executor",
+        "runtime": "python3.14",
+        "modified": "2026-07-28T11:18:32.264+0000"
+      },
+      {
+        "name": "scqos-public-proof-abc123-validator",
+        "runtime": "python3.11",
+        "modified": "2026-07-28T22:08:16.623+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-terra-inference-validator",
+        "runtime": "python3.14",
+        "modified": "2026-08-03T07:11:03.235+0000"
+      },
+      {
+        "name": "scqos-ipfs-publisher",
+        "runtime": "python3.14",
+        "modified": "2026-07-28T12:52:13.000+0000"
+      },
+      {
+        "name": "scqos-public-proof-202607282156-validator",
+        "runtime": "python3.11",
+        "modified": "2026-07-28T21:58:20.190+0000"
+      },
+      {
+        "name": "scqos-phase4-9-validator",
+        "runtime": "python3.14",
+        "modified": "2026-07-28T11:19:37.598+0000"
+      },
+      {
+        "name": "scqos-public-proof-abc123-executor",
+        "runtime": "python3.11",
+        "modified": "2026-07-28T22:07:29.770+0000"
+      },
+      {
+        "name": "scqos-public-proof-abc123-publisher",
+        "runtime": "python3.11",
+        "modified": "2026-07-29T15:22:08.000+0000"
+      },
+      {
+        "name": "grassroots-ai-service-service",
+        "runtime": "python3.14",
+        "modified": "2026-08-13T21:38:03.000+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-grok-inference-validator",
+        "runtime": "python3.14",
+        "modified": "2026-08-14T12:17:29.000+0000"
+      },
+      {
+        "name": "grassroots-ai-terra-service-service",
+        "runtime": "python3.14",
+        "modified": "2026-08-03T11:29:46.000+0000"
+      },
+      {
+        "name": "scqos-public-proof-202607282156-publisher",
+        "runtime": "python3.11",
+        "modified": "2026-07-28T21:58:20.093+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-inference-validator",
+        "runtime": "python3.14",
+        "modified": "2026-08-13T11:04:23.000+0000"
+      },
+      {
+        "name": "scqos-router",
+        "runtime": "python3.14",
+        "modified": "2026-06-05T14:41:46.000+0000"
+      },
+      {
+        "name": "grassroots-ai-grok-service-service",
+        "runtime": "python3.14",
+        "modified": "2026-08-14T12:40:46.000+0000"
+      },
+      {
+        "name": "scqos-public-proof-202607282156-executor",
+        "runtime": "python3.11",
+        "modified": "2026-07-28T21:57:40.581+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-release-validator",
+        "runtime": "python3.14",
+        "modified": "2026-08-13T11:06:21.000+0000"
+      },
+      {
+        "name": "sc-auth",
+        "runtime": "python3.11",
+        "modified": "2026-05-19T01:58:37.000+0000"
+      }
+    ],
+    "public_evidence": {
+      "source": "https://api.github.com/repos/qiskit/qiskit",
+      "repository": "Qiskit/qiskit",
+      "stars": 7708,
+      "forks": 3012,
+      "updated_at": "2026-08-15T10:22:14Z"
+    }
+  },
+  "analysis": {
+    "decision": "HOLD",
+    "raw_model_output": "```json\n{\n  \"problem\": \"The AWS Lambda function 'sc-auth' was last modified on 2026-05-19, which is significantly older compared to other functions that were modified in July and August 2026.\",\n  \"best_action\": \"Review and update the'sc-auth' Lambda function to ensure it is up-to-date with the latest security practices and improvements.\",\n  \"why\": \"Outdated functions can pose security risks and may not be optimized for performance. Ensuring all functions are up-to-date helps maintain the integrity and efficiency of the system.\",\n  \"evidence\": [\n    \"The 'sc-auth' Lambda function was last modified on 2026-05-19, which is older compared to other functions modified in July and August 2026.\"\n  ],\n  \"missing_evidence\": [\n    \"Specific details about the changes or updates needed for the'sc-auth' function.\"\n  ],\n  \"decision\": \"HOLD\"\n}\n```"
+  },
+  "governance_decision": "HOLD",
+  "external_change_executed": false,
+  "receipt_sha256": "d4f04688b0fc23fb95231045830f8738180844f0f52696c770413b958f2a69f4"
+}

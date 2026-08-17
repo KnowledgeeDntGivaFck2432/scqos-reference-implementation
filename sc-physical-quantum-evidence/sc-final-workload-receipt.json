@@ -1,0 +1,27 @@
+{
+  "schema": "sc-governed-workload-v1",
+  "timestamp": "2026-08-15T16:42:34.728352+00:00",
+  "state_sha256": "66bc31465989f8c48923398f8cb18ee1a5f32c5bb82e931026a241e71746acdb",
+  "model": "amazon.nova-micro-v1:0",
+  "analysis": {
+    "problem": "All functions are currently active and have reported successful last update statuses.",
+    "evidence": [
+      "All listed functions are in 'Active' state.",
+      "All functions have reported 'Successful' last update statuses."
+    ],
+    "missing_evidence": [],
+    "decision": "HOLD",
+    "proposed_action": "No action required",
+    "reason": "No issues detected in the current operational state of the functions."
+  },
+  "quantum_challenge": {
+    "executed": true,
+    "state_hash_bit": 1,
+    "counts": {
+      "01": 139,
+      "10": 117
+    }
+  },
+  "external_change_executed": false,
+  "receipt_sha256": "5d3a14842841f76af4a26bde1282a50404fc51c221f1a0ad481732abc0645f14"
+}

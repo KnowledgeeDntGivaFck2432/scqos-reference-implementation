@@ -1,0 +1,23 @@
+{
+  "schema": "sc-independent-consequence-proof-v1",
+  "observed_at": "2026-08-15T18:40:05.160837+00:00",
+  "transition": {
+    "before": "CREATE_FAILED",
+    "after": "CREATE_COMPLETE"
+  },
+  "cloudformation": {
+    "stack": "Infra-ECS-Cluster-scqos-docker-cluster-588ae167",
+    "status": "CREATE_COMPLETE",
+    "failed_resources": 0
+  },
+  "ecs": {
+    "cluster_arn": "arn:aws:ecs:us-east-1:327453383912:cluster/scqos-docker-cluster",
+    "cluster_name": "scqos-docker-cluster",
+    "status": "ACTIVE",
+    "registered_container_instances": 0,
+    "running_tasks": 0,
+    "pending_tasks": 0,
+    "active_services": 0
+  },
+  "proof_sha256": "5bad84b2dfa7c9972329fd50c7b913a565a589a923aae7c316c9986626c46af7"
+}

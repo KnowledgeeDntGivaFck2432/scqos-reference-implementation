@@ -1,0 +1,20 @@
+{
+  "acceptance_harness_id": "SCQOS-PILOT-ACCEPTANCE-V1",
+  "artifact_sha256": {
+    "00_SOURCE_IDENTITY.json": "c86d0ce704aec9e11e76e01f9ff14504f3a5a4002d3bea199d88cba34fbd1a6a",
+    "01_RC2_CANONICALIZATION_VERIFICATION.json": "9e74eddcfbd7d93018f1024969f34f8c2f516605071357f32950c94caba9a462",
+    "02_COMMERCIAL_OBJECT_MANIFEST.json": "26bcaf1bc117ca3c7527bf5257c4dfe1c117aa5d5cebdd061953c99c2b58d9ce",
+    "03_IP_CONTRIBUTOR_CHAIN.json": "2ca44a0aac83a84929e56651b9a0147a53679ca33bf1f942fc010b942a8423c1",
+    "04_PUBLIC_VS_COMMERCIAL_BOUNDARY.md": "cd3fed28793d17568ca695e39db5ce156f4749b30d7a9c692e0f87a6154f95fa",
+    "05_CUSTOMER_ACCEPTANCE_HARNESS.json": "1a77ebb154d1ee0d9f22451bcf7ab087ec99ad230c45119f1f7c484bcd86cdf2",
+    "05_CUSTOMER_ACCEPTANCE_OUTPUT.txt": "72f1305aa846310534758ac743d64770d7b28d4be19a880d5c4879637e55ec9b"
+  },
+  "branch": "main",
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "canonicalization_test_passed": true,
+  "commercial_object_id": "SCQOS-GOVERNED-AGENT-PILOT-V1",
+  "generated_at_utc": "20260817T014652Z",
+  "manifest_id": "SCQOS-PILOT-EVIDENCE-MANIFEST-V1",
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414",
+  "tags": []
+}

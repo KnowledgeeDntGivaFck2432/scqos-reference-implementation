@@ -1,0 +1,333 @@
+{
+  "live_state": {
+    "schema": "sc-totality-continuity-v1",
+    "observed_at": "2026-08-15T18:43:28.313732+00:00",
+    "identity": "arn:aws:iam::327453383912:root",
+    "region": "us-east-1",
+    "local": {
+      "repo": "/home/knowledgee-kza/scqos-reference-implementation",
+      "git_branch": "main",
+      "git_head": "412eefa19ad4636e8de4004a43e90694fa85314d",
+      "git_dirty": true,
+      "python": "Python 3.14.4"
+    },
+    "accessible_surfaces": [
+      "apigateway",
+      "apigateway_v2",
+      "bedrock_models",
+      "braket",
+      "cloudformation",
+      "cloudwatch_alarms",
+      "dynamodb",
+      "ec2",
+      "ecr",
+      "ecs",
+      "eks",
+      "eventbridge",
+      "iam_roles",
+      "iam_users",
+      "kms",
+      "lambda",
+      "log_groups",
+      "s3",
+      "secretsmanager",
+      "security_groups",
+      "sns",
+      "sqs",
+      "ssm_parameters",
+      "stepfunctions",
+      "vpc"
+    ],
+    "observation_errors": {},
+    "resource_counts": {
+      "lambda": 19,
+      "s3": 17,
+      "ec2": 0,
+      "vpc": 1,
+      "security_groups": 6,
+      "iam_roles": 35,
+      "iam_users": 6,
+      "cloudformation": 10,
+      "cloudwatch_alarms": 0,
+      "log_groups": 23,
+      "dynamodb": 10,
+      "sqs": 6,
+      "sns": 0,
+      "eventbridge": 1,
+      "stepfunctions": 0,
+      "ecs": 2,
+      "eks": 0,
+      "ecr": 2,
+      "apigateway": 0,
+      "apigateway_v2": 5,
+      "secretsmanager": 10,
+      "ssm_parameters": 0,
+      "kms": 17,
+      "bedrock_models": 122,
+      "braket": 10
+    },
+    "lambda_state": [
+      {
+        "name": "sc-gatekeeper",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 128,
+        "timeout": 3,
+        "modified": "2026-05-15T13:32:38.000+0000"
+      },
+      {
+        "name": "scqos-phase4-9-executor",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 128,
+        "timeout": 30,
+        "modified": "2026-07-28T11:18:32.264+0000"
+      },
+      {
+        "name": "scqos-public-proof-abc123-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-07-28T22:08:16.623+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-terra-inference-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-08-03T07:11:03.235+0000"
+      },
+      {
+        "name": "scqos-ipfs-publisher",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 128,
+        "timeout": 30,
+        "modified": "2026-07-28T12:52:13.000+0000"
+      },
+      {
+        "name": "scqos-public-proof-202607282156-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-07-28T21:58:20.190+0000"
+      },
+      {
+        "name": "scqos-phase4-9-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 128,
+        "timeout": 30,
+        "modified": "2026-07-28T11:19:37.598+0000"
+      },
+      {
+        "name": "scqos-public-proof-abc123-executor",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-07-28T22:07:29.770+0000"
+      },
+      {
+        "name": "scqos-public-proof-abc123-publisher",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-07-29T15:22:08.000+0000"
+      },
+      {
+        "name": "grassroots-ai-service-service",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 512,
+        "timeout": 120,
+        "modified": "2026-08-13T21:38:03.000+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-grok-inference-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-08-14T12:17:29.000+0000"
+      },
+      {
+        "name": "grassroots-ai-terra-service-service",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 512,
+        "timeout": 120,
+        "modified": "2026-08-03T11:29:46.000+0000"
+      },
+      {
+        "name": "scqos-public-proof-202607282156-publisher",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-07-28T21:58:20.093+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-inference-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-08-13T11:04:23.000+0000"
+      },
+      {
+        "name": "scqos-router",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 128,
+        "timeout": 30,
+        "modified": "2026-06-05T14:41:46.000+0000"
+      },
+      {
+        "name": "grassroots-ai-grok-service-service",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 512,
+        "timeout": 120,
+        "modified": "2026-08-14T12:40:46.000+0000"
+      },
+      {
+        "name": "scqos-public-proof-202607282156-executor",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-07-28T21:57:40.581+0000"
+      },
+      {
+        "name": "grassroots-ai-scqos-release-validator",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.14",
+        "memory": 256,
+        "timeout": 30,
+        "modified": "2026-08-15T17:34:04.000+0000"
+      },
+      {
+        "name": "sc-auth",
+        "state": "Active",
+        "last_update_status": "Successful",
+        "runtime": "python3.11",
+        "memory": 512,
+        "timeout": 30,
+        "modified": "2026-05-19T01:58:37.000+0000"
+      }
+    ],
+    "stack_state": [
+      {
+        "name": "Infra-ECS-Cluster-scqos-docker-cluster-588ae167",
+        "status": "CREATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-grok-service",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-scqos-grok-inference",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-terra-service",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-scqos-terra-inference",
+        "status": "CREATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-service",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-scqos-release",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "grassroots-ai-scqos-inference",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "scqos-public-proof-abc123",
+        "status": "UPDATE_COMPLETE",
+        "reason": null
+      },
+      {
+        "name": "scqos-public-proof-202607282156",
+        "status": "CREATE_COMPLETE",
+        "reason": null
+      }
+    ],
+    "alarm_state": [],
+    "ecs_state": [
+      {
+        "name": "scqos-docker-cluster",
+        "arn": "arn:aws:ecs:us-east-1:327453383912:cluster/scqos-docker-cluster",
+        "status": "ACTIVE",
+        "running_tasks": 0,
+        "pending_tasks": 0,
+        "active_services": 0,
+        "registered_instances": 0
+      },
+      {
+        "name": "grassrootsai-anabelle",
+        "arn": "arn:aws:ecs:us-east-1:327453383912:cluster/grassrootsai-anabelle",
+        "status": "ACTIVE",
+        "running_tasks": 1,
+        "pending_tasks": 0,
+        "active_services": 1,
+        "registered_instances": 0
+      }
+    ],
+    "continuity_delta": {
+      "ecs": {
+        "before": 1,
+        "after": 2
+      }
+    },
+    "previous_repair": {
+      "historical_state": "CREATE_FAILED",
+      "current_stack_state": "CREATE_COMPLETE",
+      "ecs_state": "ACTIVE",
+      "verified": true
+    },
+    "findings": [],
+    "strongest_directly_evidenced_discontinuity": null
+  },
+  "state_sha256": "df4f765c42e89fb83f40078652abffca0d8cc077149e4dba36cedb50def1ed09",
+  "previous_state_sha256": "3bcb10d25902e944975c16d7e21f89fa64b62e502228fc644ce5097ee3124850",
+  "receipt_sha256": "9f90a5226e3b122644ccd3167b08c07ee9f081cc5ee786c35f9ec82248462ce8"
+}

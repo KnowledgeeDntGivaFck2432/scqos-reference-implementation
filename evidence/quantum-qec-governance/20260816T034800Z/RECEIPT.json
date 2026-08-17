@@ -1,0 +1,8 @@
+{
+  "claim": "governed single-error repetition-code correction on real QPU",
+  "error": "AccountNotFoundError(\"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\")",
+  "schema": "scqos.quantum.qec.governance.v1",
+  "status": "HOLD",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/scqos_qec.py\", line 26, in <module>\n    service=QiskitRuntimeService()\n  File \"/home/knowledgee-kza/.scqos-env/lib/python3.14/site-packages/qiskit_ibm_runtime/qiskit_runtime_service.py\", line 206, in __init__\n    self._account = self._discover_account(\n                    ~~~~~~~~~~~~~~~~~~~~~~^\n        token=token,\n        ^^^^^^^^^^^^\n    ...<6 lines>...\n        verify=verify,\n        ^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/home/knowledgee-kza/.scqos-env/lib/python3.14/site-packages/qiskit_ibm_runtime/qiskit_runtime_service.py\", line 438, in _discover_account\n    account = AccountManager.get(filename=filename)\n  File \"/home/knowledgee-kza/.scqos-env/lib/python3.14/site-packages/qiskit_ibm_runtime/accounts/management.py\", line 213, in get\n    raise AccountNotFoundError(\n    ...<2 lines>...\n    )\nqiskit_ibm_runtime.accounts.exceptions.AccountNotFoundError: \"Unable to find account. Please make sure an account with the channel name 'ibm_quantum_platform' is saved.\"\n",
+  "utc": "2026-08-16T03:48:10.337199+00:00"
+}
