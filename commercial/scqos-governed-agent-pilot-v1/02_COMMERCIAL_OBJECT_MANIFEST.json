@@ -1,0 +1,439 @@
+{
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "commercial_capabilities": [
+    "SCQOS governed execution",
+    "version-bound governance contracts",
+    "canonical-state qualification",
+    "customer-specific deployment",
+    "customer-specific integration",
+    "governance policy configuration",
+    "deterministic acceptance qualification",
+    "verification and evidence generation",
+    "receipt infrastructure",
+    "cloud/runtime integration",
+    "enterprise adapters where separately supplied",
+    "operational support where contracted",
+    "private modules where separately created"
+  ],
+  "commercial_object_id": "SCQOS-GOVERNED-AGENT-PILOT-V1",
+  "commercial_value": {
+    "evolution": "Allow systems to change and improve only through attributable, version-bound and requalifiable transitions rather than silent semantic drift.",
+    "source_layer": [
+      "Sovereignty",
+      "Evolution"
+    ],
+    "sovereignty": "Preserve customer authority over identity, governance policy, evidence, authorization boundaries, models, tools, execution conditions and consequential state."
+  },
+  "explicit_exclusions": [
+    "No exclusive ownership claim over code already distributed under MIT.",
+    "Anabelle is not represented as owned by Eric Robles or Knowledgee Kza.",
+    "Nikolai Nedovodin external verification work is not converted into software ownership.",
+    "Third-party platforms, models, runtimes and libraries retain their applicable rights."
+  ],
+  "founder": {
+    "commercial_identity": "Knowledgee Kza",
+    "real_name": "Eric Robles",
+    "role": "Founder"
+  },
+  "licensor": {
+    "commercial_identity": "Knowledgee Kza",
+    "real_name": "Eric Robles",
+    "role": "Licensor"
+  },
+  "source_branch": "main",
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414",
+  "tracked_source_files": [
+    "API Gateway.py",
+    "LICENSE",
+    "Module Stack (SC).pdf",
+    "Qiskit Adapter .py",
+    "README.md",
+    "Root Adapter.py",
+    "SC Patch .py",
+    "White paper .pdf",
+    "alignment_gate.audit",
+    "boundary_gate.audit",
+    "causality_gate.audit",
+    "coherence_gate.audit",
+    "consciousness_gate.audit",
+    "continuity_gate.audit",
+    "docs/docs/README.md",
+    "docs/docs/audits/README.md",
+    "docs/docs/audits/integrations/README.md",
+    "docs/docs/audits/integrations/examples/README.md",
+    "evidence/quantum-qec-governance/20260816T041044Z/README.md",
+    "evidence/quantum-qec-governance/20260816T041044Z/SHA256SUM.txt",
+    "evidence/quantum-qec-governance/20260816T041044Z/circuit.qasm.txt",
+    "evidence/quantum-qec-governance/20260816T041044Z/independent-verification.json",
+    "evidence/quantum-qec-governance/20260816T041044Z/isa-circuit.txt",
+    "evidence/quantum-qec-governance/20260816T041044Z/receipt.json",
+    "evidence/quantum-qec-governance/20260816T044212Z/README.md",
+    "evidence/quantum-qec-governance/20260816T044212Z/SHA256SUMS",
+    "evidence/quantum-qec-governance/20260816T044212Z/receipt.json",
+    "evidence/spec-closure/20260816T033459Z/RECEIPT.md",
+    "evidence/spec-closure/20260816T033459Z/RECEIPT.md.sha256",
+    "evidence/spec-closure/20260816T033459Z/SHA256SUMS",
+    "evidence/spec-closure/20260816T033459Z/SHA256SUMS.sha256",
+    "evidence/spec-closure/20260816T033459Z/aws-caller-identity.json",
+    "evidence/spec-closure/20260816T033459Z/aws-cli-version.txt",
+    "evidence/spec-closure/20260816T033459Z/aws-region.txt",
+    "evidence/spec-closure/20260816T033459Z/aws-sts-error.txt",
+    "evidence/spec-closure/20260816T033459Z/closure-manifest.json",
+    "evidence/spec-closure/20260816T033459Z/current-implementation-observation.txt",
+    "evidence/spec-closure/20260816T033459Z/frozen-commit.txt",
+    "evidence/spec-closure/20260816T033459Z/git-remotes.txt",
+    "evidence/spec-closure/20260816T033459Z/git-version.txt",
+    "evidence/spec-closure/20260816T033459Z/github-cli-version.txt",
+    "evidence/spec-closure/20260816T033459Z/known-boundaries.md",
+    "evidence/spec-closure/20260816T033459Z/node-version.txt",
+    "evidence/spec-closure/20260816T033459Z/preparation-parent-commit-metadata.txt",
+    "evidence/spec-closure/20260816T033459Z/preparation-parent-commit.txt",
+    "evidence/spec-closure/20260816T033459Z/preparation-working-tree.txt",
+    "evidence/spec-closure/20260816T033459Z/python-version.txt",
+    "evidence/spec-closure/20260816T034155Z/RECEIPT.md",
+    "evidence/spec-closure/20260816T034155Z/SHA256SUMS",
+    "evidence/spec-closure/20260816T034155Z/SHA256SUMS.sha256",
+    "evidence/spec-closure/20260816T034155Z/aws-caller-identity.json",
+    "evidence/spec-closure/20260816T034155Z/aws-region.txt",
+    "evidence/spec-closure/20260816T034155Z/current-implementation-observation.txt",
+    "evidence/spec-closure/20260816T034155Z/git-remotes.txt",
+    "evidence/spec-closure/20260816T034155Z/normative-sources.txt",
+    "evidence/spec-closure/20260816T034155Z/parent-commit.txt",
+    "evidence/spec-closure/20260816T034155Z/pre-freeze-working-tree.txt",
+    "genesis_gate.audit",
+    "reference_gate.audit",
+    "scqos_supreme_stack.py",
+    "spec/canonicalization/SCQOS-CANONICALIZATION-SPEC-v1.0.md",
+    "spec/canonicalization/vectors/CHALLENGE-PROTOCOL.md",
+    "spec/canonicalization/vectors/README.md",
+    "spec/canonicalization/vectors/adversarial-vectors.json",
+    "spec/canonicalization/vectors/challenge-matrix.json"
+  ],
+  "tracked_source_objects": {
+    "API Gateway.py": {
+      "git_object": "964678c90ff7e25397668f0f6a38df10044903c5",
+      "sha256": "616fba9d16f9ccec7027fda8a384209b71ae47cc893f8439faacaae5f37cf2c3",
+      "size_bytes": 19416
+    },
+    "LICENSE": {
+      "git_object": "58fc8f70cfc8f39053e9bd9fe20bef5104a91a8c",
+      "sha256": "62f7cd73c6cb4e34d196e33d0c2159279c1b7d53f2280cea1004c86a8c2f745d",
+      "size_bytes": 1081
+    },
+    "Module Stack (SC).pdf": {
+      "git_object": "c0f6eab0c41b38ead36dd86b6384baec699dcf8b",
+      "sha256": "105e98e04727f6f0466b093a4a8b2b7760f01b3446278ac66935f80bb2f48504",
+      "size_bytes": 306695
+    },
+    "Qiskit Adapter .py": {
+      "git_object": "66f19848480ddf2e7ebfd577ee9c99026bc8f8c7",
+      "sha256": "0719521c217c6926ff5a01892fa47f8cff6e1b0e8634dc404881357888152283",
+      "size_bytes": 40390
+    },
+    "README.md": {
+      "git_object": "3cdc5ca7af32fe29a582d6b3bca1ef0d610f0a92",
+      "sha256": "bf6751f98bd167f778504d25f71f01121584309b727a0c94978ce3060e413d06",
+      "size_bytes": 25618
+    },
+    "Root Adapter.py": {
+      "git_object": "789f90e71efb06c72f5eb0e95cb85766953beba6",
+      "sha256": "fcedb8af02b118a5d1db4c17e25a3d58321676cfb5b6ed7d3b58e1f0b17cbf63",
+      "size_bytes": 19182
+    },
+    "SC Patch .py": {
+      "git_object": "3a193b2c24f33fb8bfda25cd2c6e37bf5937bb9c",
+      "sha256": "79995f44960703c1e8bacb7a00cb198f407f4a12b5e145b9cf0f613c18c74cf5",
+      "size_bytes": 49487
+    },
+    "White paper .pdf": {
+      "git_object": "982f6cbcc48d0c67c1856a207ca394d3994fb949",
+      "sha256": "cb8e0b15c676b9654f306169a81cf934f360e9c614b107cf1ba8efc3d4d0a15f",
+      "size_bytes": 1523847
+    },
+    "alignment_gate.audit": {
+      "git_object": "f87c60d2d080750629a84dc1b688800c5ab0325f",
+      "sha256": "90e5b29db1309d225a5486074ad1bdfc15c9ff9f1b6d7ec09991b77088cf2ff5",
+      "size_bytes": 6966
+    },
+    "boundary_gate.audit": {
+      "git_object": "9bf42bf6d4c591dea64263fd595d63867aea4c8d",
+      "sha256": "a267d06cf928958e95d069a7c1099967b276904ad27a1afca806e66fbadba1ae",
+      "size_bytes": 6966
+    },
+    "causality_gate.audit": {
+      "git_object": "8aa59007ab1c4bc06acaeda462602feed029c584",
+      "sha256": "89cfc669e4a31b4f8f6f84d6b8d8876efa228e27799c8cfd42397707955699f0",
+      "size_bytes": 6966
+    },
+    "coherence_gate.audit": {
+      "git_object": "54b95fcc08f9548cfd1c01daad68cdad3a34bcaf",
+      "sha256": "202444ed7919a1dbda28ca482efaa2b0188cc8193d0cac5d9f4ef9ea30d631ff",
+      "size_bytes": 6966
+    },
+    "consciousness_gate.audit": {
+      "git_object": "2c2e01e50f020c7fe3a4531a05141f9deb9dd8c6",
+      "sha256": "8be592a47928a0901c97ea0b19b570bc5f2ff5dd52be42a5f485b00e91ae3aae",
+      "size_bytes": 6966
+    },
+    "continuity_gate.audit": {
+      "git_object": "2b1d5589b3085693b3931afcca197a122e6f1410",
+      "sha256": "bd80babfdfa6fb6b0a6f317538e031950987245afbd6749650980167633da202",
+      "size_bytes": 6966
+    },
+    "docs/docs/README.md": {
+      "git_object": "5e80d4a8f8d2e8fdd7977696564ebd7dd2cb7d51",
+      "sha256": "da0024e23185e1343cac1332f7770ba40f272b0f94a29581778d51519242d7a9",
+      "size_bytes": 133
+    },
+    "docs/docs/audits/README.md": {
+      "git_object": "76c26078c954bc87383d26a8f87e07c87f94e1ce",
+      "sha256": "f1dd9ca4290c2b0612c68c4f1711a7f561560d86489a0ddce07993fe28690992",
+      "size_bytes": 232
+    },
+    "docs/docs/audits/integrations/README.md": {
+      "git_object": "dcf62537d189104b9a66510a543523a21d8d2c97",
+      "sha256": "932445ebfec5431e61d70d9163b227be6c944e83fe16563200b3553bd3fabc90",
+      "size_bytes": 244
+    },
+    "docs/docs/audits/integrations/examples/README.md": {
+      "git_object": "2a82c6a8643bea7ae9b42c012288f484fafce0b6",
+      "sha256": "f64ebc98487b00cc6ab3e7faa1a239d94b13919fcea2c77a78d311b4955c0716",
+      "size_bytes": 228
+    },
+    "evidence/quantum-qec-governance/20260816T041044Z/README.md": {
+      "git_object": "385863386fd9f0a69c7ca15b2b0df193170aaff7",
+      "sha256": "b03030230d100db1a1bbcc9907e92801418e64179c60c265c42a35b5d7ad1820",
+      "size_bytes": 818
+    },
+    "evidence/quantum-qec-governance/20260816T041044Z/SHA256SUM.txt": {
+      "git_object": "5c4118806ad24814264de3abf71eb71ba9346861",
+      "sha256": "f66823a6882447b197e945aba039541ca8cfe0acea8bf61e6cdd35e0e3a01aca",
+      "size_bytes": 79
+    },
+    "evidence/quantum-qec-governance/20260816T041044Z/circuit.qasm.txt": {
+      "git_object": "2a4d04147ec1858004ff473550ea750acec27661",
+      "sha256": "ca11d4c14ba0ff1249b52bfe1e580e17640927ce2a00e351e70ecc61a113bc29",
+      "size_bytes": 2542
+    },
+    "evidence/quantum-qec-governance/20260816T041044Z/independent-verification.json": {
+      "git_object": "40e305a890f44fc763be57015a6115492fc7d206",
+      "sha256": "c5db1f321ca3d61ffc2d290646b165dfdb03fdb8d6923f3a148427cf9e7a8923",
+      "size_bytes": 249
+    },
+    "evidence/quantum-qec-governance/20260816T041044Z/isa-circuit.txt": {
+      "git_object": "afb61e25f0826e6fd093fb4ac11b4195b07bd285",
+      "sha256": "fb8609810d6937d9d0c1af1284b2b00bf2500c01659c9380cffd2848c2c77881",
+      "size_bytes": 4496
+    },
+    "evidence/quantum-qec-governance/20260816T041044Z/receipt.json": {
+      "git_object": "2fe836044d1e9d89df326803eff88735e90f5ec7",
+      "sha256": "5842c0e6d8ed5c81b91a3b105c047f070f68b53ad06772fb52f1bc925f48d5a8",
+      "size_bytes": 900
+    },
+    "evidence/quantum-qec-governance/20260816T044212Z/README.md": {
+      "git_object": "b631ae1cd9e87d95b9a757de7e98f0507f4c0d62",
+      "sha256": "bc0eb09bfa7f21124bef44b5cc87010074ebe2274a4f34b1658fa7a6486d4b6a",
+      "size_bytes": 435
+    },
+    "evidence/quantum-qec-governance/20260816T044212Z/SHA256SUMS": {
+      "git_object": "91889913375d4a9d8a4cf7fab60956af6c8e41cd",
+      "sha256": "8d81634442b2bcd27ca8a749f741b0942ce1af807443542e7fc5e23804123ccf",
+      "size_bytes": 155
+    },
+    "evidence/quantum-qec-governance/20260816T044212Z/receipt.json": {
+      "git_object": "8d014ae8f177c2f54cf05f4d73359d8f29d0c8f5",
+      "sha256": "aa186cc488c3e4370d40e772432b62b6a791afeb71653c04ae28573d0d2298fd",
+      "size_bytes": 1210
+    },
+    "evidence/spec-closure/20260816T033459Z/RECEIPT.md": {
+      "git_object": "4e72cb9ff386c939502639ad8e5a32cd9e6cdc64",
+      "sha256": "b331adb248602251e1e219080b4c8d2057195ae6a26159e9d443111749cbcfb5",
+      "size_bytes": 1404
+    },
+    "evidence/spec-closure/20260816T033459Z/RECEIPT.md.sha256": {
+      "git_object": "5cb70611638f5d88a110370962ce458307852d64",
+      "sha256": "2a86138dd1da203dee864991aab5093d9c7246482b0bb27cd99fcdc21548a710",
+      "size_bytes": 116
+    },
+    "evidence/spec-closure/20260816T033459Z/SHA256SUMS": {
+      "git_object": "cce0622e79007354c94757ee952318336816460e",
+      "sha256": "ada7697bd84641a16bcc1117b1df1d4b86c5796cc2983f54e93e68a1b03e7cdf",
+      "size_bytes": 2274
+    },
+    "evidence/spec-closure/20260816T033459Z/SHA256SUMS.sha256": {
+      "git_object": "c6813d4d94bd59b2279a81c2430e4f189f12084e",
+      "sha256": "78b4473f3e5a5fac62386c78c825ae2ba23258d216820a791ce54fd7c998233a",
+      "size_bytes": 116
+    },
+    "evidence/spec-closure/20260816T033459Z/aws-caller-identity.json": {
+      "git_object": "1acce214fd4ce759f4e2bb0015d3ed388938b553",
+      "sha256": "34cb124fd24983a8cb0c06d5db26c6a7acd6cc3318740740df34fe85f03ccfad",
+      "size_bytes": 109
+    },
+    "evidence/spec-closure/20260816T033459Z/aws-cli-version.txt": {
+      "git_object": "cfdcc3b992faf8eed8ec8c520aacd02702ce51f8",
+      "sha256": "b245c802dc6d77388e27f720fa74a289fde809355ccbf3c030b0ce9746d75b5e",
+      "size_bytes": 77
+    },
+    "evidence/spec-closure/20260816T033459Z/aws-region.txt": {
+      "git_object": "e5c078ad28b3441e92560cb15262a1efccf3de6e",
+      "sha256": "3764aced144c63b0ec315cb1e20aa8498a62db572db4523788a2c01757625ac2",
+      "size_bytes": 10
+    },
+    "evidence/spec-closure/20260816T033459Z/aws-sts-error.txt": {
+      "git_object": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "evidence/spec-closure/20260816T033459Z/closure-manifest.json": {
+      "git_object": "03363d3f4c5fb1cd9d3a8603fad4ce8b09d063af",
+      "sha256": "48b4ee010ec798d783d634e31d23332f701a68c31db87b5bcc38ee236f8671de",
+      "size_bytes": 851
+    },
+    "evidence/spec-closure/20260816T033459Z/current-implementation-observation.txt": {
+      "git_object": "9ef5caccdce28e8b76dbe298e532320a77b601b5",
+      "sha256": "c29ee1e42eb08054538262431931251c4c181c2fae0d429ed5fd5aef265309fd",
+      "size_bytes": 12784
+    },
+    "evidence/spec-closure/20260816T033459Z/frozen-commit.txt": {
+      "git_object": "5b914204f7f34721dead18b6a1b6d49ac589a3ec",
+      "sha256": "00f7c2df57d706b7ea5dd01b28813ee688c8f918116cb409b87b3bb7df60bfa3",
+      "size_bytes": 41
+    },
+    "evidence/spec-closure/20260816T033459Z/git-remotes.txt": {
+      "git_object": "22e87abdfb46e52a24d05ab53a103a0b30c253bf",
+      "sha256": "add0de6cc550f759bd7f945a66ce42b156f39e30aab55bf8426befb863021c08",
+      "size_bytes": 165
+    },
+    "evidence/spec-closure/20260816T033459Z/git-version.txt": {
+      "git_object": "dce5793dab257c5fd708eed1937ab76c67fb7d96",
+      "sha256": "97452bcde974ef512f9552791fc4f6a3219a724877671fba270baca1a6075b74",
+      "size_bytes": 19
+    },
+    "evidence/spec-closure/20260816T033459Z/github-cli-version.txt": {
+      "git_object": "6b2e78b181f0f496767a795898d275f2eb8e127a",
+      "sha256": "205e723d608d5a3cd8573f1a298dadaee0e9e0a2b83dc04f7809cabeb94df234",
+      "size_bytes": 62
+    },
+    "evidence/spec-closure/20260816T033459Z/known-boundaries.md": {
+      "git_object": "62e85645ebecf8557da83d60821a5a0610c4744e",
+      "sha256": "83e38ef07464d86c9c6d2fe94bd812fa0b4c903401b107fb52f90a11e9e45bdc",
+      "size_bytes": 835
+    },
+    "evidence/spec-closure/20260816T033459Z/node-version.txt": {
+      "git_object": "6883d4309f8c2b794e6ee3ecc159bd021bca32f7",
+      "sha256": "3cb863c4bf4e09b7e08564d57f9c71805c227748a53e5dd1d1c6bf5e24fe30e6",
+      "size_bytes": 64
+    },
+    "evidence/spec-closure/20260816T033459Z/preparation-parent-commit-metadata.txt": {
+      "git_object": "026d105fa8e483c8e744f3ec7c53e23042b23f05",
+      "sha256": "473c722996970499ffc3816d8953425fd7eb8519d659a59228bc411f1011ec18",
+      "size_bytes": 278
+    },
+    "evidence/spec-closure/20260816T033459Z/preparation-parent-commit.txt": {
+      "git_object": "3d2bdab71cc727ca30b3fe41d79f3db3c576eee4",
+      "sha256": "4c0ca43217e1ff65aab91b767089d4847b80ea156468b669f9ece1caaaa36563",
+      "size_bytes": 41
+    },
+    "evidence/spec-closure/20260816T033459Z/preparation-working-tree.txt": {
+      "git_object": "62e7f564fab56bc4f096efde211e1420d23b6330",
+      "sha256": "3325635238de0bbaa784e712ed38bc6f63d0590cd4060205d8a60d9d1d01a598",
+      "size_bytes": 525
+    },
+    "evidence/spec-closure/20260816T033459Z/python-version.txt": {
+      "git_object": "cefa5b99f6f8219c460e42854f07b1a17b7fc13c",
+      "sha256": "63990b3ee50c49ab28d70e29c0f967f0c71330e39243ffeb4d3a8d5878c8a978",
+      "size_bytes": 14
+    },
+    "evidence/spec-closure/20260816T034155Z/RECEIPT.md": {
+      "git_object": "23616cdcfc128328396791e3647b8c4ef4785d4e",
+      "sha256": "56b5c7004c9a81186fd7763fd5dbb357c1be5bd85bb85a133fc07d206c972e60",
+      "size_bytes": 678
+    },
+    "evidence/spec-closure/20260816T034155Z/SHA256SUMS": {
+      "git_object": "eb55b490cd4122e12fd233cd0d70d36e8429223e",
+      "sha256": "d83e5ec3f52e4eef58c9d19eb012ac587dc60e5e74370fb3bb756d42d0d51030",
+      "size_bytes": 1601
+    },
+    "evidence/spec-closure/20260816T034155Z/SHA256SUMS.sha256": {
+      "git_object": "5eb954968b77d3b76e919c6f2eed16e57074a28f",
+      "sha256": "58ba6f574955034d125a1856b9b30cf206662fc17dea86479bd8816140d3093a",
+      "size_bytes": 116
+    },
+    "evidence/spec-closure/20260816T034155Z/aws-caller-identity.json": {
+      "git_object": "1acce214fd4ce759f4e2bb0015d3ed388938b553",
+      "sha256": "34cb124fd24983a8cb0c06d5db26c6a7acd6cc3318740740df34fe85f03ccfad",
+      "size_bytes": 109
+    },
+    "evidence/spec-closure/20260816T034155Z/aws-region.txt": {
+      "git_object": "e5c078ad28b3441e92560cb15262a1efccf3de6e",
+      "sha256": "3764aced144c63b0ec315cb1e20aa8498a62db572db4523788a2c01757625ac2",
+      "size_bytes": 10
+    },
+    "evidence/spec-closure/20260816T034155Z/current-implementation-observation.txt": {
+      "git_object": "99e9c7be60b5e4e1b40f64973701302324f21216",
+      "sha256": "8a35592e822165ec487b1158ef460781bb98a960ab4bce663be83f69fed56e0a",
+      "size_bytes": 13162
+    },
+    "evidence/spec-closure/20260816T034155Z/git-remotes.txt": {
+      "git_object": "22e87abdfb46e52a24d05ab53a103a0b30c253bf",
+      "sha256": "add0de6cc550f759bd7f945a66ce42b156f39e30aab55bf8426befb863021c08",
+      "size_bytes": 165
+    },
+    "evidence/spec-closure/20260816T034155Z/normative-sources.txt": {
+      "git_object": "2ab83d882b60dac2dacc9d92220946c9060ea609",
+      "sha256": "37142b5bb3333be80fb4a3b81aed3127846c0cae37155a8280718373475b64bf",
+      "size_bytes": 268
+    },
+    "evidence/spec-closure/20260816T034155Z/parent-commit.txt": {
+      "git_object": "e4f9a10ce014caeed6cb90856d441f5e81fb23e6",
+      "sha256": "9f6a6d6916d91bb4a31e7f92bf269463201930ca4a0f2e83f356a4d4ab7d6f46",
+      "size_bytes": 41
+    },
+    "evidence/spec-closure/20260816T034155Z/pre-freeze-working-tree.txt": {
+      "git_object": "3bff9908aba4eb7af52b1f2e44da1b332989f49c",
+      "sha256": "9b0f8b98b634a5a4c7967530f575c5b50a1edda0faeb5dfadedd8b0598ade2f0",
+      "size_bytes": 665
+    },
+    "genesis_gate.audit": {
+      "git_object": "ff0432032708c0534f0502abe0b6f92195312111",
+      "sha256": "147fc6fbd098353730dd4c78d8777a165aa8411fd6656c449e37d7c1748cc472",
+      "size_bytes": 6966
+    },
+    "reference_gate.audit": {
+      "git_object": "723ad895adefd47fe01058fe22159ec781fd3444",
+      "sha256": "86220315fc7792fa938ee4077e3855dbf6333d6b926fc5f42af94f4da5763477",
+      "size_bytes": 6966
+    },
+    "scqos_supreme_stack.py": {
+      "git_object": "c59dc4f47e30105d284acac13d6c4c047a16f1a4",
+      "sha256": "b18fa336d758b9bb6b080b5c8ac21b4c4019326aa827ada115104586214c2b6f",
+      "size_bytes": 49930
+    },
+    "spec/canonicalization/SCQOS-CANONICALIZATION-SPEC-v1.0.md": {
+      "git_object": "8f0f3fd597a21fd285819bf5572f1506124a0f07",
+      "sha256": "881998ab51b631876965ca94f48499e0d6c2a24e187505270414121d065f7833",
+      "size_bytes": 4806
+    },
+    "spec/canonicalization/vectors/CHALLENGE-PROTOCOL.md": {
+      "git_object": "14ff585de8694bc2aa300123e1a25b5cdc67bdbd",
+      "sha256": "47261bf410478c8666e8dab99d892436a05ff9947bc0481834680f243d3f1f89",
+      "size_bytes": 1491
+    },
+    "spec/canonicalization/vectors/README.md": {
+      "git_object": "ffb7d6faffa735b60fd9c926498206195a317fcc",
+      "sha256": "906e10f207a0198772851838f01866ae3cb32f7374d32fd0dcbea19e8d821d0e",
+      "size_bytes": 773
+    },
+    "spec/canonicalization/vectors/adversarial-vectors.json": {
+      "git_object": "dc13a344b0433f015ac147d47fc4bb5ae1b0cc60",
+      "sha256": "c6ae5e65bbc21002a6ec18662cad81921c8f0646db33a1f8a80b901aa1775825",
+      "size_bytes": 3703
+    },
+    "spec/canonicalization/vectors/challenge-matrix.json": {
+      "git_object": "3a2050c1884cdabdf74483a3201720b802252998",
+      "sha256": "e87c5c2d102df466dd34a7746058629a801681e533d717532fff4b35398f7231",
+      "size_bytes": 888
+    }
+  }
+}

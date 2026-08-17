@@ -1,0 +1,25 @@
+{
+  "anabelle_boundary": "Anabelle is Jerry Elizares-originated software and is outside the SCQOS ownership assertion.",
+  "blockers": [],
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "commercial_object_id": "SCQOS-GOVERNED-AGENT-PILOT-V1",
+  "commercial_object_state": "PERMIT",
+  "external_independent_verification_partner": "Nikolai Nedovodin",
+  "founder": {
+    "commercial_identity": "Knowledgee Kza",
+    "real_name": "Eric Robles"
+  },
+  "internal_technical_cloud_partner": "Jerry Elizares",
+  "nikolai_boundary": "Nikolai Nedovodin remains externally attributed as an independent verification partner/challenger.",
+  "passes": [
+    "RC2_LIVE_QUALIFICATION",
+    "COMMERCIAL_OBJECT_FROZEN",
+    "PUBLIC_LICENSE_IDENTIFIED",
+    "COMMERCIAL_BOUNDARY_DEFINED",
+    "CUSTOMER_ACCEPTANCE_BASELINE_PASS",
+    "TECHNICAL_EVIDENCE_MANIFEST_CREATED"
+  ],
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414",
+  "technical_state": "PERMIT",
+  "working_tree_boundary": "Non-blocking. Commercial source identity is the immutable SOURCE_COMMIT and blob hashes are derived directly from Git."
+}

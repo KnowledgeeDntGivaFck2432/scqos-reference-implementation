@@ -1,0 +1,310 @@
+{
+  "external_independent_verification_partner": {
+    "boundary": "Nikolai Nedovodin's independent reproduction, specification criticism, adversarial challenge design and verification evidence remain attributed to Nikolai Nedovodin. No ownership, employment, monetary or cloud-access rights are inferred absent a separate agreement.",
+    "real_name": "Nikolai Nedovodin",
+    "role": "External independent verification partner / challenger"
+  },
+  "founder_and_licensor": {
+    "commercial_identity": "Knowledgee Kza",
+    "real_name": "Eric Robles",
+    "role": "Founder / Licensor"
+  },
+  "git_authors": [
+    {
+      "commit_count": 9,
+      "email": "erobles3224@icloud.com",
+      "name": "Knowledgee KZA"
+    },
+    {
+      "commit_count": 16,
+      "email": "erobles3224@gmail.com",
+      "name": "Knowledgee KZA (Architect)"
+    },
+    {
+      "commit_count": 12,
+      "email": "erobles3224@gmail.com",
+      "name": "KnowledgeeDntGivaFck2432"
+    }
+  ],
+  "git_commit_provenance": [
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "6c156be369b344be99c721c44eeba863eac02414",
+      "date": "2026-08-16T18:31:03-07:00",
+      "subject": "Bind reference canonicalization to SCQOS-C14N-JCS-NFC-1"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "b8da2678e32899702866c0c7d0c69603150a75fa",
+      "date": "2026-08-15T21:42:12-07:00",
+      "subject": "quantum: preserve completed physical consequence da0jklv2sl0c73bn5ls0"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "1ee4b6890bfe8df4aadfbad064621ab8d35efaac",
+      "date": "2026-08-15T21:10:44-07:00",
+      "subject": "quantum: live governed QEC receipt da0jg772sl0c73bn5h5g"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "096986eaae6e4aeb2962142cea67c76daab954fe",
+      "date": "2026-08-15T20:42:01-07:00",
+      "subject": "spec: freeze RC2 independent canonicalization challenge contract"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "b440c4b81b1e3f2e6ca237e830420a1d1dd67697",
+      "date": "2026-08-15T20:35:10-07:00",
+      "subject": "evidence: bind canonicalization spec closure receipt"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "ec48eb2464d3623048dba7d10467e05d484816e1",
+      "date": "2026-08-15T20:35:10-07:00",
+      "subject": "spec: freeze standalone SCQOS canonicalization contract 1.0.0-rc1"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "75f888e87228ffcc20445a6f3667eafac42ae3ba",
+      "date": "2026-08-15T20:35:10-07:00",
+      "subject": "evidence: bind canonicalization spec closure receipt"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "1e2bfb0a54f4f6283cc8cdbcb8a5986e2085822c",
+      "date": "2026-08-15T20:35:10-07:00",
+      "subject": "spec: freeze standalone SCQOS canonicalization contract 1.0.0-rc1"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "c5ea75ed939cba099930f3106c4e18f93492bdb4",
+      "date": "2026-08-14T07:17:22-07:00",
+      "subject": "Update README.md"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "290d6c367ba3a7e15ce78b1c590e44deb145885c",
+      "date": "2026-08-14T07:10:58-07:00",
+      "subject": "Update README.md"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "13c543437678db3ec5f7f2f9b723d4038b8ef842",
+      "date": "2026-07-14T06:18:19-07:00",
+      "subject": "Update README.md"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "6c25d4da6780bbc2628e13ee8a40674bb47f9579",
+      "date": "2026-07-14T05:45:23-07:00",
+      "subject": "Update README.md"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "db7b8c6a56fb68ed0c4d03171c19a5960b14d9e5",
+      "date": "2026-07-14T05:32:00-07:00",
+      "subject": "Update README.md"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "5cc270c271d9f345d93a472e8e0962230d54ce0c",
+      "date": "2026-06-02T21:51:47-07:00",
+      "subject": "Revise README for clarity and structure"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "11ea5cc7e162dd4e5db1553a30cb0974e4ab6d87",
+      "date": "2026-06-02T21:50:16-07:00",
+      "subject": "Create README.md for integration examples"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "c4d14f18a12853d50a45a444512f306bfd2ef47b",
+      "date": "2026-06-02T21:49:44-07:00",
+      "subject": "Add README for integrations directory"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "3f349f6ecffed5d1e060caa3b559087e33a1dba3",
+      "date": "2026-06-02T21:48:56-07:00",
+      "subject": "Add README for audit records documentation"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "9fb069cb85061a5ebfe39291f61874987c768965",
+      "date": "2026-06-02T21:47:46-07:00",
+      "subject": "Add initial README.md for documentation directory"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "99d4c52cabf4c481b9032d25f8cbe75a6235638d",
+      "date": "2026-06-02T21:42:52-07:00",
+      "subject": "Revise README to include SCQOS details"
+    },
+    {
+      "author_email": "erobles3224@icloud.com",
+      "author_name": "Knowledgee KZA",
+      "commit": "412eefa19ad4636e8de4004a43e90694fa85314d",
+      "date": "2026-05-31T03:20:29-07:00",
+      "subject": "SCQOS boot enforcement audit gates"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "07b29e2822279129defee9aa511306587acd677d",
+      "date": "2026-05-08T09:30:17-07:00",
+      "subject": "Merge pull request #2 from KnowledgeeKZA3224/patch-001-008"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "dc2bb8d15726747a0804300f44aaaa85110c6db1",
+      "date": "2026-05-08T09:28:21-07:00",
+      "subject": "Apply SCQOS hardening patches 001-008"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "2db2f933f87c41e107f567b7026bed57af54676d",
+      "date": "2026-05-05T11:14:06-07:00",
+      "subject": "Add Supreme Computation Quantum Adapter"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "bcafd83fe38da4c7e7b1edce6430e7f312d129d7",
+      "date": "2026-05-05T07:48:10-07:00",
+      "subject": "Root + Trunk of Supreme Computation"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "Knowledgee KZA (Architect)",
+      "commit": "ec799f6db44ed937e99232ffe781409926bf975e",
+      "date": "2026-05-05T07:41:16-07:00",
+      "subject": "Update README.md"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "4a384ad08139c4311aaefc84bfc6d05f0ae1fa41",
+      "date": "2026-05-03T20:49:32-07:00",
+      "subject": "Add official SCQOS Python stack"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "bfb582212e505466e42b70688626d5ab05c53d2d",
+      "date": "2026-05-03T20:46:06-07:00",
+      "subject": "Delete scqos_supreme_stack.py"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "768fd90cc50a9f75c38260bb349bf259284bd247",
+      "date": "2026-05-03T20:07:41-07:00",
+      "subject": "scqos_supreme_stack.py"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "100aa8afcc8d07c6c4fe5f50cd7ba8e0fc621550",
+      "date": "2026-05-03T20:07:13-07:00",
+      "subject": "Delete scqos_supreme_stack.pdf"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "76b9b6e96cb65eea949f8120950d049bb93c2558",
+      "date": "2026-05-03T20:04:45-07:00",
+      "subject": "scqos_supreme_stack.py"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "9cd910ef53abe23abfd138227849299c6f2a5835",
+      "date": "2026-05-03T20:03:42-07:00",
+      "subject": "Delete scqos_supreme_stack.pdf"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "1c657482d75e543ff9e2c48e598c5baa44e9f9db",
+      "date": "2026-05-03T20:00:11-07:00",
+      "subject": "scqos_supreme_stack.pdf"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "f4bdd6a9d74cdd250c8c1b74a8df484728a85fac",
+      "date": "2026-05-03T19:56:38-07:00",
+      "subject": "Delete Py.pdf"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "063d7b7ad36a051d64b899ff86a19b3fa606167f",
+      "date": "2026-05-03T19:50:58-07:00",
+      "subject": "Finalize SCQOS v1.0 official Python reference implementation"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "d57a12ab4d823b1b54e5ac3ae4361f8f9872f64e",
+      "date": "2026-05-03T19:08:20-07:00",
+      "subject": "SCQOS papers + module stack"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "d55ec3146504c04d59dd19289788061ea12db4e4",
+      "date": "2026-05-03T18:57:32-07:00",
+      "subject": "Update project title to match casing"
+    },
+    {
+      "author_email": "erobles3224@gmail.com",
+      "author_name": "KnowledgeeDntGivaFck2432",
+      "commit": "9817c60a6f9bbf5c0753ede16bd760a3ef8510cf",
+      "date": "2026-05-03T18:56:41-07:00",
+      "subject": "Initial commit"
+    }
+  ],
+  "internal_technical_cloud_partner": {
+    "anabelle_boundary": "Anabelle is Jerry Elizares-originated software introduced into the environment by Jerry Elizares. This commercial closure does not assert ownership of Anabelle by Eric Robles or Knowledgee Kza.",
+    "real_name": "Jerry Elizares",
+    "role": "Internal technical / cloud partner"
+  },
+  "interpretation_boundary": [
+    "Git authorship proves provenance, not exclusive copyright assignment.",
+    "MIT-covered code remains governed by MIT.",
+    "Anabelle remains separately attributable to Jerry Elizares.",
+    "Nikolai Nedovodin remains externally attributable for verification work."
+  ],
+  "repository_license": {
+    "MIT_detected": true,
+    "copyright_lines": [
+      "Copyright (c) 2026 KnowledgeeDntGivaFck2432",
+      "The above copyright notice and this permission notice shall be included in all",
+      "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER"
+    ],
+    "license_sha256": "62f7cd73c6cb4e34d196e33d0c2159279c1b7d53f2280cea1004c86a8c2f745d"
+  }
+}

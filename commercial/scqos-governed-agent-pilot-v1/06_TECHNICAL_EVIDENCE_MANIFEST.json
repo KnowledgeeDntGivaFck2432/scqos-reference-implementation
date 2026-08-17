@@ -1,0 +1,24 @@
+{
+  "artifact_sha256": {
+    "01_RC2_LIVE_QUALIFICATION.json": "875ac87512703284a2d54b503247e3bcdb5d1b01da0b9bd7df7f273230b3fb6f",
+    "01_RC2_LIVE_QUALIFICATION.txt": "72f1305aa846310534758ac743d64770d7b28d4be19a880d5c4879637e55ec9b",
+    "02_COMMERCIAL_OBJECT_MANIFEST.json": "c41d77df100a1b8a7027536ede0659f32dc397cf0d93afdc7bdf04cebd53b873",
+    "03_IP_CONTRIBUTOR_PARTNER_AUTHORITY_MAP.json": "a2bfb31ab7c4b24093d2fca39e43adfdb43ee008fd00b35ac5a2cc583fb996a8",
+    "04_PUBLIC_VS_COMMERCIAL_BOUNDARY.md": "96520cfffb04826834a0561a5ecbfc71d888d82765a70e64e20ff6282313fed9",
+    "05_CUSTOMER_ACCEPTANCE_HARNESS.json": "be2a2d9f954c24ef96d3bd9444e56b167a359dc03828ce54183edb5698791f78"
+  },
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "commercial_identity": "Knowledgee Kza",
+  "commercial_object_id": "SCQOS-GOVERNED-AGENT-PILOT-V1",
+  "commercial_value": [
+    "Sovereignty",
+    "Evolution"
+  ],
+  "external_independent_verification_partner": "Nikolai Nedovodin",
+  "founder": "Eric Robles",
+  "generated_at_utc": "20260817T020202Z",
+  "internal_technical_cloud_partner": "Jerry Elizares",
+  "manifest_id": "SCQOS-GOVERNED-AGENT-PILOT-EVIDENCE-V1",
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414",
+  "technical_qualification": "PASS"
+}

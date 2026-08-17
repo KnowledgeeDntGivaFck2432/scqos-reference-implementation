@@ -1,0 +1,24 @@
+{
+  "acceptance_harness_id": "SCQOS-GOVERNED-AGENT-PILOT-ACCEPTANCE-V1",
+  "acceptance_rule": "The customer deployment is accepted only when the exact frozen deployment identity produces every required acceptance state and preserves the resulting evidence/receipt.",
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "commercial_object_id": "SCQOS-GOVERNED-AGENT-PILOT-V1",
+  "fail_closed_rule": "Missing evidence, contradiction, stale authority, unresolved identity or governance failure must never silently become PERMIT.",
+  "governance_states": [
+    "PERMIT",
+    "HOLD",
+    "REJECT"
+  ],
+  "observed_live_result": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "AUTHORITY: SCQOS-C14N-JCS-NFC-1\nNFC_STRING_EQUIVALENCE: PASS\nNFC_STRING_SHA256: 69e46f3f0688000ab7eeb9e40e6a516a254268cd644a24f4f69cf7ad063cf479\nNFC_PROPERTY_EQUIVALENCE: PASS\nNFC_COLLISION_REJECTION: PASS\nAUTHORITY_FAIL_CLOSED: PASS\nSCQOS-C14N-JCS-NFC-1: ADMISSIBLE\n"
+  },
+  "required_results": {
+    "AUTHORITY_FAIL_CLOSED": "PASS",
+    "NFC_COLLISION_REJECTION": "PASS",
+    "NFC_PROPERTY_EQUIVALENCE": "PASS",
+    "NFC_STRING_EQUIVALENCE": "PASS"
+  },
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414"
+}
