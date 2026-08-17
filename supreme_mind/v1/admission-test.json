@@ -1,0 +1,1 @@
+{"principal_id": "SOVEREIGN_HUMAN", "business_id": "test-business", "role_id": "R15", "intent": "Understand current business state", "action": "analyze", "evidence_refs": ["test://business-state"], "arguments": {"question": "What changed?"}}

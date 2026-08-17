@@ -1,0 +1,13 @@
+{
+  "architecture_id": "SUPREME-MIND-59-FACULTY-UNIVERSE-V1",
+  "source_commit": "fa21e1b4fd9bb63c39df15eaf2b5d209ef914d8e",
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "manifest_sha256": "f160ed6ebe5a07b2630ca96dfa51e08f91ad2d82ffce3eba3b0899bf930a331a",
+  "role_count": 59,
+  "role_identity_complete": true,
+  "unique_role_ids": true,
+  "shared_sovereign_principal": true,
+  "scqos_bypass_prohibited": true,
+  "state": "PERMIT",
+  "generated_at_utc": "20260817T032619Z"
+}

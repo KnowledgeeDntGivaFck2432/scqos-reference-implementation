@@ -1,0 +1,1 @@
+{"principal_id": "SOVEREIGN_HUMAN", "business_id": "test-business", "role_id": "R04", "intent": "Move business capital", "action": "transfer_money", "tool": "future-banking-adapter", "evidence_refs": ["test://balance"]}

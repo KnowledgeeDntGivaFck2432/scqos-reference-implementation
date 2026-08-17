@@ -1,0 +1,6 @@
+{
+  "QueueUrl": "https://sqs.us-east-1.amazonaws.com/327453383912/supreme-mind-v1-actions",
+  "Attributes": {
+    "RedrivePolicy": "{\"deadLetterTargetArn\":\"arn:aws:sqs:us-east-1:327453383912:supreme-mind-v1-actions-dlq\",\"maxReceiveCount\":\"3\"}"
+  }
+}

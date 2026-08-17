@@ -1,0 +1,32 @@
+{
+  "contract_id": "SUPREME-MIND-TOOL-ADAPTER-CONTRACT-V1",
+  "architecture_id": "SUPREME-MIND-59-FACULTY-UNIVERSE-V1",
+  "purpose": "Every real website/app/business capability attaches here rather than granting faculties unrestricted credentials.",
+  "required_fields": [
+    "tool_id",
+    "business_id",
+    "allowed_role_ids",
+    "allowed_actions",
+    "credential_reference",
+    "evidence_requirements",
+    "consequence_verification",
+    "risk_class",
+    "version"
+  ],
+  "examples": [
+    "email",
+    "calendar",
+    "CRM",
+    "customer_support",
+    "inventory",
+    "ecommerce",
+    "website CMS",
+    "analytics",
+    "cloud deployment",
+    "accounting",
+    "payments",
+    "scheduling",
+    "social publishing"
+  ],
+  "rule": "No unregistered adapter receives consequential execution authority."
+}
