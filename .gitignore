@@ -1,0 +1,5 @@
+.venv-crypto-proof/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+

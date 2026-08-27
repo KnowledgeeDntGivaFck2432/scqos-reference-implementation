@@ -1,0 +1,36 @@
+{
+  "governed_transaction": {
+    "account": "rwEZsqSjFHR3Q6cxUefCA5WRfVe6HsjrNL",
+    "amount": "1",
+    "destination": "r4sGL5ZnpHdfoCF3ioFdcux1VhaxziFMP6",
+    "destination_tag": 111,
+    "engine_result": "tesSUCCESS",
+    "ledger_hash": "D3AC2C932AD608106D0A406C455F371476BE7083437347F3DD1C77E4A571E65E",
+    "ledger_index": 106572004,
+    "transaction_hash": "D13EDAED96354DD2CF16382BA815367A37F5408D64B362FC24C19DEDF6775AD7",
+    "transaction_type": "Payment",
+    "validated": true
+  },
+  "network": "xrpl_mainnet",
+  "network_id": 0,
+  "observed_at": 1787814708.193816,
+  "rpc": "https://s2.ripple.com:51234/",
+  "schema": "scqos.xrpl-live-revalidation.v1",
+  "validated_ledger": {
+    "closed_at": 1787814701.0,
+    "hash": "141EE295597E2BE1738530D6711B41B977E483CC7750A80FA0F23E9C4AC67277",
+    "index": 106572919
+  },
+  "wrong_control_transaction": {
+    "account": "rwEZsqSjFHR3Q6cxUefCA5WRfVe6HsjrNL",
+    "amount": "1000000",
+    "destination": "r4sGL5ZnpHdfoCF3ioFdcux1VhaxziFMP6",
+    "destination_tag": 222,
+    "engine_result": "tesSUCCESS",
+    "ledger_hash": "AB1D7F4613C0560C56CE1E08FB58DF30D663C2FFDFB19E130F9E9B9EDE42DB3D",
+    "ledger_index": 106572001,
+    "transaction_hash": "C474989DFE4354CBB9A1F0B977BAF473EE91345DC6387F84C80F5A3B5F1110F9",
+    "transaction_type": "Payment",
+    "validated": true
+  }
+}

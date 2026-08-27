@@ -1,0 +1,64 @@
+{
+  "causal_result": {
+    "consequence_closed": "PERMIT",
+    "correct_transaction_validated": true,
+    "correct_transaction_with_scqos": "PERMIT",
+    "same_exact_wrong_transaction_with_scqos": "REJECT",
+    "wrong_transaction_without_scqos": "tesSUCCESS"
+  },
+  "claim_boundary": "SCQOS prevented the governed execution of the tested destination-tag intent contradiction while XRPL Mainnet accepted the exact ungoverned control.",
+  "evidence_files_sha256": {
+    "README.md": "d3fa704b38adc32a91782ff80384cc9f9f8e6ea7d7a6c1a92e220ba05c01c3ac",
+    "authenticated_scqos_receipt.json": "1c0eae7058561d5b56e148b61f044455ad0a26c039452d64fa8fba768ba07aa7",
+    "ed25519_public_key.pem": "ee8c93d83f860545488f0a72899a3c3cb410e8fbc0ed3164f6835c248beba48d",
+    "live_xrpl_revalidation.json": "865efc3b8cc9402a0934ea4f6f1da0dea3cf4847f90323da28b6b180e3956d34"
+  },
+  "frozen_at": 1787814708.3553462,
+  "implementation_files_sha256": {
+    "crypto_holy_grail/README.md": "caad0434eebf093c14945fa7bfbeccf595e8a20427357aa653e7702a7afdf5fc",
+    "crypto_holy_grail/requirements.txt": "d2e662b5f0079c97742c7193945af2b439117d7692532c98d8ea9a2c84eb9590",
+    "crypto_holy_grail/run_coinbase_fund.sh": "12971766bde3d5e456b6518db33c1a8ed1ac9519813067a0ae5f6b500809108e",
+    "crypto_holy_grail/run_freeze_publish.sh": "6304a9c45974f384efe96513dfab9fcb7341fd1518b03ac486e7228f1c8ed0d5",
+    "crypto_holy_grail/run_full_terminal_proof.sh": "17bb11d985669ba0c26c781e3e0c40c7133e6598ce6e7099a8257209bd88cc0d",
+    "crypto_holy_grail/run_mainnet_execute.sh": "005a49b62749a291c54c85ce5e780ec37b0422e78fc73abfca28da4a02d54a1d",
+    "crypto_holy_grail/run_mainnet_prepare.sh": "d49ab9590b3816dfb20699aabd63eeb25f778f8bd695fcb25d47cdd9a1444d6a",
+    "crypto_holy_grail/run_proof.sh": "c3c9136f007ec8ca469d33842946b60b69e1b169ccfb662f65abd83083f400a2",
+    "crypto_holy_grail/scqos_coinbase_fund.py": "9338679013ad05586574433214ee48272843b60377a69a34281a44ff5634aec9",
+    "crypto_holy_grail/scqos_crypto_proof.py": "02559710d7c79aa87384c658944a7b5ac28074da0567b1d72c65c5eb47d96d6e",
+    "crypto_holy_grail/scqos_freeze_publish.py": "d747d5a74cdc5d75bdc80ce349c3a2c59f63f78c6adca9ed2d9581862343c112",
+    "crypto_holy_grail/scqos_full_terminal.py": "b83eb73b378e613393b70c4b28d048a506e4470b4239615d1e06e7a979958a78",
+    "crypto_holy_grail/test_scqos_coinbase_fund.py": "95b506e9871db9b9014928a1e7483e789234d8d33cbcf9fef57042d085b9969e",
+    "crypto_holy_grail/test_scqos_crypto_proof.py": "0a490293a2478ce041f0e9c61d0ba3af9dc792664737861931e11a9079715f8f",
+    "crypto_holy_grail/test_scqos_freeze_publish.py": "41477b6a30fdb68ec6880daa769631cd298f17af23661bf3c5400294c728da75",
+    "crypto_holy_grail/test_scqos_full_terminal.py": "08ae3c54b44f68683b7609c88583508fa9a622d5ff8df566764c982501570af7",
+    "crypto_holy_grail/test_xrpl_mainnet_supreme_proof.py": "59908e0a748138af7d7eb3834cddfbfaea2c98cb352f18bd7b2b255041e65c21",
+    "crypto_holy_grail/xrpl_live_testnet.py": "99a6d7903f7c1368aa0bda9d202a3a61932a31567aa32ba571a96a00ea4af166",
+    "crypto_holy_grail/xrpl_mainnet_supreme_proof.py": "5e174233d5bca540a601000e65446ad622baa64cedd32f6009c37510730bc0ad"
+  },
+  "local_authentication": {
+    "hmac_verified_before_publication": true,
+    "private_hmac_key_published": false,
+    "receipt_hash_sha3_512": "ad27efd38fcc1ecbe2a6724283c316936d84f23ef71f35c71d2fa3e96f6234899e4d42b5753529614f131616f979de038296e0571d4ae41cde262761e96d975c",
+    "source_receipt_filename": "mainnet_20260827T061232Z.json"
+  },
+  "network": "XRPL Mainnet",
+  "network_id": 0,
+  "proof_status": "COMPLETE",
+  "public_authentication": {
+    "algorithm": "Ed25519",
+    "canonicalization": "RFC 8785 JCS",
+    "signature_encoding": "base64"
+  },
+  "repository": "https://github.com/KnowledgeeKZA3224/scqos-reference-implementation",
+  "schema": "scqos.public-mainnet-proof.v1",
+  "transactions": {
+    "governed_correct": {
+      "explorer": "https://livenet.xrpl.org/transactions/D13EDAED96354DD2CF16382BA815367A37F5408D64B362FC24C19DEDF6775AD7",
+      "hash": "D13EDAED96354DD2CF16382BA815367A37F5408D64B362FC24C19DEDF6775AD7"
+    },
+    "wrong_control": {
+      "explorer": "https://livenet.xrpl.org/transactions/C474989DFE4354CBB9A1F0B977BAF473EE91345DC6387F84C80F5A3B5F1110F9",
+      "hash": "C474989DFE4354CBB9A1F0B977BAF473EE91345DC6387F84C80F5A3B5F1110F9"
+    }
+  }
+}
