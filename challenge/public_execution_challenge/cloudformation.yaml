@@ -1,0 +1,81 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: SCQOS Public Execution Challenge v1
+Parameters:
+  ArtifactBucket: {Type: String}
+  ArtifactKey: {Type: String}
+  SourceCommit: {Type: String}
+Resources:
+  SigningKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: SCQOS public receipt signing key
+      Enabled: true
+      KeySpec: ECC_NIST_P256
+      KeyUsage: SIGN_VERIFY
+      PendingWindowInDays: 7
+  Receipts:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions: [{AttributeName: receipt_id, AttributeType: S}]
+      KeySchema: [{AttributeName: receipt_id, KeyType: HASH}]
+      PointInTimeRecoverySpecification: {PointInTimeRecoveryEnabled: true}
+      SSESpecification: {SSEEnabled: true}
+  RuntimeRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement: [{Effect: Allow, Principal: {Service: lambda.amazonaws.com}, Action: 'sts:AssumeRole'}]
+      Policies:
+        - PolicyName: scqos-public-challenge-runtime
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - {Effect: Allow, Action: ['logs:CreateLogStream','logs:PutLogEvents'], Resource: '*'}
+              - {Effect: Allow, Action: ['dynamodb:PutItem','dynamodb:GetItem'], Resource: !GetAtt Receipts.Arn}
+              - {Effect: Allow, Action: ['kms:Sign','kms:GetPublicKey'], Resource: !GetAtt SigningKey.Arn}
+  Function:
+    Type: AWS::Lambda::Function
+    Properties:
+      Runtime: python3.12
+      Architectures: [arm64]
+      Handler: runtime.handler
+      Role: !GetAtt RuntimeRole.Arn
+      Timeout: 20
+      MemorySize: 384
+      ReservedConcurrentExecutions: 8
+      Code: {S3Bucket: !Ref ArtifactBucket, S3Key: !Ref ArtifactKey}
+      Environment:
+        Variables:
+          SCQOS_PRODUCTION: '1'
+          SCQOS_RECEIPTS_TABLE: !Ref Receipts
+          SCQOS_KMS_KEY_ID: !GetAtt SigningKey.Arn
+          SCQOS_KERNEL_SECRET: !Sub '${AWS::StackId}:${SourceCommit}'
+          SCQOS_SOURCE_COMMIT: !Ref SourceCommit
+  FunctionLogs:
+    Type: AWS::Logs::LogGroup
+    Properties: {LogGroupName: !Sub '/aws/lambda/${Function}', RetentionInDays: 30}
+  Api:
+    Type: AWS::ApiGatewayV2::Api
+    Properties: {Name: scqos-public-execution-challenge-v1, ProtocolType: HTTP}
+  Integration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties: {ApiId: !Ref Api, IntegrationType: AWS_PROXY, IntegrationUri: !GetAtt Function.Arn, PayloadFormatVersion: '2.0'}
+  Route:
+    Type: AWS::ApiGatewayV2::Route
+    Properties: {ApiId: !Ref Api, RouteKey: '$default', Target: !Join ['/', ['integrations', !Ref Integration]]}
+  Stage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref Api
+      StageName: '$default'
+      AutoDeploy: true
+      DefaultRouteSettings: {ThrottlingBurstLimit: 10, ThrottlingRateLimit: 5}
+  InvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties: {Action: 'lambda:InvokeFunction', FunctionName: !Ref Function, Principal: apigateway.amazonaws.com, SourceArn: !Sub 'arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${Api}/*'}
+Outputs:
+  PublicUrl: {Value: !Sub 'https://${Api}.execute-api.${AWS::Region}.${AWS::URLSuffix}/'}
+  FunctionName: {Value: !Ref Function}
+  SigningKeyArn: {Value: !GetAtt SigningKey.Arn}

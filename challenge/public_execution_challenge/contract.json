@@ -1,0 +1,16 @@
+{
+  "contract_id": "SCQOS-PUBLIC-EXECUTION-CHALLENGE-v1",
+  "canonicalization": "RFC8785-JCS+SCQOS-NFC1",
+  "execution_mode": "SHADOW_ONLY",
+  "required_authority_scope": "challenge:execute",
+  "maximum_evidence_age_seconds": 300,
+  "maximum_clock_skew_seconds": 30,
+  "decision_precedence": ["REJECT", "HOLD", "PERMIT"],
+  "world_first_claim": "The first publicly reproducible cross-substrate proof-before-action execution challenge using one frozen governance contract, nine cryptographic gate proofs, signed decision receipts, and live independent evidence anchors.",
+  "claim_boundary": "This is a defined technical demonstration claim, not a claim that no prior safety, policy, authorization, or formal-verification system exists.",
+  "live_reference_sources": [
+    {"name": "NIST AI Agent Standards Initiative", "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative"},
+    {"name": "OWASP Top 10 for Agentic Applications 2026", "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"},
+    {"name": "XRPL JSON-RPC tx method", "url": "https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/transaction-methods/tx"}
+  ]
+}
