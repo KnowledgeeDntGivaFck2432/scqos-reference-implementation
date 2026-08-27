@@ -44,7 +44,6 @@ Resources:
       Role: !GetAtt RuntimeRole.Arn
       Timeout: 20
       MemorySize: 384
-      ReservedConcurrentExecutions: 8
       Code: {S3Bucket: !Ref ArtifactBucket, S3Key: !Ref ArtifactKey}
       Environment:
         Variables:
