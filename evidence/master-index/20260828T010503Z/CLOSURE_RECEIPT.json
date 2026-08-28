@@ -1,0 +1,13 @@
+{
+  "artifact_checksums_sha256": "a373c6ff19107dfbcee13872fa16709f567d548d003bcf4fa5650a698dd88545",
+  "canonical_master_index_sha256": "76278b0b633d82c5822fdaaa9f61c2dee7d9f3c52413095e5e77442560f8e5e6",
+  "closed_at": "2026-08-28T01:05:03Z",
+  "decision": "PERMIT",
+  "human_readable_master_index_sha256": "784106c6a0eee1fb08882a5aca8c716a3e85ab91b3d7e46262ae34dcb49fac89",
+  "object_type": "SCQOS_MASTER_INDEX_CLOSURE_RECEIPT",
+  "signature_status": "UNSIGNED",
+  "source_state_root": "8abea84b1c120b27086794b30389ff127d2fec5d3e3f2477dc2a1dd780d125ec",
+  "transition_id": "scqos:transition:sha256:8abea84b1c120b27086794b30389ff127d2fec5d3e3f2477dc2a1dd780d125ec",
+  "transparency_receipt_status": "UNREGISTERED",
+  "truth_notice": "Hash closure is complete. Identity signature and external transparency registration must be performed by their real authorities and are never fabricated."
+}

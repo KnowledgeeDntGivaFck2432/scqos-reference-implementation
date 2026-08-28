@@ -1,0 +1,24 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "decision": "PERMIT",
+    "repository_commits": {
+      "SCQOS_Hybrid_Proof": "b959c66efeeba1d2200a18cd74557108b98bf3c3",
+      "Supreme-Computation-Core": "98451e81511026d998311c9815b5f631cfca4b4b",
+      "linux-coherence-gate": "3887c604bb97c2c1c8ca106d53361c85332cbd39",
+      "scqos-reference-implementation": "5ea79497cb6cc4ff3529ae76511f368675212c1f",
+      "scqos-webhook": "087c4429c2a8985fa9645d0a5badb633c52b512c"
+    },
+    "source_state_root": "8abea84b1c120b27086794b30389ff127d2fec5d3e3f2477dc2a1dd780d125ec",
+    "transition_id": "scqos:transition:sha256:8abea84b1c120b27086794b30389ff127d2fec5d3e3f2477dc2a1dd780d125ec"
+  },
+  "predicateType": "https://knowledgeekza3224.github.io/scqos/attestation/master-index/v1",
+  "subject": [
+    {
+      "digest": {
+        "sha256": "76278b0b633d82c5822fdaaa9f61c2dee7d9f3c52413095e5e77442560f8e5e6"
+      },
+      "name": "SCQOS_MASTER_INDEX.canonical.json"
+    }
+  ]
+}
