@@ -1,0 +1,156 @@
+{
+  "executed_at": 1787806398.8857875,
+  "network": "xrpl_devnet",
+  "public_wallets": {
+    "intended_destination": "rKNLweqGmtFKf3ftFzLoJi9Ak65xeFEB6F",
+    "source": "rPKsxC62anvF5Z5wurSUdTK1DWs8v6g3vv",
+    "wrong_destination": "rfngs7PMTzbcBJpJZvdSywaD1iuQwPgtfq"
+  },
+  "receipt_hash": "2796661aa68c68b50ccb3cedea561affdab1b6e8876115f5734b086fa3dd7b312c51ee9fd355a988d9a12db9ba8bb07967050563d036d63bb2d2f99a6d6bb698",
+  "receipt_hmac_sha256": "d65e4538227dc629d028e26c3504ca93d84f0ee91e46c67a8dd3eac64b8db1b5",
+  "rpc": "https://s.devnet.rippletest.net:51234/",
+  "schema": "scqos.crypto-proof.live-xrpl-testnet.v1",
+  "secrets_persisted": false,
+  "test_value": "2 drops total; Devnet XRP has no monetary value",
+  "valid_transaction": {
+    "consequence_closure": {
+      "decision": "PERMIT",
+      "evaluated_at": 1787806398.8857763,
+      "evidence_hash": "5a037525de16bddf3e575ab1cece6a4f3faa25454b402ce0e245899e9c02e2823d3996562d9f21a6a14bb7de77ebc2d8d3d02d88d0072005afae8beb1fe52b99",
+      "findings": [],
+      "gate_status": {
+        "alignment": true,
+        "boundary": true,
+        "causality": true,
+        "coherence": true,
+        "consciousness": true,
+        "continuity": true,
+        "genesis": true,
+        "reference": true,
+        "time": true
+      },
+      "intent_hash": "a7692e409e9ee14ecaec0c6803675ef347ea60acb2115853f3ddd6f3c01008927454906eb99cbf121cc2de0d3bd816cd8ed401a66d3bb70bfba5db8d3fa66628",
+      "policy_hash": "c9fbe623cb36a51a56bcc1e8ab91f789d9162612bf95155e202e0bcc7650b839cbc915c98f5fd41c5454a9a672b5b5e0be53d63a8806e4c90b582169c797fb38",
+      "root_proof": {
+        "admitted": true,
+        "mode": "consequence-closure"
+      },
+      "transaction_hash": "DB7602D0309A2929F7D374DAAD7B5A3DC1F64FF2C216F132508210FD4CA6974B"
+    },
+    "governed_ledger_result": {
+      "account": "rPKsxC62anvF5Z5wurSUdTK1DWs8v6g3vv",
+      "amount": "1",
+      "destination": "rKNLweqGmtFKf3ftFzLoJi9Ak65xeFEB6F",
+      "destination_tag": null,
+      "engine_result": "tesSUCCESS",
+      "ledger_hash": "2204319BEE50742D9B56F0FE33DD840AC17C86A18C00FE57A3CDA160913FD015",
+      "ledger_index": 4813922,
+      "meta_transaction_result": "tesSUCCESS",
+      "transaction_hash": "DB7602D0309A2929F7D374DAAD7B5A3DC1F64FF2C216F132508210FD4CA6974B",
+      "transaction_type": "Payment",
+      "validated": true
+    },
+    "prepared_transaction_hash": "f3e2e223a719f9a3b2ffc70d428489324d90b30f116be4ea7629517ffce77876a532518eae8be2d8e1949e4447fe30437419c2ad8b27325b1faa377054f5b64a",
+    "scqos_decision": {
+      "decision": "PERMIT",
+      "evaluated_at": 1787806394.2794156,
+      "evidence_hash": "a101abac6f917d777da90877e1bffe8ab5d409348c7372ef75a8393fab3f3453173d25c0b737819da2e6e2c89791f766992063e44c7d763f536fc40b9312575b",
+      "findings": [],
+      "gate_status": {
+        "alignment": true,
+        "boundary": true,
+        "causality": true,
+        "coherence": true,
+        "consciousness": true,
+        "continuity": true,
+        "genesis": true,
+        "reference": true,
+        "time": true
+      },
+      "intent_hash": "a7692e409e9ee14ecaec0c6803675ef347ea60acb2115853f3ddd6f3c01008927454906eb99cbf121cc2de0d3bd816cd8ed401a66d3bb70bfba5db8d3fa66628",
+      "policy_hash": "dd76f8e3f85165354cfef3d6b9fd667db3d0ae503a69b3e78384f2212b764e0e94cc89c28990518d8da16cf8b84915c95fe7e918b0d7c5be9559f905fb2130c2",
+      "root_proof": {
+        "admitted": true,
+        "alignment_hash": "cc34e5979a50de695364ba79666463fdae932ee3d869fb7db943f51dcc58ecdd",
+        "boundary_hash": "55af5b36dd0e9077eea6a9d32e88b9da2b6fa8511df282b202704e28fee8e409",
+        "causality_hash": "322a03ba10c5ec61228dfa99691588bb1a03f3f85f76a9d000ac3e42344b319b",
+        "coherence_hash": "00f6b6cb37e680a37168fd94eab245a46823ab1b4d189899b8b6b85d6860cd85",
+        "consciousness_hash": "9ff149074ae2f4f3c7b76bc4c4185ab4a0ed0637475bbb5f582dea0c334cc935",
+        "continuity_hash": "4ff632c9e79ac075562cd2d0925e7f59415ca71e2c2796f0088899aae8f1c707",
+        "final_proof": "00f6b6cb37e680a3",
+        "genesis_hash": "c03fe66753d221a9216ac7eadac1e0c0bdcf71271a5f2b9b14c71b34900b9299",
+        "packet_hash": "5bbb58baf7e62dcd28423e3ace92423b24599ce33850c329d2864d79af879419",
+        "reason": "external state admitted after nine-gate coherence",
+        "reference_hash": "878b7352b56d95d2dff148d84e9448ece2d492009a6299c925eb454104445acd",
+        "time_hash": "8a57aadb7e8182e55e0a6ef5f79b458ba8229d6b7b5750edeea7b529aa0d317d"
+      },
+      "transaction_hash": "f3e2e223a719f9a3b2ffc70d428489324d90b30f116be4ea7629517ffce77876a532518eae8be2d8e1949e4447fe30437419c2ad8b27325b1faa377054f5b64a"
+    }
+  },
+  "wrong_transaction": {
+    "causal_result": "same prepared wrong transaction was executable without governance and rejected by SCQOS",
+    "prepared_transaction_hash": "31cc663751c5274135131d079e8d584283df760e1aa5a323c57743c86f0fa1ef75f19434a8f093e075d7e2b41facc43ac2d050eefc13ec1a473bcd912b0c10d6",
+    "scqos_decision": {
+      "decision": "REJECT",
+      "evaluated_at": 1787806387.8466423,
+      "evidence_hash": "3019833e5074ba693acf7291a08e04f6733161f051eb69031e9e3f21b64c6999952ea5d9d8afdcb718211dfb2b58cd96e34e4d3bc8f20f332911b965df0dc143",
+      "findings": [
+        {
+          "code": "DESTINATION_MISMATCH",
+          "decision": "REJECT",
+          "gate": "alignment",
+          "message": "transaction destination contradicts declared intent"
+        },
+        {
+          "code": "EXPECTED_EFFECT_MISMATCH",
+          "decision": "REJECT",
+          "gate": "alignment",
+          "message": "proposed consequence differs from declared consequence"
+        }
+      ],
+      "gate_status": {
+        "alignment": false,
+        "boundary": true,
+        "causality": true,
+        "coherence": false,
+        "consciousness": true,
+        "continuity": true,
+        "genesis": true,
+        "reference": true,
+        "time": true
+      },
+      "intent_hash": "50dcceef4961119bfa6f48baca4f14322837b6f85f71e8e882b0678b91ca3a23ab0bec33715d384239a19b07af9ee915c7fd74ed304785962c1b964c59f5393b",
+      "policy_hash": "dd76f8e3f85165354cfef3d6b9fd667db3d0ae503a69b3e78384f2212b764e0e94cc89c28990518d8da16cf8b84915c95fe7e918b0d7c5be9559f905fb2130c2",
+      "root_proof": {
+        "admitted": true,
+        "alignment_hash": "917f5b1a9a1264bc529857c3b51e0d2c29028eb3e47593b0e28ff6c762103a77",
+        "boundary_hash": "6d20e177351376051d4da7da6f8dca277b8de38aea3346ccd09b6605daf4c1f5",
+        "causality_hash": "c2fc4751875afb0088a5c86e696bebcaf129717e2c8355922e1f6ce7ad9d23ec",
+        "coherence_hash": "51c60de06278305a33e6da23a2757a51dc5ac0339351c646d3c3db9c5e2e0033",
+        "consciousness_hash": "1fe8386beaa090e46a144c0e3bb67a6ba5ac0175463d81aba47d725f4609e5c4",
+        "continuity_hash": "0541a0396d2549154c8203ecede1a8310df9c32d6157d86a3bfee834f473baa8",
+        "final_proof": "51c60de06278305a",
+        "genesis_hash": "c6951a6e8fbccd495b1f31c89fc6c2833d9cd740fd1fa13739867d9ca1ea7e3c",
+        "packet_hash": "0da46a7d340d33a044571c8b543e263bcbc0454cfe80c9f3745bb257b513af91",
+        "reason": "external state admitted after nine-gate coherence",
+        "reference_hash": "4c9e3c5b9eaa5292ef0a99d41753bac017e19e2f741438ecaa2df4b61193271f",
+        "time_hash": "d6326ca13175ad00911d94419d89bf0986fb131fab9bdb077e453ab0b509beee"
+      },
+      "transaction_hash": "31cc663751c5274135131d079e8d584283df760e1aa5a323c57743c86f0fa1ef75f19434a8f093e075d7e2b41facc43ac2d050eefc13ec1a473bcd912b0c10d6"
+    },
+    "signer_action": "BLOCKED_BEFORE_SIGNING",
+    "unsafe_control_result": {
+      "account": "rPKsxC62anvF5Z5wurSUdTK1DWs8v6g3vv",
+      "amount": "1",
+      "destination": "rfngs7PMTzbcBJpJZvdSywaD1iuQwPgtfq",
+      "destination_tag": null,
+      "engine_result": "tesSUCCESS",
+      "ledger_hash": "3BBD2DA82A200A3341EA53E9827EA1283A3BB3316D7EA3334C4AE14D24FA57B4",
+      "ledger_index": 4813920,
+      "meta_transaction_result": "tesSUCCESS",
+      "transaction_hash": "BFE9C255F62E82FB8E03D0C68AFB0A53854F57B451731048A3B4F303C4054265",
+      "transaction_type": "Payment",
+      "validated": true
+    }
+  }
+}

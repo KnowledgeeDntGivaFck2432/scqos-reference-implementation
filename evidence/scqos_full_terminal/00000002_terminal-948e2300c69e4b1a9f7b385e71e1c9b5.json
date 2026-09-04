@@ -1,0 +1,86 @@
+{
+  "consequence": {
+    "consequence_decision": "PERMIT",
+    "executed": true,
+    "exit_matches": true,
+    "expected_exit_code": 0,
+    "file_expectations": [],
+    "files_match": true,
+    "finished_at": 1787809010.6782613,
+    "return_code": 0,
+    "started_at": 1787809006.3189998,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_matches": true,
+    "stdout_sha256": "3e2839556bf9523787b179c1f8890c2ba961cbb16ed86364e2f46e989cbbbf5f",
+    "timed_out": false
+  },
+  "intent": {
+    "actor": "knowledgee-kza",
+    "authority_mode": "owner_full_control",
+    "authorization": "explicit_terminal_invocation",
+    "command": {
+      "argv": [
+        ".venv-crypto-proof/bin/python",
+        "crypto_holy_grail/xrpl_mainnet_supreme_proof.py",
+        "--prepare"
+      ],
+      "mode": "argv",
+      "shell_command": null
+    },
+    "command_hash": "7ea82c62b1c6d3463c5227e17ebc48b51806d5bbe2f5c6a2970f0c8f1af5c2d17aa693cca653365f1915f7434bca8e2e3880bac1297a62684d442fb7d8c4eafa",
+    "created_at": 1787809006.1345532,
+    "cwd": "/home/knowledgee-kza/scqos-reference-implementation",
+    "effective_uid": 1000,
+    "environment_hash": "b28d941fbaf902015d7ff86a70fa1ad05054783b22e458f27730a34ba399f3acf745c770128b0dc9bdd1f1c7f0308c19d5fff385949fbc5db23ac3ffd9d1744f",
+    "expected_effect": "create protected proof wallets and calculate the exact funding requirement from live Mainnet reserve and fee data",
+    "expected_exit_code": 0,
+    "expires_at": 1787809126.1345532,
+    "objective": "prepare the frozen SCQOS XRPL Mainnet causal proof",
+    "previous_receipt_hash": "cf75e057da3b86c32b62357adaefb94e47a248ba09d1b5743b2c7435a720e4e0585b76e30db5d9914cc6d8eadad6d0a30680acdd32fe46fad05d4cac8f957769",
+    "runtime": "/usr/bin/python3.14",
+    "runtime_sha256": "b8d8288faefdd300201f43fcf00f6f539a27218eeed3a3dff5ab10b9c4c99700",
+    "schema": "scqos.full-terminal.v1",
+    "sequence": 2,
+    "stdin_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timeout_seconds": 300.0,
+    "transition_id": "terminal-948e2300c69e4b1a9f7b385e71e1c9b5",
+    "uid": 1000
+  },
+  "pre_execution": {
+    "command_hash": "7ea82c62b1c6d3463c5227e17ebc48b51806d5bbe2f5c6a2970f0c8f1af5c2d17aa693cca653365f1915f7434bca8e2e3880bac1297a62684d442fb7d8c4eafa",
+    "decision": "PERMIT",
+    "findings": [],
+    "gate_status": {
+      "alignment": true,
+      "boundary": true,
+      "causality": true,
+      "coherence": true,
+      "consciousness": true,
+      "continuity": true,
+      "genesis": true,
+      "reference": true,
+      "time": true
+    },
+    "intent_hash": "bc5373592333f486605137b6501eeae673d3bace94c4a1b142041fafa2ca2fd0c3cb916e555739583934513e2c50c0eb092a2561547db20a015a82192e2b1b56",
+    "root_proof": {
+      "admitted": true,
+      "alignment_hash": "354ccf502acfefdceb9ce2d76b950950ace2f25e2dbd7e6dd5dc0330870951f7",
+      "boundary_hash": "003b033bdeed70339cda5ddd3d000c01bfbfb6898e5502e79a2d9cc5c2668b76",
+      "causality_hash": "e0c9d8b798ec7a3e68c07fc754ead426b5b933433d7b3c8a740be2f8dc344462",
+      "coherence_hash": "1e7e040606d6de5456d5cfa7f05b3d22a61b5923bcc663052c02eafddf861c6d",
+      "consciousness_hash": "023acbc7c2ce1100709eae840963698813d3e73ff2412839869e254a36ea76fb",
+      "continuity_hash": "d886332002f04314feed256bcc1281687f241dc0182088261f3b874097fd8637",
+      "final_proof": "1e7e040606d6de54",
+      "genesis_hash": "fd81fab253fdb514bdcca2ef9ecffd5b528c2f4bf649975be74a328b0a72af43",
+      "packet_hash": "e28163a43acb8824d5cb721cd103925dc93646f75bef2d10eb87beb1ceb133ab",
+      "reason": "external state admitted after nine-gate coherence",
+      "reference_hash": "c11ff45dc40be8469a95ac41a2b48645e73a354a1b7957ff13583ac6f8b5e92f",
+      "time_hash": "f13fd7ee608217a597d3944e9bca2429bcf9f3519264f156a729c46b52fce936"
+    },
+    "runtime_hash": "b8d8288faefdd300201f43fcf00f6f539a27218eeed3a3dff5ab10b9c4c99700",
+    "transition_id": "terminal-948e2300c69e4b1a9f7b385e71e1c9b5"
+  },
+  "receipt_hash": "baa88bff1121fb3f23f8bb22c69d822d74c0835548c745b5c29aa6d0e6dbc13e424bfe0982f3a4dfca51043daa3282faa52719f5d0f68c4a84a30a9bfe085b27",
+  "receipt_hmac_sha256": "3ae8cb77f5799963e36c3a801a61e47bde044d70dd77b7ecbca2c7e126fb0822",
+  "schema": "scqos.full-terminal.v1"
+}

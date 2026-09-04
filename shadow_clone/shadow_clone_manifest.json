@@ -1,0 +1,43 @@
+{
+  "protocol": "SHADOW-CLONE-RECURSIVE-EXECUTION-V1",
+  "architecture_id": "SUPREME-MIND-59-FACULTY-UNIVERSE-V1",
+  "source_manifest_raw_sha256": "a70a130772ca13cf55bf4887e1862eebbf27bd1fc62d1de1db2f2dc366a0f9ac",
+  "source_commit": "92aee0d7221f0bcad30ead8bcaa27226f0f29586",
+  "sovereign_principal": "SOVEREIGN_HUMAN",
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "prime_faculties": 59,
+  "purpose": "Activate the 59-faculty Supreme Mind as a recursively multiplying, internet-operating workforce whose actions, consequences, memory and evolution remain governed by SCQOS.",
+  "internet_body": {
+    "runtime": "Amazon Bedrock AgentCore Harness",
+    "browser": "Amazon Bedrock AgentCore Browser",
+    "automation": "Playwright CLI over authenticated CDP",
+    "network": "public internet initiated from isolated managed browser sessions",
+    "session_recording": true
+  },
+  "clone_limits": {
+    "max_depth": 8,
+    "max_children_per_clone": 32,
+    "default_ttl_seconds": 900,
+    "maximum_ttl_seconds": 3600,
+    "read_only_autonomy": true,
+    "external_mutation_requires_registered_adapter": true
+  },
+  "learning": {
+    "experience_is_appended_after_every_consequence": true,
+    "qualified_experience_enters_shared_memory": true,
+    "qualified_experience_is_shared_across_all_59_faculties": true,
+    "model_policy_and_tool_changes_require_versioned_requalification": true,
+    "silent_authoritative_rewrite": false
+  },
+  "lifecycle": [
+    "PROPOSE",
+    "QUALIFY",
+    "SPAWN",
+    "OBSERVE",
+    "ACT",
+    "VERIFY_CONSEQUENCE",
+    "LEARN",
+    "MERGE_OR_QUARANTINE",
+    "TERMINATE_OR_REUSE"
+  ]
+}
