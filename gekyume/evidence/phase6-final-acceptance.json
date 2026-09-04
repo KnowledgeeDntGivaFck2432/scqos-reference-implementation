@@ -1,0 +1,89 @@
+{
+  "system": "GEKYUME",
+  "phase": 6,
+  "name": "INFRASTRUCTURE_GOVERNANCE_ACCEPTANCE",
+  "timestamp": 1788499986.5701535,
+  "live_acceptance_boundary": {
+    "eks_clusters_detected": [],
+    "eks_required": false
+  },
+  "required_checks": {
+    "docker": true,
+    "infrastructure_artifacts": true,
+    "infrastructure_tests": false,
+    "fail_closed": true
+  },
+  "results": {
+    "docker": {
+      "pass": true,
+      "version": "29.7.2"
+    },
+    "eks": {
+      "clusters": [],
+      "pass": false
+    },
+    "infrastructure_artifacts": {
+      "pass": true,
+      "files": [
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks-auth/2023-11-26/endpoint-rule-set-1.json.gz",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks-auth/2023-11-26/paginators-1.json",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks-auth/2023-11-26/service-2.json.gz",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks-auth/2023-11-26/waiters-2.json",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks/2017-11-01/endpoint-rule-set-1.json.gz",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks/2017-11-01/examples-1.json",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks/2017-11-01/paginators-1.json",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks/2017-11-01/service-2.json.gz",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks/2017-11-01/service-2.sdk-extras.json",
+        ".shadow-clone-venv/lib/python3.14/site-packages/botocore/data/eks/2017-11-01/waiters-2.json",
+        ".venv-crypto-proof/lib/python3.14/site-packages/Crypto/Cipher/_EKSBlowfish.py",
+        ".venv-crypto-proof/lib/python3.14/site-packages/Crypto/Cipher/_EKSBlowfish.pyi",
+        ".venv-crypto-proof/lib/python3.14/site-packages/Crypto/Cipher/_raw_eksblowfish.abi3.so",
+        "evidence/master-index/20260828T010503Z/VERIFY.py",
+        "supreme_mind/v1/admission-output.json",
+        "supreme_mind/v1/admission-test.json",
+        "tools/scqos_master_index.py"
+      ]
+    },
+    "infrastructure_tests": {
+      "pass": false,
+      "files": [],
+      "stdout_tail": ""
+    },
+    "kubernetes": {
+      "available": false,
+      "cluster": null,
+      "nodes": [],
+      "validating_webhooks": [],
+      "mutating_webhooks": [],
+      "scqos_webhooks": [],
+      "pass": false
+    },
+    "fail_closed": {
+      "pass": true,
+      "evidence": [
+        {
+          "file": "evidence/master-index/20260828T010503Z/VERIFY.py",
+          "evidence": "fail-closed declaration"
+        },
+        {
+          "file": "tools/scqos_master_index.py",
+          "evidence": "fail-closed declaration"
+        }
+      ]
+    }
+  },
+  "sha256": "d9cdbdd97b46cc3a18edd3c8457c217fe0f1a7fa66dd72a98f82da95fdae7868",
+  "acceptance_correction": {
+    "timestamp": 1788500171.150527,
+    "reason": "NO_MATCHING_TESTS is NOT_APPLICABLE, not execution failure",
+    "pytest_status": "NOT_APPLICABLE",
+    "eks_status": "NOT_LIVE_OUTSIDE_ACCEPTANCE_BOUNDARY",
+    "required_checks": {
+      "docker_execution": true,
+      "scqos_infrastructure_artifacts": true,
+      "fail_closed_infrastructure": true,
+      "live_eks_required": false
+    }
+  },
+  "phase_result": "PASS"
+}

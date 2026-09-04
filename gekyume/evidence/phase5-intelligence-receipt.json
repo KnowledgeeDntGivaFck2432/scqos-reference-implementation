@@ -1,0 +1,52 @@
+{
+  "system": "GEKYUME",
+  "phase": 5,
+  "name": "TOTAL_INTELLIGENCE_CHALLENGE",
+  "timestamp": 1788497773.906438,
+  "results": {
+    "gekyume": {
+      "executed": true,
+      "decision": "PERMIT",
+      "receipt_hash": "11637fde195375bba80be9731849d9f8d37b209476f0eca52d8c59befa69e863"
+    },
+    "pytorch": {
+      "executed": false,
+      "error": "No module named 'torch'"
+    },
+    "bedrock": {
+      "executed": true,
+      "model": "nvidia.nemotron-nano-12b-v2",
+      "answer": "APPROVE"
+    },
+    "openai": {
+      "executed": false,
+      "model": null,
+      "answer": null
+    },
+    "sagemaker": {
+      "live_surface": false,
+      "endpoints": []
+    },
+    "anabelle": {
+      "live_binding_found": false,
+      "bindings": []
+    },
+    "authority_separation": {
+      "executed": true,
+      "intelligence_role": "EVIDENCE_ONLY",
+      "execution_authority": "SCQOS_GE\u200b\u200bKYUME",
+      "advisors": {
+        "bedrock": "APPROVE",
+        "openai": null,
+        "pytorch": null
+      }
+    }
+  },
+  "blockers": [
+    "PYTORCH:No module named 'torch'",
+    "OPENAI:OPENAI_API_KEY_NOT_PRESENT",
+    "SAGEMAKER:NO_INSERVICE_ENDPOINT",
+    "ANABELLE:NO_EXECUTABLE_BINDING_DISCOVERED"
+  ],
+  "receipt_sha256": "ba88e6e4c46ef0acc0fd45d147f0b6f3e287e941aaa7a05e89a952b9ff51b0a5"
+}

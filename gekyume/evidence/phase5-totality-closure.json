@@ -1,0 +1,49 @@
+{
+  "system": "GEKYUME",
+  "phase": 5,
+  "timestamp": 1788498780.976139,
+  "results": {
+    "gekyume": {
+      "pass": true,
+      "decision": "PERMIT",
+      "receipt_hash": "b7bd70aa727b8f5325168b5007f62d1a6c314ac41daecec010d822a5069816b5"
+    },
+    "pytorch": {
+      "pass": false
+    },
+    "bedrock": {
+      "pass": true,
+      "model": "nvidia.nemotron-nano-12b-v2"
+    },
+    "governed_intelligence": {
+      "pass": true,
+      "validators": {
+        "grassroots-ai-scqos-terra-inference-validator": true,
+        "grassroots-ai-scqos-grok-inference-validator": true,
+        "grassroots-ai-scqos-inference-validator": true,
+        "grassroots-ai-scqos-release-validator": true
+      }
+    },
+    "sagemaker": {
+      "pass": false,
+      "existing_models": [],
+      "candidate_execution_roles": [
+        [
+          "AmazonBraketServiceSageMakerNotebookRole",
+          "arn:aws:iam::327453383912:role/service-role/AmazonBraketServiceSageMakerNotebookRole"
+        ]
+      ],
+      "activation_ready": true
+    },
+    "openai": {
+      "pass": false,
+      "credential_sources": []
+    },
+    "authority_separation": {
+      "pass": true,
+      "intelligence": "EVIDENCE_ONLY",
+      "execution_authority": "SCQOS/GEKYUME"
+    }
+  },
+  "sha256": "1d56c1ed304f2fd374adb29b766bbc889828254500457ce5546c537f3ee0efa4"
+}

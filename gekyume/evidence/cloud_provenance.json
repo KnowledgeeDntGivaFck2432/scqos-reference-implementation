@@ -1,0 +1,37 @@
+{
+  "system": "GEKYUME",
+  "phase": "2-cloud-provenance",
+  "timestamp": 1788494601.793199,
+  "git_commit": "25e1a29da41b43d5f781613ff93723206ea8f290",
+  "docker_image_id": "sha256:30bcedc2ab9a5652892f2d67134861fba35c5b20dd58e2befdfd0167e3753af3",
+  "aws_account": "327453383912",
+  "aws_region": "us-east-1",
+  "receipts": [
+    {
+      "file": "gekyume/receipts/634b8ea6-e941-4f8a-a3ee-6ebe30cdd658.json",
+      "sha256": "50b5cebfe69f6e7745d558639a7e65b4e7390a92730527fce8199bd472bbe17e",
+      "bytes": 1380
+    },
+    {
+      "file": "gekyume/receipts/90f8046c-cc5f-4cbb-a11b-def305c3fd9c.json",
+      "sha256": "3e2b1db80988c1b72a1ec2ce059d76cbf58106a47b962c2f32dacad2303c2378",
+      "bytes": 1379
+    },
+    {
+      "file": "gekyume/receipts/a369189e-f43a-4988-aad4-4aff1c87d102.json",
+      "sha256": "d04b95c1070780819502b3bf042ef967635f937d38532982bef4407912915059",
+      "bytes": 1375
+    },
+    {
+      "file": "gekyume/receipts/a5660c3e-be6c-4172-af41-47299bac8129.json",
+      "sha256": "2ea99288ef5adbcaeabb1c3e70d5582029ad2ce902634a2c98c7b1833f1050ec",
+      "bytes": 1452
+    },
+    {
+      "file": "gekyume/receipts/e9ef7980-8c59-44a3-afdb-74cfcc7b665b.json",
+      "sha256": "b43f358d909153b60fc53ef60297f3c680ef5c8c5a165250dc5bccf43f345db6",
+      "bytes": 1362
+    }
+  ],
+  "manifest_sha256": "b90a194680387d8031094a0602da0157fd9b1f954ed7bae24598ce9c94f4fe71"
+}

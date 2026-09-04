@@ -1,0 +1,20 @@
+{
+  "_type": "https://in-toto.io/Statement/v1",
+  "predicate": {
+    "decision": "HOLD",
+    "repository_commits": {
+      "scqos-reference-implementation": "25e1a29da41b43d5f781613ff93723206ea8f290"
+    },
+    "source_state_root": "662689062e87bab1c2f80b9fdb65fe854a414381ddc03c16b8829026422bd5fa",
+    "transition_id": "scqos:transition:sha256:662689062e87bab1c2f80b9fdb65fe854a414381ddc03c16b8829026422bd5fa"
+  },
+  "predicateType": "https://knowledgeekza3224.github.io/scqos/attestation/master-index/v1",
+  "subject": [
+    {
+      "digest": {
+        "sha256": "7bdbaddc440099bf411dd0345524e1f1054ca5f0d5eebf02a02e20ddcf9732c0"
+      },
+      "name": "SCQOS_MASTER_INDEX.canonical.json"
+    }
+  ]
+}
