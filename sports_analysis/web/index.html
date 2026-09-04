@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07130f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>SCQOS Sports Analysis</title>
+  <style>
+    :root{color-scheme:dark;--bg:#06100d;--panel:#0d1c17;--line:#213a31;--text:#eefaf5;--muted:#8ea99d;--green:#65f4ae;--amber:#ffd166;--red:#ff6b75;--blue:#72b7ff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#123126 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,sans-serif}main{width:min(1050px,100%);margin:auto;padding:32px 18px 70px}header{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.eyebrow{color:var(--green);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(28px,5vw,52px);line-height:1.02;margin:6px 0}.sub{color:var(--muted);max-width:670px;margin:0}.seal{border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--green);white-space:nowrap}.panel,.card{background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 20px 60px #0005}.grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}.field label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}.field input,.field select{width:100%;background:#06110d;border:1px solid var(--line);color:var(--text);border-radius:11px;padding:12px;font:inherit}.actions{display:flex;gap:10px;margin-top:14px;align-items:center}button{border:0;border-radius:11px;padding:12px 17px;background:var(--green);color:#03110b;font-weight:900;font:inherit;cursor:pointer}button:disabled{opacity:.45;cursor:wait}.status{color:var(--muted)}#result{margin-top:18px;display:grid;gap:14px}.headline{display:flex;justify-content:space-between;gap:12px;align-items:center}.badge{font-weight:900;border-radius:999px;padding:6px 10px;font-size:12px}.EXECUTE{background:#143d2c;color:var(--green)}.HOLD{background:#443713;color:var(--amber)}.REJECT,.FAILED{background:#411a21;color:var(--red)}.QUEUED,.RUNNING{background:#132d46;color:var(--blue)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:14px 0}.metric{background:#07130f;border-radius:12px;padding:11px}.metric b{display:block;font-size:20px}.metric span{color:var(--muted);font-size:11px}.proofs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.proof{border:1px solid var(--line);border-radius:9px;padding:7px 9px;font-size:12px}.pass{color:var(--green)}.fail{color:var(--red)}a{color:var(--blue)}ul{padding-left:20px}.sources{display:grid;gap:7px}.source{padding:9px;border-left:3px solid var(--line);background:#07130f}.hash{font:11px ui-monospace,monospace;word-break:break-all;color:var(--muted)}footer{margin-top:24px;color:var(--muted);font-size:12px}.hidden{display:none}@media(max-width:700px){main{padding-top:20px}header{display:block}.seal{display:inline-block;margin-top:12px}.grid{grid-template-columns:1fr}.metrics,.proofs{grid-template-columns:1fr 1fr}.headline{align-items:flex-start}.panel,.card{padding:14px}}
+  </style>
+</head>
+<body><main>
+  <header><div><div class="eyebrow">Supreme computation • R15 intelligence</div><h1>Live MLB Analysis</h1><p class="sub">Current MLB facts + current DraftKings moneylines → deterministic edge, evidence, model agreement, eight invariant proofs, and a signed receipt.</p></div><div class="seal">🔒 Analysis only</div></header>
+  <section class="panel">
+    <div class="grid">
+      <div class="field"><label>ACCESS KEY</label><input id="key" type="password" autocomplete="current-password" placeholder="Deployment access key"></div>
+      <div class="field"><label>GAME DATE</label><input id="date" type="date"></div>
+      <div class="field"><label>MAX GAMES</label><select id="max"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option></select></div>
+    </div>
+    <div class="field" style="margin-top:12px"><label>OPTIONAL MATCHUP FILTER</label><input id="matchup" maxlength="120" placeholder="Example: Dodgers vs Diamondbacks"></div>
+    <div class="actions"><button id="run">Analyze live data</button><span class="status" id="status">Ready.</span></div>
+  </section>
+  <section id="result"></section>
+  <footer>⚠️ Informational analysis only. No wager is placed or prepared. Sports betting involves risk; 21+ in Arizona. If gambling stops being fun, stop.</footer>
+</main><script>
+const $=s=>document.querySelector(s), E=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n};
+const key=$('#key'), date=$('#date'), run=$('#run'), status=$('#status'), result=$('#result');
+key.value=localStorage.getItem('scqos-key')||''; date.value=new Date().toISOString().slice(0,10);
+const pct=v=>v==null?'—':(Number(v)*100).toFixed(1)+'%';
+function badge(value){return E('span','badge '+value,value||'UNKNOWN')}
+function addMetric(box,value,label){const x=E('div','metric');x.append(E('b','',value),E('span','',label));box.append(x)}
+function render(data){result.replaceChildren();const decision=data.sports_decision||{};const top=E('div','card');const head=E('div','headline');const title=E('div');title.append(E('div','eyebrow','Verified live result'),E('h2','',decision.decision||data.state));head.append(title,badge(decision.decision||data.state));top.append(head,E('p','',decision.reason||data.decision_reason||data.error||'Processing live sources…'));if(data.receipt_verified){top.append(E('div','hash','✅ Receipt verified: '+data.consequence_receipt_sha256))}result.append(top);
+  const raw=(data.sports_analysis||{}).markets||[]; const rawById=Object.fromEntries(raw.map(x=>[String(x.event_id),x]));
+  for(const market of (decision.markets||[])){const card=E('article','card');const h=E('div','headline');const t=E('div');t.append(E('div','eyebrow',market.league+' • '+market.market_type),E('h2','',market.selected_outcome||market.event_id));h.append(t,badge(market.decision));card.append(h);const metrics=E('div','metrics');addMetric(metrics,pct(market.edge),'MODEL EDGE');addMetric(metrics,pct(market.ensemble_probability),'MODEL PROBABILITY');addMetric(metrics,pct(market.market_no_vig_probability),'NO-VIG MARKET');addMetric(metrics,pct(market.evidence_completeness),'EVIDENCE');card.append(metrics);
+    const proofs=E('div','proofs');for(const [name,p] of Object.entries(market.invariant_proofs||{})){proofs.append(E('div','proof '+(p.passed?'pass':'fail'),(p.passed?'✓ ':'✕ ')+name))}card.append(proofs);
+    const reasons=E('ul');for(const reason of market.reasons||[])reasons.append(E('li','',reason));card.append(E('h3','','Decision basis'),reasons);
+    const sources=E('div','sources');for(const src of (rawById[String(market.event_id)]||{}).evidence||[]){const row=E('div','source');const a=E('a','',src.category+' — '+src.claim);if(String(src.url).startsWith('https://')){a.href=src.url;a.target='_blank';a.rel='noopener noreferrer'}row.append(a,E('div','hash',src.observed_at||''));sources.append(row)}card.append(E('h3','','Direct evidence'),sources,E('div','hash','Decision SHA-256: '+(market.decision_sha256||'')));result.append(card)}
+}
+async function api(path,options={}){const r=await fetch(path,{...options,headers:{'content-type':'application/json','x-scqos-key':key.value,...(options.headers||{})}});const body=await r.json();if(!r.ok)throw new Error(body.error+(body.detail?' ('+body.detail+')':''));return body}
+async function poll(id){for(let i=0;i<181;i++){const data=await api('/api/analysis/'+id);render(data);status.textContent=data.state==='COMPLETED'?'Complete. Signed receipt verified.':data.state+' — live collection in progress…';if(['COMPLETED','FAILED','REJECT'].includes(data.state))return;await new Promise(r=>setTimeout(r,5000))}throw new Error('Analysis exceeded 15 minutes')}
+run.onclick=async()=>{run.disabled=true;result.replaceChildren();localStorage.setItem('scqos-key',key.value);status.textContent='Submitting through the 59-faculty governor…';try{const job=await api('/api/analyze',{method:'POST',body:JSON.stringify({analysis_date:date.value,max_events:Number($('#max').value),matchup:$('#matchup').value})});render(job);await poll(job.task_id)}catch(e){status.textContent='Stopped.';render({state:'FAILED',error:e.message})}finally{run.disabled=false}};
+</script></body></html>

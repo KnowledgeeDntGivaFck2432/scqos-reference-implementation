@@ -1,0 +1,86 @@
+{
+  "consequence": {
+    "consequence_decision": "REJECT",
+    "executed": true,
+    "exit_matches": false,
+    "expected_exit_code": 0,
+    "file_expectations": [],
+    "files_match": true,
+    "finished_at": 1787814279.2025306,
+    "return_code": 1,
+    "started_at": 1787814278.7454991,
+    "stderr_sha256": "cd864ec99c1a1f8215d0e4fbf388e9d6d2c96a52522f671258bb517a13b8d404",
+    "stdout_matches": true,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "intent": {
+    "actor": "knowledgee-kza",
+    "authority_mode": "owner_full_control",
+    "authorization": "explicit_terminal_invocation",
+    "command": {
+      "argv": [
+        ".venv-crypto-proof/bin/python",
+        "crypto_holy_grail/scqos_freeze_publish.py",
+        "publish"
+      ],
+      "mode": "argv",
+      "shell_command": null
+    },
+    "command_hash": "6b47ab151e6151afc2e01dca98c63a5a8c96db5b42cf05bcbdab845316c52fd160832ac8c15ad8e5aa0ce5076f57e116e52e5eb2f337b3e4104f44d6b1f80f3f",
+    "created_at": 1787814278.5556312,
+    "cwd": "/home/knowledgee-kza/scqos-reference-implementation",
+    "effective_uid": 1000,
+    "environment_hash": "b28d941fbaf902015d7ff86a70fa1ad05054783b22e458f27730a34ba399f3acf745c770128b0dc9bdd1f1c7f0308c19d5fff385949fbc5db23ac3ffd9d1744f",
+    "expected_effect": "publish a secret-free immutable evidence package whose Ed25519 signature, file hashes, receipt claims, live-ledger facts, Git commit, and remote GitHub branch all verify",
+    "expected_exit_code": 0,
+    "expires_at": 1787814398.5556312,
+    "objective": "freeze, hash, publicly sign, independently verify, commit, and publish the completed live SCQOS XRPL Mainnet causal proof",
+    "previous_receipt_hash": "401ebe29aa6af3766f477f41680e13e1e0f006ccfffeafe02998de331ab1579ed86b3c366a9b18fb4cdd5837632077ac49d978caa8bfdaa49b28e75752215671",
+    "runtime": "/usr/bin/python3.14",
+    "runtime_sha256": "b8d8288faefdd300201f43fcf00f6f539a27218eeed3a3dff5ab10b9c4c99700",
+    "schema": "scqos.full-terminal.v1",
+    "sequence": 7,
+    "stdin_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timeout_seconds": 900.0,
+    "transition_id": "terminal-125249d0c3e5498a96b947d6c7a6fc67",
+    "uid": 1000
+  },
+  "pre_execution": {
+    "command_hash": "6b47ab151e6151afc2e01dca98c63a5a8c96db5b42cf05bcbdab845316c52fd160832ac8c15ad8e5aa0ce5076f57e116e52e5eb2f337b3e4104f44d6b1f80f3f",
+    "decision": "PERMIT",
+    "findings": [],
+    "gate_status": {
+      "alignment": true,
+      "boundary": true,
+      "causality": true,
+      "coherence": true,
+      "consciousness": true,
+      "continuity": true,
+      "genesis": true,
+      "reference": true,
+      "time": true
+    },
+    "intent_hash": "62bce2d7608b21e242bbf3852539c72e86126fb409f482607a76261a43df947968876fb81a20960d64e78439dc12a290820c3c68ef94fca52daa370d15713fd3",
+    "root_proof": {
+      "admitted": true,
+      "alignment_hash": "14514a2734e61dc007fc53b287735ceab43fb5099ac65afa1aa38eb922656c62",
+      "boundary_hash": "b8878a7edd823313bd3ddaef832bb9bbbd123c7243d73201f8c002973a338c39",
+      "causality_hash": "eb4c38afe1696e5ee8824b4b8f2225e1241df9d886b5fca9e13197fc845d4f2e",
+      "coherence_hash": "bb194f2939b578210e3d0f75b1aa6b8fa20b40ee8eaff2774068b1c528a9a27d",
+      "consciousness_hash": "a9ea46b80691827a164b3347f490748ef41562248cbe036eb7c1e2540afd305d",
+      "continuity_hash": "e8e2185f1436856120ed61a67bf068744e500f634657742226ac4a2204e88ba8",
+      "final_proof": "bb194f2939b57821",
+      "genesis_hash": "caf4d1717bef6e0bfbcbf89af1771c9a4ea1f73d77966500aab37120f9704f86",
+      "packet_hash": "7f2a70a1d6de81b66e335f24fd887cba92d36f52409cdd0192f6ea0b392474a5",
+      "reason": "external state admitted after nine-gate coherence",
+      "reference_hash": "8af25f3bc44b10db9ec8729a502f2e83bec56717f62ae5ef41e8581b63ad7e8e",
+      "time_hash": "bdf11b408b8d6672dba125675abacc35393166400647c0023aa7ae94ef646bf3"
+    },
+    "runtime_hash": "b8d8288faefdd300201f43fcf00f6f539a27218eeed3a3dff5ab10b9c4c99700",
+    "transition_id": "terminal-125249d0c3e5498a96b947d6c7a6fc67"
+  },
+  "receipt_hash": "abea7172e34879710003365d9d060c7fe92f5862a5390486817a308da0de14718ebde984d8db52eed8ca7def122355f9636dd083fadd25aec2c30f6f802d90f9",
+  "receipt_hmac_sha256": "6f269a8f8a26748d5a1105d1174e77d46bbdcd6842b678ce72218c56b7edaf1e",
+  "schema": "scqos.full-terminal.v1"
+}

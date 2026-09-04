@@ -1,0 +1,907 @@
+{
+  "all_faults_fail_closed": true,
+  "baseline": {
+    "decision": "PERMIT",
+    "evaluated_at": 1787806355.9762924,
+    "evidence_hash": "029091732eb4a0c3b5107d21903b06616480c11e7a0cc4aba5455d817b1a36fc54b7039cf3006cc717c35c1bbb0ec8b0aa7adfb1859f2376a9853638e3ab05b7",
+    "findings": [],
+    "gate_status": {
+      "alignment": true,
+      "boundary": true,
+      "causality": true,
+      "coherence": true,
+      "consciousness": true,
+      "continuity": true,
+      "genesis": true,
+      "reference": true,
+      "time": true
+    },
+    "intent_hash": "e649878418edd5418c65e94bcc5d3340d056aeb6fb8bb36ba94ffb2c5f931941c482135c4acad49b6588826495c3f54e6a6f7a1a87cd516d6e1f8859fd9e9f4e",
+    "policy_hash": "6f5eced4b0953a25c43bfc84b88d431db1c30397f07dbd25dd7f520c635159514a4086e93a1c3354f94fc4ca4f9c56ec9b9d20fbf56c5f2d1d254183903cb31a",
+    "root_proof": {
+      "admitted": true,
+      "alignment_hash": "4a02dcceb99da69ccc43fc39f7506df143c40b338d1c0b8b8e4ba8329bca5e58",
+      "boundary_hash": "f4ea4c89606177c72f6df31eb7ea0fa42bb4d64c8342ed2807d56b59d12bf05c",
+      "causality_hash": "eef91283f6ce8390b965fab83fbe070167f69864a617f9f3dffe5d01188fce40",
+      "coherence_hash": "deb55679cd394ebdb51f54acb58cb6eb17183db48061fe145cdcf919f25afcff",
+      "consciousness_hash": "648dbafe26a037638fa4c42f3e58b057ede8045a7f735bd98de72b6b5197ba11",
+      "continuity_hash": "63d5b4e2f926f78b65dbf8a720a7495494a781d5b85a5afad30ac107990149d5",
+      "final_proof": "deb55679cd394ebd",
+      "genesis_hash": "19c6f77d34e8ef7e6c4bf4ab404f47d9e01cc671d5db77c55efa83bbd023f8b8",
+      "packet_hash": "9e06704ac8540997522ef481fcca4c1aacfced5c8bbae4e4dfafd1c02d5185cb",
+      "reason": "external state admitted after nine-gate coherence",
+      "reference_hash": "15d1e72129eeb3bd65495fe0154384c4db6b39b7794d197dd8352a6adf71c2bf",
+      "time_hash": "52cce4d46db437dda45b86631648865c2c6d3542de3486871bf1ad064e0fa4ed"
+    },
+    "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+  },
+  "claim_scope": "XRPL Payment pre-signing safety v1",
+  "executed_at": 1787806358.9609933,
+  "failed_cases": 0,
+  "mode": "closed_fault_universe",
+  "passed_cases": 62,
+  "receipt_hash": "3a9fa5642f90e7376df1fc67752fb00db316dff81771cc69da990c79a86076c6c5f87a867354cb6133ff0403f918564d183458ea003944a6ee54b79f57649fc8",
+  "receipt_hmac_sha256": "b8493478dbfa34607b7117b1bd81893ee97545c7036afe9554f9f8a1c86ea677",
+  "results": [
+    {
+      "case": "missing decision time",
+      "expected": "HOLD",
+      "expected_code": "TIME_MISSING",
+      "finding_codes": [
+        "LEDGER_TIME_MISSING",
+        "ROOT_PROOF_FAILURE",
+        "TIME_MISSING"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "future-dated intent",
+      "expected": "REJECT",
+      "expected_code": "CREATED_IN_FUTURE",
+      "finding_codes": [
+        "CREATED_IN_FUTURE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "expired intent",
+      "expected": "REJECT",
+      "expected_code": "INTENT_EXPIRED",
+      "finding_codes": [
+        "INTENT_EXPIRED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "unvalidated ledger",
+      "expected": "HOLD",
+      "expected_code": "LEDGER_NOT_VALIDATED",
+      "finding_codes": [
+        "LEDGER_NOT_VALIDATED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "stale ledger",
+      "expected": "HOLD",
+      "expected_code": "LEDGER_STALE",
+      "finding_codes": [
+        "LEDGER_STALE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "stale oracle",
+      "expected": "HOLD",
+      "expected_code": "ORACLE_STALE",
+      "finding_codes": [
+        "ORACLE_STALE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "missing intent identity",
+      "expected": "HOLD",
+      "expected_code": "INTENT_ID_MISSING",
+      "finding_codes": [
+        "INTENT_ID_MISSING",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "replayed intent",
+      "expected": "REJECT",
+      "expected_code": "INTENT_REPLAY",
+      "finding_codes": [
+        "INTENT_REPLAY",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "stale or future sequence",
+      "expected": "REJECT",
+      "expected_code": "SEQUENCE_MISMATCH",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "SEQUENCE_MISMATCH",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "b9de261485d1b31695418939950c519017730f5482e34dbeff571105d229b157a685630e4c683138cc7de5fcce51f7ee3d65874375e80dff311c474ef8a6f666"
+    },
+    {
+      "case": "broken prior receipt",
+      "expected": "REJECT",
+      "expected_code": "RECEIPT_CHAIN_BROKEN",
+      "finding_codes": [
+        "RECEIPT_CHAIN_BROKEN",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "semantic autofill mutation",
+      "expected": "REJECT",
+      "expected_code": "AUTOFILL_SEMANTIC_MUTATION",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "da4c24bab39fd875b9569fbdbcb72229a178a6141c0e9831b6bc23f23c6f7c4aac40f7c40c865925f22774cf76cbb20ad36374f0258165b36b5fb0d594a44e14"
+    },
+    {
+      "case": "post-admission mutation",
+      "expected": "REJECT",
+      "expected_code": "POST_ADMISSION_MUTATION",
+      "finding_codes": [
+        "POST_ADMISSION_MUTATION",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "duplicate submission",
+      "expected": "REJECT",
+      "expected_code": "DUPLICATE_SUBMISSION",
+      "finding_codes": [
+        "DUPLICATE_SUBMISSION",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "wrong network",
+      "expected": "REJECT",
+      "expected_code": "NETWORK_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "ENDPOINT_NETWORK_MISMATCH",
+        "EXPECTED_EFFECT_MISMATCH",
+        "NETWORK_MISMATCH",
+        "NETWORK_NOT_ALLOWED",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "96407d3e56cc561224240728f14481f32de4267fbb4d2115472f740de8f3d3b7c8621ad02e206585024d8e42efa6c4e3f0b7180d3853dccf7b5a84c2ad0b9514"
+    },
+    {
+      "case": "wrong chain identity",
+      "expected": "REJECT",
+      "expected_code": "CHAIN_ID_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "CHAIN_ID_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "94d8370be2bc41b2aa3282564ad6c93a781e47486a229b1c1b1ab868eab50f51e2ef84ad3fce9f79f3817ab77f10611d023537347de1a170b7ccdf7534651f67"
+    },
+    {
+      "case": "wrong transaction type",
+      "expected": "REJECT",
+      "expected_code": "TRANSACTION_TYPE_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH",
+        "TRANSACTION_TYPE_MISMATCH",
+        "TRANSACTION_TYPE_NOT_ALLOWED"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "0cb989af7c95c0b88501a173e1b2cf1e9620a811347543b3059f52b1f723145bb23ab3635e9cf6f7d75553ea31453008be93e2d0e3302303f39a3d2ee3bc2f06"
+    },
+    {
+      "case": "wrong source wallet",
+      "expected": "REJECT",
+      "expected_code": "SOURCE_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH",
+        "SOURCE_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "62bfc9a301d2a232d850fe53c0b9199f56eb0d823266e3e5387750557c6ab1fd54fefacef79328f19b49c342a46058364e6d4ae40f32c949cb5864f4e286bb55"
+    },
+    {
+      "case": "valid but wrong destination",
+      "expected": "REJECT",
+      "expected_code": "DESTINATION_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "DESTINATION_MISMATCH",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "b3d243c3223da5f5a49909054d5687dc076513df7021e3fe5dfef31e47c8e95aeb0fc8648d1a7cce66748cf021a8bf00bc3919d31ab33c17631d1e9a260e1822"
+    },
+    {
+      "case": "wrong destination tag",
+      "expected": "REJECT",
+      "expected_code": "DESTINATION_TAG_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "DESTINATION_TAG_MISMATCH",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "5def5eecb94fb632f066c877781d35024b0bf81aece73beba222e352791c04240bdde3f8ff450d9611beca49b970db751b15e4e2acaeb99a94c7f63dd26d33fd"
+    },
+    {
+      "case": "wrong asset",
+      "expected": "REJECT",
+      "expected_code": "ASSET_MISMATCH",
+      "finding_codes": [
+        "ASSET_MISMATCH",
+        "ASSET_NOT_ALLOWED",
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "9a03157433d865ad1896f746f7057dcf123ca525f0763b2622179c3df79faaa4e5c8a32597d4a17c884afc771d2e950ca302ef2f2b2997adc2002bcd35e4bd6a"
+    },
+    {
+      "case": "wrong issuer",
+      "expected": "REJECT",
+      "expected_code": "ISSUER_MISMATCH",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ISSUER_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "7cc23b4e25ccde4d39e043b987249dcc466b210739b02a0d348fbf5717ee549190508ab657d46cc509694cf23b0026a294229bf9735f838ce9415cbd3ad1fe44"
+    },
+    {
+      "case": "wrong amount",
+      "expected": "REJECT",
+      "expected_code": "AMOUNT_MISMATCH",
+      "finding_codes": [
+        "AMOUNT_MISMATCH",
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "5c18108762938acffc6519964e9cb9dac94b6c784c4f92d12976196df466fed87cc5857af7e87f46e0d602679800f95dca6d5fc4be083b20cfeeb64b43599a47"
+    },
+    {
+      "case": "missing expected consequence",
+      "expected": "HOLD",
+      "expected_code": "EXPECTED_EFFECT_MISSING",
+      "finding_codes": [
+        "EXPECTED_EFFECT_MISSING",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "wrong expected consequence",
+      "expected": "REJECT",
+      "expected_code": "EXPECTED_EFFECT_MISMATCH",
+      "finding_codes": [
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "unauthorized actor",
+      "expected": "REJECT",
+      "expected_code": "ACTOR_UNAUTHORIZED",
+      "finding_codes": [
+        "ACTOR_UNAUTHORIZED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "unauthorized signer",
+      "expected": "REJECT",
+      "expected_code": "SIGNER_UNAUTHORIZED",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_UNAUTHORIZED"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "unauthorized approver",
+      "expected": "REJECT",
+      "expected_code": "APPROVER_UNAUTHORIZED",
+      "finding_codes": [
+        "APPROVER_UNAUTHORIZED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "unverified source wallet",
+      "expected": "HOLD",
+      "expected_code": "SOURCE_PROVENANCE_UNVERIFIED",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "SOURCE_PROVENANCE_UNVERIFIED"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "unverifiable evidence",
+      "expected": "HOLD",
+      "expected_code": "EVIDENCE_SIGNATURE_INVALID",
+      "finding_codes": [
+        "EVIDENCE_SIGNATURE_INVALID",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "wrong policy version",
+      "expected": "REJECT",
+      "expected_code": "POLICY_HASH_MISMATCH",
+      "finding_codes": [
+        "POLICY_HASH_MISMATCH",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "policy engine failure",
+      "expected": "HOLD",
+      "expected_code": "POLICY_ENGINE_FAILURE",
+      "finding_codes": [
+        "POLICY_ENGINE_FAILURE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "verifier failure",
+      "expected": "HOLD",
+      "expected_code": "VERIFIER_FAILURE",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "VERIFIER_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "zero amount",
+      "expected": "REJECT",
+      "expected_code": "AMOUNT_NONPOSITIVE",
+      "finding_codes": [
+        "AMOUNT_NONPOSITIVE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "3a23129d80e798b8f98b50121d6e5c86508aa2305c692ad4901d04142319754460147c650ee84f35764708359d76a37555ef72d3e712e79e55ad748cc74cd4dd"
+    },
+    {
+      "case": "amount above policy",
+      "expected": "REJECT",
+      "expected_code": "AMOUNT_LIMIT_EXCEEDED",
+      "finding_codes": [
+        "AMOUNT_LIMIT_EXCEEDED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "excess precision",
+      "expected": "REJECT",
+      "expected_code": "AMOUNT_PRECISION_EXCEEDED",
+      "finding_codes": [
+        "AMOUNT_PRECISION_EXCEEDED",
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "4fd4289387d9d47a0236b77c3b18a6159b2e4bfb036c09c3b8bb834330a1a2ec6b719735b63a41c72fa69cc04c7fc3375f76e1cf50dfe0f0ee8c89d11767ec66"
+    },
+    {
+      "case": "excess fee",
+      "expected": "REJECT",
+      "expected_code": "FEE_LIMIT_EXCEEDED",
+      "finding_codes": [
+        "FEE_LIMIT_EXCEEDED",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "15ac024be701d20a80cd49f12d5a9fec81c29e0df26d1c16951fe2a6cb6462915c8fff794701cdb31072f67cd3b979673a16365536b960f9ac91adcfe4ebd39e"
+    },
+    {
+      "case": "insufficient spendable balance",
+      "expected": "REJECT",
+      "expected_code": "INSUFFICIENT_SPENDABLE_BALANCE",
+      "finding_codes": [
+        "INSUFFICIENT_SPENDABLE_BALANCE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "network outside boundary",
+      "expected": "REJECT",
+      "expected_code": "NETWORK_NOT_ALLOWED",
+      "finding_codes": [
+        "NETWORK_NOT_ALLOWED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "transaction type outside boundary",
+      "expected": "REJECT",
+      "expected_code": "TRANSACTION_TYPE_NOT_ALLOWED",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "TRANSACTION_TYPE_NOT_ALLOWED"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "asset outside boundary",
+      "expected": "REJECT",
+      "expected_code": "ASSET_NOT_ALLOWED",
+      "finding_codes": [
+        "ASSET_NOT_ALLOWED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "partial-payment flag",
+      "expected": "REJECT",
+      "expected_code": "DANGEROUS_FLAG",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "DANGEROUS_FLAG",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "e3335b1035a60baac9a358f8f3007c0126112c36de8515d34467c97ee3f801654d804dcfee1290576ea58b6595a4837e6395cc5c85fa91e6b5ae44adfe4e8827"
+    },
+    {
+      "case": "excess slippage",
+      "expected": "REJECT",
+      "expected_code": "SLIPPAGE_LIMIT_EXCEEDED",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "SLIPPAGE_LIMIT_EXCEEDED"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "invalid source address",
+      "expected": "REJECT",
+      "expected_code": "SOURCE_ADDRESS_INVALID",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH",
+        "SOURCE_ADDRESS_INVALID",
+        "SOURCE_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "5e551105e2b21a875686bca07d2b889d0df1ef7d828e741c2d2a4100e2be157ec893fa5ae6b612fb9287628fd808ff8778ebbdafd698b28d3fc5198dc904b5d6"
+    },
+    {
+      "case": "invalid destination address",
+      "expected": "REJECT",
+      "expected_code": "DESTINATION_ADDRESS_INVALID",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "DESTINATION_ADDRESS_INVALID",
+        "DESTINATION_MISMATCH",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "724803af05b459011a53792464a6cb815d94ba9164d823f2bed29d03fc6ca0960d80ac3975b3d35f8e7f405da7b2de3a7b8cbe4f1a069946dae5f17eb0ac7d70"
+    },
+    {
+      "case": "destination not verified",
+      "expected": "HOLD",
+      "expected_code": "DESTINATION_NOT_VERIFIED",
+      "finding_codes": [
+        "DESTINATION_NOT_VERIFIED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "required destination tag absent",
+      "expected": "REJECT",
+      "expected_code": "DESTINATION_TAG_REQUIRED",
+      "finding_codes": [
+        "DESTINATION_TAG_REQUIRED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "destination rejects asset",
+      "expected": "REJECT",
+      "expected_code": "DESTINATION_DISALLOWS_ASSET",
+      "finding_codes": [
+        "DESTINATION_DISALLOWS_ASSET",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "token trustline absent",
+      "expected": "REJECT",
+      "expected_code": "TRUSTLINE_MISSING",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH",
+        "TRUSTLINE_MISSING"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "6ce0e9792ef099737419d7752c5cca4d496f5b444462050e8349ee0b61eab33112c295a42b403c9174a0191e01d9aa2cf1a40c81660b6ab292a00500a37b38dd"
+    },
+    {
+      "case": "token issuer frozen",
+      "expected": "REJECT",
+      "expected_code": "ISSUER_FROZEN",
+      "finding_codes": [
+        "AUTOFILL_SEMANTIC_MUTATION",
+        "EXPECTED_EFFECT_MISMATCH",
+        "ISSUER_FROZEN",
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "6ce0e9792ef099737419d7752c5cca4d496f5b444462050e8349ee0b61eab33112c295a42b403c9174a0191e01d9aa2cf1a40c81660b6ab292a00500a37b38dd"
+    },
+    {
+      "case": "wrong RPC network",
+      "expected": "REJECT",
+      "expected_code": "ENDPOINT_NETWORK_MISMATCH",
+      "finding_codes": [
+        "ENDPOINT_NETWORK_MISMATCH",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "asset metadata absent",
+      "expected": "HOLD",
+      "expected_code": "ASSET_METADATA_UNVERIFIED",
+      "finding_codes": [
+        "ASSET_METADATA_UNVERIFIED",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "simulation failure",
+      "expected": "HOLD",
+      "expected_code": "SIMULATION_FAILED",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "SIMULATION_FAILED"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "preflight failure",
+      "expected": "HOLD",
+      "expected_code": "PREFLIGHT_NOT_SUCCESS",
+      "finding_codes": [
+        "PREFLIGHT_NOT_SUCCESS",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "signer bound to different bytes",
+      "expected": "REJECT",
+      "expected_code": "SIGNER_BINDING_MISMATCH",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "SIGNER_BINDING_MISMATCH"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "executor failure",
+      "expected": "HOLD",
+      "expected_code": "EXECUTOR_FAILURE",
+      "finding_codes": [
+        "EXECUTOR_FAILURE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "receipt writer failure",
+      "expected": "HOLD",
+      "expected_code": "RECEIPT_WRITER_FAILURE",
+      "finding_codes": [
+        "RECEIPT_WRITER_FAILURE",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "approval absent",
+      "expected": "HOLD",
+      "expected_code": "APPROVAL_MISSING",
+      "finding_codes": [
+        "APPROVAL_MISSING",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "approval invalid or expired",
+      "expected": "HOLD",
+      "expected_code": "APPROVAL_INVALID",
+      "finding_codes": [
+        "APPROVAL_INVALID",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "approval scope mismatch",
+      "expected": "REJECT",
+      "expected_code": "APPROVAL_SCOPE_MISMATCH",
+      "finding_codes": [
+        "APPROVAL_SCOPE_MISMATCH",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "accountability absent",
+      "expected": "HOLD",
+      "expected_code": "ACCOUNTABILITY_MISSING",
+      "finding_codes": [
+        "ACCOUNTABILITY_MISSING",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "required human confirmation absent",
+      "expected": "HOLD",
+      "expected_code": "HUMAN_CONFIRMATION_MISSING",
+      "finding_codes": [
+        "HUMAN_CONFIRMATION_MISSING",
+        "ROOT_PROOF_FAILURE"
+      ],
+      "observed": "HOLD",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    },
+    {
+      "case": "memo prompt injection",
+      "expected": "REJECT",
+      "expected_code": "UNTRUSTED_MEMO_CONTROL",
+      "finding_codes": [
+        "ROOT_PROOF_FAILURE",
+        "UNTRUSTED_MEMO_CONTROL"
+      ],
+      "observed": "REJECT",
+      "passed": true,
+      "root_proof": "",
+      "transaction_hash": "14554618949005c9e7c13941f59fe49bf5c77215019f9e735e5b29537b79ff7bbc90c3b0c2835cc8c84b73a971ceaf3033a756445cf3086f982bcf9ec133bbae"
+    }
+  ],
+  "schema": "scqos.crypto-proof.v1",
+  "total_cases": 62
+}

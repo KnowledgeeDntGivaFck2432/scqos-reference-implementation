@@ -1,0 +1,450 @@
+{
+  "schema": "sc-final-economic-value-discovery-v1",
+  "observed_at": "2026-08-15T18:51:44.843634+00:00",
+  "window_start": "2026-07-16T18:51:44.843634+00:00",
+  "window_end": "2026-08-15T18:51:44.843634+00:00",
+  "identity": {
+    "account": "327453383912",
+    "arn": "arn:aws:iam::327453383912:root",
+    "region": "us-east-1"
+  },
+  "problem_supplied": false,
+  "target_supplied": false,
+  "solution_supplied": false,
+  "functions": [
+    {
+      "function": "sc-gatekeeper",
+      "memory_mb": 128.0,
+      "invocations_30d": 0,
+      "errors_30d": 0,
+      "error_rate": 0,
+      "aggregate_duration_ms": 0,
+      "average_duration_ms": 0,
+      "gb_seconds": 0.0,
+      "reference_compute_cost_usd": 0.0,
+      "reference_request_cost_usd": 0.0,
+      "reference_total_cost_usd": 0.0,
+      "opportunities": [
+        {
+          "kind": "ZERO_30D_INVOCATIONS",
+          "score": 70,
+          "claim": "No Lambda invocations were observed during the 30-day window."
+        }
+      ]
+    },
+    {
+      "function": "scqos-phase4-9-executor",
+      "memory_mb": 128.0,
+      "invocations_30d": 4.0,
+      "errors_30d": 1.0,
+      "error_rate": 0.25,
+      "aggregate_duration_ms": 4846.31,
+      "average_duration_ms": 1211.5775,
+      "gb_seconds": 0.6057887500000001,
+      "reference_compute_cost_usd": 1.0096499359625002e-05,
+      "reference_request_cost_usd": 8e-07,
+      "reference_total_cost_usd": 1.0896499359625002e-05,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 125.0,
+          "claim": "25.00% of observed invocations returned errors."
+        }
+      ]
+    },
+    {
+      "function": "scqos-public-proof-abc123-validator",
+      "memory_mb": 256.0,
+      "invocations_30d": 8.0,
+      "errors_30d": 1.0,
+      "error_rate": 0.125,
+      "aggregate_duration_ms": 21703.199999999997,
+      "average_duration_ms": 2712.8999999999996,
+      "gb_seconds": 5.425799999999999,
+      "reference_compute_cost_usd": 9.043018085999999e-05,
+      "reference_request_cost_usd": 1.6e-06,
+      "reference_total_cost_usd": 9.203018085999999e-05,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 112.5,
+          "claim": "12.50% of observed invocations returned errors."
+        },
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 22.607545215000002,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000023/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 2.2607545215e-05
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-scqos-terra-inference-validator",
+      "memory_mb": 256.0,
+      "invocations_30d": 14.0,
+      "errors_30d": 0.0,
+      "error_rate": 0.0,
+      "aggregate_duration_ms": 21974.35,
+      "average_duration_ms": 1569.5964285714285,
+      "gb_seconds": 5.493587499999999,
+      "reference_compute_cost_usd": 9.155997478624999e-05,
+      "reference_request_cost_usd": 2.8000000000000003e-06,
+      "reference_total_cost_usd": 9.435997478624999e-05,
+      "opportunities": [
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 22.8899936965625,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000023/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 2.2889993696562498e-05
+        }
+      ]
+    },
+    {
+      "function": "scqos-ipfs-publisher",
+      "memory_mb": 128.0,
+      "invocations_30d": 18.0,
+      "errors_30d": 0.0,
+      "error_rate": 0.0,
+      "aggregate_duration_ms": 45274.81999999999,
+      "average_duration_ms": 2515.267777777777,
+      "gb_seconds": 5.659352499999999,
+      "reference_compute_cost_usd": 9.432273031174998e-05,
+      "reference_request_cost_usd": 3.6000000000000003e-06,
+      "reference_total_cost_usd": 9.792273031174999e-05,
+      "opportunities": []
+    },
+    {
+      "function": "scqos-public-proof-202607282156-validator",
+      "memory_mb": 256.0,
+      "invocations_30d": 0,
+      "errors_30d": 0,
+      "error_rate": 0,
+      "aggregate_duration_ms": 0,
+      "average_duration_ms": 0,
+      "gb_seconds": 0.0,
+      "reference_compute_cost_usd": 0.0,
+      "reference_request_cost_usd": 0.0,
+      "reference_total_cost_usd": 0.0,
+      "opportunities": [
+        {
+          "kind": "ZERO_30D_INVOCATIONS",
+          "score": 70,
+          "claim": "No Lambda invocations were observed during the 30-day window."
+        }
+      ]
+    },
+    {
+      "function": "scqos-phase4-9-validator",
+      "memory_mb": 128.0,
+      "invocations_30d": 5.0,
+      "errors_30d": 1.0,
+      "error_rate": 0.2,
+      "aggregate_duration_ms": 16275.67,
+      "average_duration_ms": 3255.134,
+      "gb_seconds": 2.03445875,
+      "reference_compute_cost_usd": 3.3907713648625e-05,
+      "reference_request_cost_usd": 1.0000000000000002e-06,
+      "reference_total_cost_usd": 3.4907713648625e-05,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 120.0,
+          "claim": "20.00% of observed invocations returned errors."
+        }
+      ]
+    },
+    {
+      "function": "scqos-public-proof-abc123-executor",
+      "memory_mb": 256.0,
+      "invocations_30d": 4.0,
+      "errors_30d": 1.0,
+      "error_rate": 0.25,
+      "aggregate_duration_ms": 6071.08,
+      "average_duration_ms": 1517.77,
+      "gb_seconds": 1.51777,
+      "reference_compute_cost_usd": 2.5296217259000002e-05,
+      "reference_request_cost_usd": 8e-07,
+      "reference_total_cost_usd": 2.6096217259e-05,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 125.0,
+          "claim": "25.00% of observed invocations returned errors."
+        },
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 6.324054314750003,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000006/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 6.324054314750003e-06
+        }
+      ]
+    },
+    {
+      "function": "scqos-public-proof-abc123-publisher",
+      "memory_mb": 256.0,
+      "invocations_30d": 23.0,
+      "errors_30d": 0.0,
+      "error_rate": 0.0,
+      "aggregate_duration_ms": 23266.07,
+      "average_duration_ms": 1011.5682608695652,
+      "gb_seconds": 5.8165175,
+      "reference_compute_cost_usd": 9.694215221725e-05,
+      "reference_request_cost_usd": 4.6e-06,
+      "reference_total_cost_usd": 0.00010154215221725,
+      "opportunities": [
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 24.235538054312503,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000024/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 2.4235538054312504e-05
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-service-service",
+      "memory_mb": 512.0,
+      "invocations_30d": 42.0,
+      "errors_30d": 5.0,
+      "error_rate": 0.11904761904761904,
+      "aggregate_duration_ms": 353775.67000000004,
+      "average_duration_ms": 8423.230238095239,
+      "gb_seconds": 176.88783500000002,
+      "reference_compute_cost_usd": 0.0029481364795945005,
+      "reference_request_cost_usd": 8.4e-06,
+      "reference_total_cost_usd": 0.0029565364795945005,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 111.9047619047619,
+          "claim": "11.90% of observed invocations returned errors."
+        },
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 368.5170599493125,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000369/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 0.0003685170599493125
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-scqos-grok-inference-validator",
+      "memory_mb": 256.0,
+      "invocations_30d": 55.0,
+      "errors_30d": 1.0,
+      "error_rate": 0.01818181818181818,
+      "aggregate_duration_ms": 70615.83,
+      "average_duration_ms": 1283.9241818181818,
+      "gb_seconds": 17.6539575,
+      "reference_compute_cost_usd": 0.00029423321346525,
+      "reference_request_cost_usd": 1.1000000000000001e-05,
+      "reference_total_cost_usd": 0.00030523321346525,
+      "opportunities": [
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 73.5583033663125,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000074/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 7.35583033663125e-05
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-terra-service-service",
+      "memory_mb": 512.0,
+      "invocations_30d": 15.0,
+      "errors_30d": 0.0,
+      "error_rate": 0.0,
+      "aggregate_duration_ms": 210587.95,
+      "average_duration_ms": 14039.196666666667,
+      "gb_seconds": 105.293975,
+      "reference_compute_cost_usd": 0.0017549030931325001,
+      "reference_request_cost_usd": 3e-06,
+      "reference_total_cost_usd": 0.0017579030931325,
+      "opportunities": [
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 219.36288664156254,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000219/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 0.00021936288664156254
+        }
+      ]
+    },
+    {
+      "function": "scqos-public-proof-202607282156-publisher",
+      "memory_mb": 256.0,
+      "invocations_30d": 0,
+      "errors_30d": 0,
+      "error_rate": 0,
+      "aggregate_duration_ms": 0,
+      "average_duration_ms": 0,
+      "gb_seconds": 0.0,
+      "reference_compute_cost_usd": 0.0,
+      "reference_request_cost_usd": 0.0,
+      "reference_total_cost_usd": 0.0,
+      "opportunities": [
+        {
+          "kind": "ZERO_30D_INVOCATIONS",
+          "score": 70,
+          "claim": "No Lambda invocations were observed during the 30-day window."
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-scqos-inference-validator",
+      "memory_mb": 256.0,
+      "invocations_30d": 32.0,
+      "errors_30d": 2.0,
+      "error_rate": 0.0625,
+      "aggregate_duration_ms": 45020.38,
+      "average_duration_ms": 1406.886875,
+      "gb_seconds": 11.255094999999999,
+      "reference_compute_cost_usd": 0.0001875852918365,
+      "reference_request_cost_usd": 6.4e-06,
+      "reference_total_cost_usd": 0.0001939852918365,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 106.25,
+          "claim": "6.25% of observed invocations returned errors."
+        },
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 46.89632295912499,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000047/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 4.6896322959124985e-05
+        }
+      ]
+    },
+    {
+      "function": "scqos-router",
+      "memory_mb": 128.0,
+      "invocations_30d": 0,
+      "errors_30d": 0,
+      "error_rate": 0,
+      "aggregate_duration_ms": 0,
+      "average_duration_ms": 0,
+      "gb_seconds": 0.0,
+      "reference_compute_cost_usd": 0.0,
+      "reference_request_cost_usd": 0.0,
+      "reference_total_cost_usd": 0.0,
+      "opportunities": [
+        {
+          "kind": "ZERO_30D_INVOCATIONS",
+          "score": 70,
+          "claim": "No Lambda invocations were observed during the 30-day window."
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-grok-service-service",
+      "memory_mb": 512.0,
+      "invocations_30d": 49.0,
+      "errors_30d": 0.0,
+      "error_rate": 0.0,
+      "aggregate_duration_ms": 837982.5399999999,
+      "average_duration_ms": 17101.684489795916,
+      "gb_seconds": 418.99127,
+      "reference_compute_cost_usd": 0.006983201799709,
+      "reference_request_cost_usd": 9.800000000000001e-06,
+      "reference_total_cost_usd": 0.006993001799709,
+      "opportunities": [
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 872.9002249636252,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000873/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 0.0008729002249636252
+        }
+      ]
+    },
+    {
+      "function": "scqos-public-proof-202607282156-executor",
+      "memory_mb": 256.0,
+      "invocations_30d": 0,
+      "errors_30d": 0,
+      "error_rate": 0,
+      "aggregate_duration_ms": 0,
+      "average_duration_ms": 0,
+      "gb_seconds": 0.0,
+      "reference_compute_cost_usd": 0.0,
+      "reference_request_cost_usd": 0.0,
+      "reference_total_cost_usd": 0.0,
+      "opportunities": [
+        {
+          "kind": "ZERO_30D_INVOCATIONS",
+          "score": 70,
+          "claim": "No Lambda invocations were observed during the 30-day window."
+        }
+      ]
+    },
+    {
+      "function": "grassroots-ai-scqos-release-validator",
+      "memory_mb": 256.0,
+      "invocations_30d": 53.0,
+      "errors_30d": 5.0,
+      "error_rate": 0.09433962264150944,
+      "aggregate_duration_ms": 13825.57,
+      "average_duration_ms": 260.8598113207547,
+      "gb_seconds": 3.4563924999999998,
+      "reference_compute_cost_usd": 5.760665687975e-05,
+      "reference_request_cost_usd": 1.06e-05,
+      "reference_total_cost_usd": 6.820665687974999e-05,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 109.43396226415095,
+          "claim": "9.43% of observed invocations returned errors."
+        },
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 14.401664219937501,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000014/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 1.4401664219937502e-05
+        }
+      ]
+    },
+    {
+      "function": "sc-auth",
+      "memory_mb": 512.0,
+      "invocations_30d": 1.0,
+      "errors_30d": 1.0,
+      "error_rate": 1.0,
+      "aggregate_duration_ms": 98.83,
+      "average_duration_ms": 98.83,
+      "gb_seconds": 0.049415,
+      "reference_compute_cost_usd": 8.235849805e-07,
+      "reference_request_cost_usd": 2e-07,
+      "reference_total_cost_usd": 1.0235849805000001e-06,
+      "opportunities": [
+        {
+          "kind": "HIGH_ERROR_RATE",
+          "score": 200.0,
+          "claim": "100.00% of observed invocations returned errors."
+        },
+        {
+          "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+          "score": 0.10294812256249994,
+          "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000000/30d ONLY IF duration and correctness remained unchanged.",
+          "theoretical_30d_savings_usd": 1.0294812256249994e-07
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "functions": 19,
+    "invocations": 323.0,
+    "errors": 18.0,
+    "reference_direct_lambda_cost_usd": 0.0127336455880405
+  },
+  "winning_evidence_selected_opportunity": {
+    "function": "grassroots-ai-grok-service-service",
+    "memory_mb": 512.0,
+    "invocations": 49.0,
+    "errors": 0.0,
+    "error_rate": 0.0,
+    "kind": "MEMORY_RIGHTSIZING_CANDIDATE",
+    "score": 872.9002249636252,
+    "claim": "A 64 MB lower-memory configuration would reduce compute spend by approximately $0.000873/30d ONLY IF duration and correctness remained unchanged.",
+    "theoretical_30d_savings_usd": 0.0008729002249636252
+  },
+  "state_sha256": "77d81021ba5b6d76a96a518867dff0dee33c9edb7661366da344bd67969d612a",
+  "receipt_sha256": "20d01fb0c01f870ff6f5b2cdeb5bc6e5073756e567483b40c024d66c91f59c90"
+}

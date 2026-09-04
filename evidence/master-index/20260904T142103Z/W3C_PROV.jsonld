@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "scqos": "https://knowledgeekza3224.github.io/scqos#"
+  },
+  "@id": "scqos:transition:sha256:662689062e87bab1c2f80b9fdb65fe854a414381ddc03c16b8829026422bd5fa",
+  "@type": "prov:Activity",
+  "prov:startedAtTime": "2026-09-04T14:21:06Z",
+  "prov:used": [
+    {
+      "@id": "https://github.com/KnowledgeeKZA3224/scqos-reference-implementation/commit/25e1a29da41b43d5f781613ff93723206ea8f290",
+      "@type": "prov:Entity"
+    }
+  ],
+  "prov:wasAssociatedWith": [
+    {
+      "@id": "https://github.com/KnowledgeeKZA3224",
+      "@type": "prov:Agent"
+    },
+    {
+      "@id": "scqos:governor",
+      "@type": "prov:SoftwareAgent"
+    }
+  ],
+  "scqos:decision": "HOLD",
+  "scqos:sourceStateRoot": "662689062e87bab1c2f80b9fdb65fe854a414381ddc03c16b8829026422bd5fa"
+}

@@ -1,0 +1,47 @@
+{
+  "system": "GEKYUME",
+  "phase": 5,
+  "name": "GOVERNED_INTELLIGENCE_ACCEPTANCE",
+  "timestamp": 1788499601.272141,
+  "scope": {
+    "included_live_surfaces": [
+      "GEKYUME",
+      "SCQOS",
+      "AWS_BEDROCK",
+      "TERRA_INFERENCE_VALIDATOR",
+      "GROK_INFERENCE_VALIDATOR",
+      "SCQOS_INFERENCE_VALIDATOR",
+      "SCQOS_RELEASE_VALIDATOR"
+    ],
+    "unavailable_surfaces_not_in_acceptance_boundary": [
+      "OPENAI",
+      "SAGEMAKER"
+    ]
+  },
+  "results": {
+    "gekyume": {
+      "pass": true,
+      "decision": "PERMIT",
+      "receipt_hash": "e1c8efa4ebc481f520609e59074650c5deb6767a639203a3f6bc6b4182492c14"
+    },
+    "bedrock": {
+      "pass": true,
+      "model": "nvidia.nemotron-nano-12b-v2"
+    },
+    "governed_intelligence": {
+      "pass": true,
+      "validators": {
+        "grassroots-ai-scqos-terra-inference-validator": true,
+        "grassroots-ai-scqos-grok-inference-validator": true,
+        "grassroots-ai-scqos-inference-validator": true,
+        "grassroots-ai-scqos-release-validator": true
+      }
+    },
+    "authority_separation": {
+      "pass": true,
+      "intelligence_role": "EVIDENCE_ONLY",
+      "execution_authority": "SCQOS_GE\u200b\u200bKYUME"
+    }
+  },
+  "sha256": "f5aa300d3d702e4b8c56bc8bc0b947b13859dbf16f983373a33bd521dc45a28e"
+}

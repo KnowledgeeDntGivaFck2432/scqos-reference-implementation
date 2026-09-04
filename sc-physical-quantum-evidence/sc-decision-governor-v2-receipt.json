@@ -1,0 +1,1229 @@
+{
+  "state": {
+    "schema": "sc-decision-governor-v2",
+    "mode": "READ_ONLY",
+    "timestamp_utc": "2026-08-15T16:31:35.298138+00:00",
+    "account": "327453383912",
+    "region": "us-east-1",
+    "cost_window": {
+      "start": "2026-08-08",
+      "end": "2026-08-15",
+      "aws_lambda_unblended_cost_usd": 0.0,
+      "note": "Account-level Lambda cost. Per-function attribution is not assumed without resource-level billing evidence."
+    },
+    "functions": [
+      {
+        "function": "sc-gatekeeper",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:sc-gatekeeper",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 3,
+        "last_modified": "2026-05-15T13:32:38.000+0000",
+        "code_size_bytes": 502,
+        "environment_variable_names": [],
+        "tags": {},
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": true
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 1,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-phase4-9-executor",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-phase4-9-executor",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T11:18:32.264+0000",
+        "code_size_bytes": 11445,
+        "environment_variable_names": [
+          "SCQOS_PHASE4_9_APPROVED_POLICY_HASH",
+          "SCQOS_PHASE4_9_APPROVED_VALIDATOR_CODE_DIGEST",
+          "SCQOS_PHASE4_9_CONSEQUENCE_KEY_ARN",
+          "SCQOS_PHASE4_9_DECISION_KEY_ARN",
+          "SCQOS_PHASE4_9_TARGET_TABLE",
+          "SCQOS_PHASE4_9_VALIDATION_TABLE"
+        ],
+        "tags": {},
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 1,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-public-proof-abc123-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-public-proof-abc123-validator",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T22:08:16.623+0000",
+        "code_size_bytes": 19201,
+        "environment_variable_names": [
+          "SCQOS_PHASE4_9_DECISION_KEY_ARN",
+          "SCQOS_PHASE4_9_EVIDENCE_BUCKET",
+          "SCQOS_PHASE4_9_EXECUTOR_FUNCTION_NAME",
+          "SCQOS_PHASE4_9_PUBLICATION_QUEUE_URL",
+          "SCQOS_PHASE4_9_VALIDATOR_CODE_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-abc123/9c18aed0-8ad0-11f1-ae5a-0affcabc89fb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-abc123",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "validator",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-scqos-terra-inference-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-scqos-terra-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-03T07:11:03.235+0000",
+        "code_size_bytes": 9420,
+        "environment_variable_names": [
+          "SCQOS_APPROVED_MODEL_CONFIGURATION",
+          "SCQOS_APPROVED_MODEL_ID",
+          "SCQOS_APPROVED_TARGET",
+          "SCQOS_DECISION_KEY_ARN",
+          "SCQOS_DECISION_VALIDITY_SECONDS",
+          "SCQOS_EVIDENCE_BUCKET",
+          "SCQOS_EVIDENCE_KEY_PREFIX",
+          "SCQOS_EXPECTED_AUTHORITY",
+          "SCQOS_POLICY_HASH",
+          "SCQOS_RUNTIME",
+          "SCQOS_VALIDATOR_CODE_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "TerraInferenceValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-terra-inference/5fb4ded0-8f0a-11f1-afa5-0afff42c7521",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-terra-inference",
+          "scqos:boundary": "terra-inference",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-ipfs-publisher",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-ipfs-publisher",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T12:52:13.000+0000",
+        "code_size_bytes": 9123,
+        "environment_variable_names": [
+          "PINATA_SECRET_ID"
+        ],
+        "tags": {},
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [
+            {
+              "uuid": "b79620c6-4e34-4143-ab85-db331b81c2cd",
+              "source": "arn:aws:sqs:us-east-1:327453383912:scqos-evidence-publish-queue",
+              "state": "Enabled"
+            }
+          ],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-public-proof-202607282156-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-public-proof-202607282156-validator",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T21:58:20.190+0000",
+        "code_size_bytes": 19201,
+        "environment_variable_names": [
+          "SCQOS_PHASE4_9_DECISION_KEY_ARN",
+          "SCQOS_PHASE4_9_EVIDENCE_BUCKET",
+          "SCQOS_PHASE4_9_EXECUTOR_FUNCTION_NAME",
+          "SCQOS_PHASE4_9_PUBLICATION_QUEUE_URL",
+          "SCQOS_PHASE4_9_VALIDATOR_CODE_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-202607282156/385a9580-8acf-11f1-93e5-12e3e10c7ccb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-202607282156",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "validator",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-phase4-9-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-phase4-9-validator",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T11:19:37.598+0000",
+        "code_size_bytes": 19273,
+        "environment_variable_names": [
+          "SCQOS_PHASE4_9_DECISION_KEY_ARN",
+          "SCQOS_PHASE4_9_EVIDENCE_BUCKET",
+          "SCQOS_PHASE4_9_EXECUTOR_FUNCTION_NAME",
+          "SCQOS_PHASE4_9_PUBLICATION_QUEUE_URL",
+          "SCQOS_PHASE4_9_VALIDATOR_CODE_DIGEST"
+        ],
+        "tags": {},
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 1,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-public-proof-abc123-executor",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-public-proof-abc123-executor",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T22:07:29.770+0000",
+        "code_size_bytes": 11445,
+        "environment_variable_names": [
+          "SCQOS_PHASE4_9_APPROVED_POLICY_HASH",
+          "SCQOS_PHASE4_9_APPROVED_VALIDATOR_CODE_DIGEST",
+          "SCQOS_PHASE4_9_CONSEQUENCE_KEY_ARN",
+          "SCQOS_PHASE4_9_DECISION_KEY_ARN",
+          "SCQOS_PHASE4_9_TARGET_TABLE",
+          "SCQOS_PHASE4_9_VALIDATION_TABLE"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofExecutorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-abc123/9c18aed0-8ad0-11f1-ae5a-0affcabc89fb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-abc123",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "executor",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-public-proof-abc123-publisher",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-public-proof-abc123-publisher",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-29T15:22:08.000+0000",
+        "code_size_bytes": 9123,
+        "environment_variable_names": [
+          "PINATA_SECRET_ID"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofPublisherFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-abc123/9c18aed0-8ad0-11f1-ae5a-0affcabc89fb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-abc123",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "publisher",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [
+            {
+              "uuid": "5c1280bb-a619-4d55-820b-98b070f3a95c",
+              "source": "arn:aws:sqs:us-east-1:327453383912:scqos-public-proof-abc123-publication",
+              "state": "Enabled"
+            }
+          ],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 3,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-service-service",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "last_modified": "2026-08-13T21:38:03.000+0000",
+        "code_size_bytes": 25679828,
+        "environment_variable_names": [
+          "GRASSROOTS_AI_EVIDENCE_BUCKET",
+          "GRASSROOTS_AI_EVIDENCE_PREFIX",
+          "GRASSROOTS_AI_EXPECTED_RUNTIME",
+          "GRASSROOTS_AI_EXPECTED_TARGET",
+          "GRASSROOTS_AI_GROK_INFERENCE_FUNCTION_NAME",
+          "GRASSROOTS_AI_GROK_INFERENCE_KEY_ARN",
+          "GRASSROOTS_AI_GROK_INFERENCE_POLICY_HASH",
+          "GRASSROOTS_AI_GROK_INFERENCE_POLICY_IDENTITY",
+          "GRASSROOTS_AI_GROK_INFERENCE_VALIDATOR_DIGEST",
+          "GRASSROOTS_AI_GROK_MANTLE_PROJECT_ID",
+          "GRASSROOTS_AI_GROK_MODEL_BACKEND",
+          "GRASSROOTS_AI_GROK_MODEL_ID",
+          "GRASSROOTS_AI_GROK_MODEL_PROVIDER",
+          "GRASSROOTS_AI_INFERENCE_FUNCTION_NAME",
+          "GRASSROOTS_AI_INFERENCE_KEY_ARN",
+          "GRASSROOTS_AI_INFERENCE_POLICY_HASH",
+          "GRASSROOTS_AI_INFERENCE_POLICY_IDENTITY",
+          "GRASSROOTS_AI_INFERENCE_VALIDATOR_DIGEST",
+          "GRASSROOTS_AI_NONCE_TABLE",
+          "GRASSROOTS_AI_NOVA_MODEL_BACKEND",
+          "GRASSROOTS_AI_NOVA_MODEL_ID",
+          "GRASSROOTS_AI_REGION",
+          "GRASSROOTS_AI_RELEASE_FUNCTION_NAME",
+          "GRASSROOTS_AI_RELEASE_KEY_ARN",
+          "GRASSROOTS_AI_RELEASE_POLICY_HASH",
+          "GRASSROOTS_AI_RELEASE_VALIDATOR_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "ServiceFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-service/06101050-8e2b-11f1-b81d-0e4da90aa417",
+          "aws:cloudformation:stack-name": "grassroots-ai-service"
+        },
+        "usage_7d": {
+          "invocations": 23,
+          "errors": 2,
+          "error_rate": 0.086957,
+          "avg_duration_ms": 9210.11,
+          "max_concurrency": 1
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": true
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 3,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-scqos-grok-inference-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-scqos-grok-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-14T12:17:29.000+0000",
+        "code_size_bytes": 9922,
+        "environment_variable_names": [
+          "SCQOS_APPROVED_MODEL_CONFIGURATION",
+          "SCQOS_APPROVED_MODEL_ID",
+          "SCQOS_APPROVED_TARGET",
+          "SCQOS_CONTRACT_UNIVERSE_HASH",
+          "SCQOS_DECISION_KEY_ARN",
+          "SCQOS_DECISION_VALIDITY_SECONDS",
+          "SCQOS_EVIDENCE_BUCKET",
+          "SCQOS_EVIDENCE_KEY_PREFIX",
+          "SCQOS_EXPECTED_AUTHORITY",
+          "SCQOS_POLICY_HASH",
+          "SCQOS_RUNTIME",
+          "SCQOS_VALIDATOR_CODE_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "GrokInferenceValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-grok-inference/164e6110-8f7f-11f1-837a-0e428f79081d",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-grok-inference",
+          "scqos:boundary": "grok-inference",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 48,
+          "errors": 1,
+          "error_rate": 0.020833,
+          "avg_duration_ms": 1253.032,
+          "max_concurrency": 1
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-terra-service-service",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-terra-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "last_modified": "2026-08-03T11:29:46.000+0000",
+        "code_size_bytes": 25655166,
+        "environment_variable_names": [
+          "GRASSROOTS_AI_EVIDENCE_BUCKET",
+          "GRASSROOTS_AI_EVIDENCE_PREFIX",
+          "GRASSROOTS_AI_EXPECTED_RUNTIME",
+          "GRASSROOTS_AI_EXPECTED_TARGET",
+          "GRASSROOTS_AI_INFERENCE_FUNCTION_NAME",
+          "GRASSROOTS_AI_INFERENCE_KEY_ARN",
+          "GRASSROOTS_AI_INFERENCE_POLICY_HASH",
+          "GRASSROOTS_AI_INFERENCE_POLICY_IDENTITY",
+          "GRASSROOTS_AI_INFERENCE_VALIDATOR_DIGEST",
+          "GRASSROOTS_AI_MANTLE_PROJECT_ID",
+          "GRASSROOTS_AI_MODEL_BACKEND",
+          "GRASSROOTS_AI_MODEL_ID",
+          "GRASSROOTS_AI_NONCE_TABLE",
+          "GRASSROOTS_AI_REGION",
+          "GRASSROOTS_AI_RELEASE_FUNCTION_NAME",
+          "GRASSROOTS_AI_RELEASE_KEY_ARN",
+          "GRASSROOTS_AI_RELEASE_POLICY_HASH",
+          "GRASSROOTS_AI_RELEASE_VALIDATOR_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "ServiceFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-terra-service/71919870-8f0d-11f1-9df1-12508baf7cfb",
+          "aws:cloudformation:stack-name": "grassroots-ai-terra-service"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": true
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 3,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-public-proof-202607282156-publisher",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-public-proof-202607282156-publisher",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T21:58:20.093+0000",
+        "code_size_bytes": 9123,
+        "environment_variable_names": [
+          "PINATA_SECRET_ID"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofPublisherFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-202607282156/385a9580-8acf-11f1-93e5-12e3e10c7ccb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-202607282156",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "publisher",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [
+            {
+              "uuid": "78c427ba-5649-4dc9-8268-139a1d00bf7e",
+              "source": "arn:aws:sqs:us-east-1:327453383912:scqos-public-proof-202607282156-publication",
+              "state": "Enabled"
+            }
+          ],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 3,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-scqos-inference-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-scqos-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-13T11:04:23.000+0000",
+        "code_size_bytes": 9922,
+        "environment_variable_names": [
+          "SCQOS_CONTRACT_UNIVERSE_HASH",
+          "SCQOS_DECISION_KEY_ARN",
+          "SCQOS_DECISION_VALIDITY_SECONDS",
+          "SCQOS_EVIDENCE_BUCKET",
+          "SCQOS_EVIDENCE_KEY_PREFIX",
+          "SCQOS_EXPECTED_AUTHORITY",
+          "SCQOS_POLICY_HASH",
+          "SCQOS_RUNTIME",
+          "SCQOS_VALIDATOR_CODE_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "InferenceValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-inference/dc998750-8dcc-11f1-960d-0affd3548659",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-inference",
+          "scqos:boundary": "inference",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 21,
+          "errors": 2,
+          "error_rate": 0.095238,
+          "avg_duration_ms": 1449.458,
+          "max_concurrency": 1
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-router",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-router",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-06-05T14:41:46.000+0000",
+        "code_size_bytes": 1069,
+        "environment_variable_names": [
+          "BEDROCK_API_KEY"
+        ],
+        "tags": {},
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": true
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-grok-service-service",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-grok-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "last_modified": "2026-08-14T12:40:46.000+0000",
+        "code_size_bytes": 25679901,
+        "environment_variable_names": [
+          "GRASSROOTS_AI_EVIDENCE_BUCKET",
+          "GRASSROOTS_AI_EVIDENCE_PREFIX",
+          "GRASSROOTS_AI_EXPECTED_RUNTIME",
+          "GRASSROOTS_AI_EXPECTED_TARGET",
+          "GRASSROOTS_AI_INFERENCE_FUNCTION_NAME",
+          "GRASSROOTS_AI_INFERENCE_KEY_ARN",
+          "GRASSROOTS_AI_INFERENCE_POLICY_HASH",
+          "GRASSROOTS_AI_INFERENCE_POLICY_IDENTITY",
+          "GRASSROOTS_AI_INFERENCE_VALIDATOR_DIGEST",
+          "GRASSROOTS_AI_MANTLE_PROJECT_ID",
+          "GRASSROOTS_AI_MODEL_BACKEND",
+          "GRASSROOTS_AI_MODEL_ID",
+          "GRASSROOTS_AI_MODEL_PROVIDER",
+          "GRASSROOTS_AI_NONCE_TABLE",
+          "GRASSROOTS_AI_REGION",
+          "GRASSROOTS_AI_RELEASE_FUNCTION_NAME",
+          "GRASSROOTS_AI_RELEASE_KEY_ARN",
+          "GRASSROOTS_AI_RELEASE_POLICY_HASH",
+          "GRASSROOTS_AI_RELEASE_VALIDATOR_DIGEST"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "ServiceFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-grok-service/935277f0-8f7f-11f1-a5e3-1229f76eacc3",
+          "aws:cloudformation:stack-name": "grassroots-ai-grok-service"
+        },
+        "usage_7d": {
+          "invocations": 47,
+          "errors": 0,
+          "error_rate": 0.0,
+          "avg_duration_ms": 17370.454,
+          "max_concurrency": 1
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": true
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 3,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "scqos-public-proof-202607282156-executor",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:scqos-public-proof-202607282156-executor",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T21:57:40.581+0000",
+        "code_size_bytes": 11445,
+        "environment_variable_names": [
+          "SCQOS_PHASE4_9_APPROVED_POLICY_HASH",
+          "SCQOS_PHASE4_9_APPROVED_VALIDATOR_CODE_DIGEST",
+          "SCQOS_PHASE4_9_CONSEQUENCE_KEY_ARN",
+          "SCQOS_PHASE4_9_DECISION_KEY_ARN",
+          "SCQOS_PHASE4_9_TARGET_TABLE",
+          "SCQOS_PHASE4_9_VALIDATION_TABLE"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofExecutorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-202607282156/385a9580-8acf-11f1-93e5-12e3e10c7ccb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-202607282156",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "executor",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      },
+      {
+        "function": "grassroots-ai-scqos-release-validator",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:grassroots-ai-scqos-release-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-13T11:06:21.000+0000",
+        "code_size_bytes": 9360,
+        "environment_variable_names": [
+          "SCQOS_CONTRACT_UNIVERSE_HASH",
+          "SCQOS_RELEASE_EVIDENCE_BUCKET",
+          "SCQOS_RELEASE_EVIDENCE_PREFIX",
+          "SCQOS_RELEASE_KEY_ARN",
+          "SCQOS_RELEASE_POLICY_HASH",
+          "SCQOS_RELEASE_RUNTIME",
+          "SCQOS_RELEASE_VALIDATOR_CODE_DIGEST",
+          "SCQOS_RELEASE_VALIDITY_SECONDS"
+        ],
+        "tags": {
+          "aws:cloudformation:logical-id": "ReleaseValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-release/42a0b200-8de9-11f1-bbcc-0eab4fe6dfb5",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-release",
+          "scqos:boundary": "release",
+          "scqos:production": "false"
+        },
+        "usage_7d": {
+          "invocations": 44,
+          "errors": 5,
+          "error_rate": 0.113636,
+          "avg_duration_ms": 255.497,
+          "max_concurrency": 1
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": false
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 2,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": true,
+            "reason": "Observed 11.4% error rate."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "REVIEW_OPTIMIZATION"
+      },
+      {
+        "function": "sc-auth",
+        "arn": "arn:aws:lambda:us-east-1:327453383912:function:sc-auth",
+        "runtime": "python3.11",
+        "memory_mb": 512,
+        "timeout_s": 30,
+        "last_modified": "2026-05-19T01:58:37.000+0000",
+        "code_size_bytes": 1503,
+        "environment_variable_names": [],
+        "tags": {},
+        "usage_7d": {
+          "invocations": 0,
+          "errors": 0,
+          "error_rate": 0,
+          "avg_duration_ms": 0,
+          "max_concurrency": 0
+        },
+        "provisioned_concurrency": 0,
+        "dependencies": {
+          "event_source_mappings": [],
+          "api_gateway": [],
+          "function_url": null,
+          "resource_policy_present": true
+        },
+        "evidence": {
+          "usage_known": true,
+          "configuration_known": true,
+          "dependency_signals": 1,
+          "account_cost_known": true,
+          "per_function_cost_known": false
+        },
+        "candidate_actions": [
+          {
+            "action": "KEEP",
+            "admissible": true,
+            "reason": "Preserves current state while evidence is evaluated."
+          },
+          {
+            "action": "OPTIMIZE",
+            "admissible": false,
+            "reason": "No deterministic optimization trigger."
+          },
+          {
+            "action": "DISABLE_CANDIDATE",
+            "admissible": false,
+            "reason": "Seven days of inactivity alone is insufficient proof for disabling a function."
+          }
+        ],
+        "deterministic_decision": "KEEP"
+      }
+    ]
+  },
+  "state_sha256": "08599692a2b35c5d6452ea566c23a646f26e84ff1cb97a2d51715b74d2477293",
+  "bedrock_model": "amazon.nova-micro-v1:0",
+  "independent_challenge": "{\n  \"strongest_candidate\": \"grassroots-ai-scqos-release-validator\",\n  \"decision\": \"REVIEW_OPTIMIZATION\",\n  \"evidence\": [\n    \"Observed 11.4% error rate.\"\n  ],\n  \"missing_evidence\": [],\n  \"customer_value\": \"Potential for optimization due to error rate\",\n  \"next_safe_action\": \"Review and optimize function\"\n}",
+  "authority": {
+    "read_only": true,
+    "mutation_authorized": false
+  },
+  "final_boundary": "HOLD_BEFORE_EXTERNAL_CHANGE",
+  "receipt_sha256": "ac0fb5c8262c910f98072b8038d09f40f16134388bf195f1b923812070bcab38"
+}

@@ -1,0 +1,34 @@
+{
+  "architecture": "SUPREME_COMPUTATION_ABSOLUTE_TOTALITY_TOROIDAL_UNIVERSE_V1",
+  "created_utc": "2026-08-16T14:05:06.653885+00:00",
+  "target_accuracy": 1.0,
+  "sport": "baseball_mlb",
+  "events": [],
+  "prediction_count": 0,
+  "source_chain": [
+    {
+      "label": "MLB_SCHEDULE",
+      "timestamp_utc": "2026-08-16T14:05:05.870792+00:00",
+      "previous_chain_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "payload_sha256": "003d2cd6bd1ac53cca4d40ae799d182df38a8497cfa157389e55a32c2da586fb",
+      "chain_sha256": "d39bb8f20c4517b06fc261da56c810a427e7f61fb1c2b7c250cb7e5241e0ee4e"
+    },
+    {
+      "label": "ACTION_NETWORK_V2",
+      "timestamp_utc": "2026-08-16T14:05:06.410252+00:00",
+      "previous_chain_sha256": "d39bb8f20c4517b06fc261da56c810a427e7f61fb1c2b7c250cb7e5241e0ee4e",
+      "payload_sha256": "0d3f7d71d71f79c64ff77d7f922a812975decc260d7df48f5668ad2adc9fb578",
+      "chain_sha256": "eed2e5a74a0da4357522bbbb26961f5eea029699dc1a170cf81b083ec57be2b3"
+    },
+    {
+      "label": "ACTION_NETWORK_V1",
+      "timestamp_utc": "2026-08-16T14:05:06.653511+00:00",
+      "previous_chain_sha256": "eed2e5a74a0da4357522bbbb26961f5eea029699dc1a170cf81b083ec57be2b3",
+      "payload_sha256": "31df009fad4431ac82375f821e1cb6c032f6cbade44be831491b5cf33db9579b",
+      "chain_sha256": "285955c1bb1a56f655dde13f6416c8d4108d167d0136ac1c0b516a9b49aa61c3"
+    }
+  ],
+  "source_chain_terminal_sha256": "285955c1bb1a56f655dde13f6416c8d4108d167d0136ac1c0b516a9b49aa61c3",
+  "precommit_sha256": "62c56aed033413d9babcaf0bfce3dfcf4f6696a5d9880eec3e88cf916d55a8ee",
+  "kms_signature": null
+}

@@ -1,0 +1,238 @@
+{
+  "schema": "sc-decision-governor-v1",
+  "mode": "DRY_RUN",
+  "timestamp_utc": "2026-08-15T16:22:44.035751+00:00",
+  "state_sha256": "12b80857ca6c16e10cce9ef63e9162798d92c26a92b3ee11b36eda5394787bfe",
+  "state": {
+    "timestamp_utc": "2026-08-15T16:22:44.035751+00:00",
+    "window_days": 7,
+    "lambda_count": 19,
+    "functions": [
+      {
+        "function": "sc-gatekeeper",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 3,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-phase4-9-executor",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-public-proof-abc123-validator",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-terra-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-ipfs-publisher",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-public-proof-202607282156-validator",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-phase4-9-validator",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-public-proof-abc123-executor",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-public-proof-abc123-publisher",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "invocations_7d": 23,
+        "errors_7d": 2,
+        "error_rate": 0.087,
+        "avg_duration_ms": 9210.11,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-grok-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 48,
+        "errors_7d": 1,
+        "error_rate": 0.0208,
+        "avg_duration_ms": 1253.03,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-terra-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-public-proof-202607282156-publisher",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 21,
+        "errors_7d": 2,
+        "error_rate": 0.0952,
+        "avg_duration_ms": 1449.46,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-router",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-grok-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "invocations_7d": 47,
+        "errors_7d": 0,
+        "error_rate": 0.0,
+        "avg_duration_ms": 17370.45,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "scqos-public-proof-202607282156-executor",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-release-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "invocations_7d": 44,
+        "errors_7d": 5,
+        "error_rate": 0.1136,
+        "avg_duration_ms": 255.5,
+        "provisioned_concurrency": 0
+      },
+      {
+        "function": "sc-auth",
+        "runtime": "python3.11",
+        "memory_mb": 512,
+        "timeout_s": 30,
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "provisioned_concurrency": 0
+      }
+    ],
+    "candidate_actions": [
+      {
+        "action": "INVESTIGATE_ERROR_RATE",
+        "function": "grassroots-ai-scqos-release-validator",
+        "reason": "7-day error rate is 11.4%.",
+        "risk": "OPERATIONAL",
+        "execution": "HOLD"
+      }
+    ]
+  },
+  "bedrock_model": "amazon.nova-micro-v1:0",
+  "bedrock_analysis": "{\n  \"top_actions\": [\n    {\n      \"action\": \"HOLD\",\n      \"function\": \"grassroots-ai-scqos-release-validator\",\n      \"reason\": \"No invocations in the last 7 days.\"\n    },\n    {\n      \"action\": \"HOLD\",\n      \"function\": \"grassroots-ai-terra-service-service\",\n      \"reason\": \"No invocations in the last 7 days.\"\n    },\n    {\n      \"action\": \"HOLD\",\n      \"function\": \"sc-auth\",\n      \"reason\": \"No invocations in the last 7 days.\"\n    }\n  ],\n  \"why\": \"Functions with zero invocations in the last 7 days may not require immediate attention but should be monitored for future usage patterns.\",\n  \"missing_evidence\": \"Insufficient data to determine the necessity or optimal configuration of functions with zero invocations.\"\n}",
+  "governance": {
+    "mutation_allowed": false,
+    "decision": "HOLD_BEFORE_EXTERNAL_CHANGE"
+  },
+  "receipt_sha256": "0da62343f73474b851fb659db0e01bb4a757d50b49b730d350e44a96ed94a31e"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "scqos-workload-receipt-v1",
+  "created_utc": "2026-08-15T16:17:34.473474+00:00",
+  "evidence": {
+    "source": "https://api.github.com/repos/qiskit/qiskit",
+    "http_status": 200,
+    "retrieved_utc": "2026-08-15T16:17:30.783318+00:00",
+    "sha256": "4361e24124de7c6273ff1ce27a7ae0709dfd2a0a88dea625e72fbeb1943253de",
+    "bytes": 6253,
+    "repository": "Qiskit/qiskit",
+    "stars": 7708,
+    "forks": 3012,
+    "open_issues": 1141,
+    "updated_at": "2026-08-15T10:22:14Z"
+  },
+  "pre_checks": {
+    "source_present": true,
+    "http_success": true,
+    "evidence_nonempty": true,
+    "sha256_valid": true,
+    "reference_present": true
+  },
+  "pre_decision": "PERMIT",
+  "bedrock": {
+    "model": "amazon.nova-micro-v1:0",
+    "analysis": "1. Three factual observations supported only by this evidence:\n\n   a. The receipt was retrieved from the GitHub API on August 15, 2026, at 16:17:30 UTC.\n   \n   b. The SHA-256 hash of the retrieved data is \"4361e24124de7c6273ff1ce27a7ae0709dfd2a0a88dea625e72fbeb1943253de\".\n   \n   c. The GitHub repository \"Qiskit/qiskit\" had 7,708 stars and 3,012 forks at the time of retrieval.\n\n2. One sentence stating what cannot be concluded from this evidence:\n\n   The evidence does not provide any information about the content or functionality of the \"Qiskit/qiskit\" repository beyond its metadata and current statistics."
+  },
+  "quantum": {
+    "engine": "qiskit.StatevectorSampler",
+    "shots": 512,
+    "hash_derived_bit": 0,
+    "counts": {
+      "00": 274,
+      "11": 238
+    }
+  },
+  "post_checks": {
+    "bedrock_returned_text": true,
+    "model_recorded": true,
+    "quantum_counts_present": true,
+    "source_hash_unchanged": true
+  },
+  "post_decision": "EXECUTED",
+  "receipt_sha256": "e00e68ad9d80c597edbd58a0e8542b18eb30261be16a720420040d095fef6eda"
+}

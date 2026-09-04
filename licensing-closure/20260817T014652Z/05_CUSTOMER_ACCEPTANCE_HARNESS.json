@@ -1,0 +1,30 @@
+{
+  "acceptance_harness_id": "SCQOS-PILOT-ACCEPTANCE-V1",
+  "canonicalization_authority": "SCQOS-C14N-JCS-NFC-1",
+  "customer_acceptance_rule": "Customer acceptance is not achieved unless every required check returns its specified state against the exact frozen commercial source identity.",
+  "live_result": {
+    "attempted": true,
+    "passed": true,
+    "stderr": "",
+    "stdout": "AUTHORITY: SCQOS-C14N-JCS-NFC-1\nNFC_STRING_EQUIVALENCE: PASS\nNFC_STRING_SHA256: 69e46f3f0688000ab7eeb9e40e6a516a254268cd644a24f4f69cf7ad063cf479\nNFC_PROPERTY_EQUIVALENCE: PASS\nNFC_COLLISION_REJECTION: PASS\nAUTHORITY_FAIL_CLOSED: PASS\nSCQOS-C14N-JCS-NFC-1: ADMISSIBLE\n"
+  },
+  "required_checks": [
+    {
+      "expected": "PASS",
+      "id": "NFC_STRING_EQUIVALENCE"
+    },
+    {
+      "expected": "PASS",
+      "id": "NFC_PROPERTY_EQUIVALENCE"
+    },
+    {
+      "expected": "PASS",
+      "id": "NFC_COLLISION_REJECTION"
+    },
+    {
+      "expected": "PASS",
+      "id": "AUTHORITY_FAIL_CLOSED"
+    }
+  ],
+  "source_commit": "6c156be369b344be99c721c44eeba863eac02414"
+}

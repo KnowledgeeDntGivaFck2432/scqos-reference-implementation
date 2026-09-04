@@ -1,0 +1,5 @@
+rfc8785>=0.1.4,<1
+xrpl-py>=4,<5
+coinbase-advanced-py>=1.8,<2
+cryptography>=45,<51
+pytest>=8,<10

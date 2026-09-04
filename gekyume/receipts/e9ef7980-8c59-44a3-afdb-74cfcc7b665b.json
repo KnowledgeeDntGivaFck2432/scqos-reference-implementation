@@ -1,0 +1,43 @@
+{
+  "system": "GEKYUME",
+  "version": "0.1.0",
+  "timestamp": 1788494409.338514,
+  "transaction": {
+    "transition_id": "e9ef7980-8c59-44a3-afdb-74cfcc7b665b",
+    "source": "TREASURY_A",
+    "destination": "BANK_B",
+    "amount": 100000000,
+    "currency": "USD",
+    "purpose": "AUTHORIZED_INSTITUTIONAL_TRANSFER",
+    "origin": "GEKYUME_AUTHORIZED_BANK",
+    "authorized_by": "TREASURY_AUTHORITY_001",
+    "authority_status": "ACTIVE",
+    "created_at": 1788494409.337249,
+    "expires_at": 1788494709.3372524,
+    "prior_state_hash": "0b9e595f8bfc82eaa926abd285a52b660b893625338e14bea62cc14d50a542c4"
+  },
+  "transaction_hash": "633db82fb0b3e79545713aa254fd8e15e482c86b5a57b30631638e56abcba241",
+  "invariants": {
+    "TIME": true,
+    "CONTINUITY": false,
+    "ALIGNMENT": true,
+    "GENESIS": true,
+    "BOUNDARY": true,
+    "REFERENCE": true,
+    "CAUSALITY": true,
+    "CONSCIOUSNESS": true
+  },
+  "decision": "REJECT",
+  "reason": "REPLAY_DETECTED",
+  "consequence": {
+    "executed": false,
+    "before_hash": "4ae8a31ab1f20a55eaac96675a98d70cd54b7d10e07d29c57ea2d8ee2a07a1b1",
+    "after_hash": "4ae8a31ab1f20a55eaac96675a98d70cd54b7d10e07d29c57ea2d8ee2a07a1b1"
+  },
+  "ledger_after": {
+    "TREASURY_A": 8900000000,
+    "BANK_B": 1100000000,
+    "BANK_C": 0
+  },
+  "receipt_hash": "8f0a27e483ca9d2eb54b052fd62775d4e5b7563917da9c5e4fdbedbb1d084662"
+}

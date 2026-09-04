@@ -1,0 +1,89 @@
+01. Arizona Diamondbacks @ Atlanta Braves
+DETERMINATION: Arizona Diamondbacks
+Arizona Diamondbacks: 0.540367
+Atlanta Braves: 0.459633
+SEPARATION: 0.080734
+
+02. Baltimore Orioles @ Tampa Bay Rays
+DETERMINATION: Tampa Bay Rays
+Baltimore Orioles: 0.404939
+Tampa Bay Rays: 0.595061
+SEPARATION: 0.190122
+
+03. Boston Red Sox @ Pittsburgh Pirates
+DETERMINATION: Pittsburgh Pirates
+Boston Red Sox: 0.438774
+Pittsburgh Pirates: 0.561226
+SEPARATION: 0.122451
+
+04. Chicago White Sox @ Detroit Tigers
+DETERMINATION: Chicago White Sox
+Chicago White Sox: 0.515920
+Detroit Tigers: 0.484080
+SEPARATION: 0.031840
+
+05. Colorado Rockies @ San Francisco Giants
+DETERMINATION: San Francisco Giants
+Colorado Rockies: 0.387835
+San Francisco Giants: 0.612165
+SEPARATION: 0.224329
+
+06. Kansas City Royals @ Los Angeles Angels
+DETERMINATION: Los Angeles Angels
+Kansas City Royals: 0.432667
+Los Angeles Angels: 0.567333
+SEPARATION: 0.134666
+
+07. Miami Marlins @ Cincinnati Reds
+DETERMINATION: Cincinnati Reds
+Miami Marlins: 0.483254
+Cincinnati Reds: 0.516746
+SEPARATION: 0.033492
+
+08. Milwaukee Brewers @ Los Angeles Dodgers
+DETERMINATION: Milwaukee Brewers
+Milwaukee Brewers: 0.546746
+Los Angeles Dodgers: 0.453254
+SEPARATION: 0.093493
+
+09. New York Yankees @ Toronto Blue Jays
+DETERMINATION: Toronto Blue Jays
+New York Yankees: 0.424846
+Toronto Blue Jays: 0.575154
+SEPARATION: 0.150307
+
+10. Philadelphia Phillies @ Minnesota Twins
+DETERMINATION: Minnesota Twins
+Philadelphia Phillies: 0.407293
+Minnesota Twins: 0.592707
+SEPARATION: 0.185414
+
+11. San Diego Padres @ Cleveland Guardians
+DETERMINATION: San Diego Padres
+San Diego Padres: 0.529287
+Cleveland Guardians: 0.470713
+SEPARATION: 0.058574
+
+12. Seattle Mariners @ Houston Astros
+DETERMINATION: Houston Astros
+Seattle Mariners: 0.487931
+Houston Astros: 0.512069
+SEPARATION: 0.024139
+
+13. St. Louis Cardinals @ Chicago Cubs
+DETERMINATION: Chicago Cubs
+St. Louis Cardinals: 0.488912
+Chicago Cubs: 0.511088
+SEPARATION: 0.022177
+
+14. Texas Rangers @ Athletics
+DETERMINATION: Texas Rangers
+Texas Rangers: 0.512542
+Athletics: 0.487458
+SEPARATION: 0.025084
+
+15. Washington Nationals @ New York Mets
+DETERMINATION: New York Mets
+Washington Nationals: 0.476115
+New York Mets: 0.523885
+SEPARATION: 0.047769

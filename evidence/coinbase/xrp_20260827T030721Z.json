@@ -1,0 +1,32 @@
+{
+  "SCQOS_DECISION": "PERMIT_READ_ONLY",
+  "request_nine_gate_proof": "c23ee899b72bf44d",
+  "live_data_nine_gate_proof": "aaf8c74723aded47",
+  "request_packet_hash": "ce3417085ff764a6ce8527aca4c3248a1ff15849cfa4812d2fb3449022535687",
+  "live_packet_hash": "d0808abed7ce00a70c711a5542fbf9b91f581d109b36616b86acd30e110dbbfa",
+  "live_state": {
+    "permissions": {
+      "can_view": true,
+      "can_trade": false,
+      "can_transfer": false
+    },
+    "xrp_balance": "13.358969",
+    "xrp_usd": {
+      "price": "1.4072",
+      "volume_24h": "157032496.434061",
+      "change_24h": "-2.48770009008385"
+    },
+    "invariants": {
+      "time": true,
+      "continuity": true,
+      "alignment": true,
+      "genesis": true,
+      "boundary": true,
+      "reference": true,
+      "causality": true,
+      "consciousness": true,
+      "coherence": true
+    },
+    "observed_at_epoch": 1787800043.875
+  }
+}

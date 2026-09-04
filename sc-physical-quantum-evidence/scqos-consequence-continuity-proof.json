@@ -1,0 +1,79 @@
+{
+  "schema": "scqos-consequence-continuous-authorization-v1",
+  "timestamp": "2026-08-15T18:58:49.567001+00:00",
+  "aws": {
+    "account": "327453383912",
+    "arn": "arn:aws:iam::327453383912:root",
+    "region": "us-east-1"
+  },
+  "initial_state": {
+    "serviceArn": "arn:aws:ecs:us-east-1:327453383912:service/grassrootsai-anabelle/grassrootsai-anabelle",
+    "clusterArn": "arn:aws:ecs:us-east-1:327453383912:cluster/grassrootsai-anabelle",
+    "status": "ACTIVE",
+    "desiredCount": 1,
+    "runningCount": 1,
+    "pendingCount": 0,
+    "taskDefinition": "arn:aws:ecs:us-east-1:327453383912:task-definition/grassrootsai-anabelle:18"
+  },
+  "permit_n": {
+    "id": "d1d26ed76b2e151f4e89783d527720edf0530a54db2018c581d54ac6d420f5a5",
+    "authority": {
+      "transition": "temporary reversible ECS desired-count increase",
+      "service": "arn:aws:ecs:us-east-1:327453383912:service/grassrootsai-anabelle/grassrootsai-anabelle",
+      "authorized_from_state": "07811db13fcf41a5b5c95428618c4e10d325e74e518c35a081411329943a4f73",
+      "authorized_desired_before": 1,
+      "authorized_desired_after": 2,
+      "issued_at": "2026-08-15T18:58:41.385819+00:00"
+    }
+  },
+  "evidence_transition": {
+    "policy_n": "da38b7acbbab3c0802b8558d395dc100f78ce8f20f3b06fc5745c78394efe567",
+    "policy_n1": "e030471781997826c8927a3a1abad2d875633b8a1a8effa0a7e697a516edca4c",
+    "delta_detected": true
+  },
+  "correctability_boundary": {
+    "old_permit_survived": false,
+    "decision_after_delta": "HOLD"
+  },
+  "permit_n1": {
+    "id": "b27a877df350a6b55e0a166881e9ea94e03e94c85d476c21af31adf3728172fb",
+    "requalification": {
+      "service": "arn:aws:ecs:us-east-1:327453383912:service/grassrootsai-anabelle/grassrootsai-anabelle",
+      "fresh_state": "07811db13fcf41a5b5c95428618c4e10d325e74e518c35a081411329943a4f73",
+      "fresh_policy": "e030471781997826c8927a3a1abad2d875633b8a1a8effa0a7e697a516edca4c",
+      "desired_before": 1,
+      "desired_after": 2,
+      "reversible": true,
+      "issued_at": "2026-08-15T18:58:41.650802+00:00"
+    },
+    "distinct_from_permit_n": true
+  },
+  "real_consequence": {
+    "before": 1,
+    "after": 2,
+    "aws_readback": {
+      "serviceArn": "arn:aws:ecs:us-east-1:327453383912:service/grassrootsai-anabelle/grassrootsai-anabelle",
+      "clusterArn": "arn:aws:ecs:us-east-1:327453383912:cluster/grassrootsai-anabelle",
+      "status": "ACTIVE",
+      "desiredCount": 2,
+      "runningCount": 1,
+      "pendingCount": 0,
+      "taskDefinition": "arn:aws:ecs:us-east-1:327453383912:task-definition/grassrootsai-anabelle:18"
+    },
+    "verified": true
+  },
+  "restoration": {
+    "expected": 1,
+    "aws_readback": {
+      "serviceArn": "arn:aws:ecs:us-east-1:327453383912:service/grassrootsai-anabelle/grassrootsai-anabelle",
+      "clusterArn": "arn:aws:ecs:us-east-1:327453383912:cluster/grassrootsai-anabelle",
+      "status": "ACTIVE",
+      "desiredCount": 1,
+      "runningCount": 1,
+      "pendingCount": 1,
+      "taskDefinition": "arn:aws:ecs:us-east-1:327453383912:task-definition/grassrootsai-anabelle:18"
+    },
+    "verified": true
+  },
+  "receipt_sha256": "cea085d08708fee07352a7b95ba3e48e77f210f3107531af671c27a807c8c1c6"
+}

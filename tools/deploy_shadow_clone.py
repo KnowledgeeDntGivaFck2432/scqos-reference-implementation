@@ -521,6 +521,11 @@ phases:
         package.mkdir()
         shutil.copy2(SHADOW / "executor.py", package / "executor.py")
         shutil.copy2(SHADOW / "protocol.py", package / "protocol.py")
+        shutil.copytree(
+            ROOT / "sports_analysis",
+            package / "sports_analysis",
+            ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
+        )
         run([
             sys.executable, "-m", "pip", "install",
             "--quiet", "--disable-pip-version-check",
@@ -837,8 +842,12 @@ phases:
             for relative in (
                 Path(".gitignore"),
                 Path("shadow_clone"),
+                Path("sports_analysis"),
                 Path("tools/deploy_shadow_clone.py"),
                 Path("tests/test_shadow_clone_protocol.py"),
+                Path("tests/test_sports_analysis_contract.py"),
+                Path("tests/test_sports_analysis_prompt.py"),
+                Path("tests/test_sports_analysis_api.py"),
                 self.evidence_dir.relative_to(ROOT),
             ):
                 source = ROOT / relative
@@ -848,7 +857,7 @@ phases:
                     shutil.copytree(source, target, dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
                 else:
                     shutil.copy2(source, target)
-            run(["git", "add", ".gitignore", "shadow_clone", "tools/deploy_shadow_clone.py", "tests/test_shadow_clone_protocol.py", str(self.evidence_dir.relative_to(ROOT))], cwd=worktree)
+            run(["git", "add", ".gitignore", "shadow_clone", "sports_analysis", "tools/deploy_shadow_clone.py", "tests/test_shadow_clone_protocol.py", "tests/test_sports_analysis_contract.py", "tests/test_sports_analysis_prompt.py", "tests/test_sports_analysis_api.py", str(self.evidence_dir.relative_to(ROOT))], cwd=worktree)
             if not run(["git", "status", "--porcelain"], cwd=worktree):
                 print("  PERMIT: public main already contains the exact deployment")
                 return run(["git", "rev-parse", "HEAD"], cwd=worktree)

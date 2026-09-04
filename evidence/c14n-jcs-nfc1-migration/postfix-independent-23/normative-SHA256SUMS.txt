@@ -1,0 +1,4 @@
+0455b406d89648d20cbde375561e19c245b9815e894164c2670772e3d54deb82  evidence/c14n-jcs-nfc1-migration/postfix-independent-23/normative/FIPS180-4.pdf
+63d52294eb0e3f0014174288186d388b4ddbf2c67d1ce8af1d9726eb0c3ab240  evidence/c14n-jcs-nfc1-migration/postfix-independent-23/normative/RFC8785.txt
+881998ab51b631876965ca94f48499e0d6c2a24e187505270414121d065f7833  evidence/c14n-jcs-nfc1-migration/postfix-independent-23/normative/SCQOS-CANONICALIZATION-SPEC-v1.0.md
+c0c05f91e1c4f9be3d987e27d76cf254b30003b6be41eb94977cc3fe148d4c4e  evidence/c14n-jcs-nfc1-migration/postfix-independent-23/normative/UAX15.html

@@ -1,0 +1,89 @@
+{
+  "consequence": {
+    "consequence_decision": "REJECT",
+    "executed": true,
+    "exit_matches": false,
+    "expected_exit_code": 0,
+    "file_expectations": [],
+    "files_match": true,
+    "finished_at": 1787810629.7188888,
+    "return_code": 1,
+    "started_at": 1787810626.4169178,
+    "stderr_sha256": "860dd6b697430e48f8953ca9a7b9f2802ef2a22d8aadde7ab7c5492eaca6c97c",
+    "stdout_matches": true,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timed_out": false
+  },
+  "intent": {
+    "actor": "knowledgee-kza",
+    "authority_mode": "owner_full_control",
+    "authorization": "explicit_terminal_invocation",
+    "command": {
+      "argv": [
+        ".venv-crypto-proof/bin/python",
+        "crypto_holy_grail/scqos_coinbase_fund.py",
+        "--key-file",
+        "/home/knowledgee-kza/Downloads/coinbase_transfer_key.json",
+        "--confirm",
+        "SEND-2.100200-XRP"
+      ],
+      "mode": "argv",
+      "shell_command": null
+    },
+    "command_hash": "37bbaf651e32f7d55d359abe5059068e7a96686c055770811c46660cb8a0f8a09e4ac7f2e16d3c8bf8711cc46a261865f0d7b577217bdd34c4920a01e4643c4f",
+    "created_at": 1787810626.2073128,
+    "cwd": "/home/knowledgee-kza/scqos-reference-implementation",
+    "effective_uid": 1000,
+    "environment_hash": "b28d941fbaf902015d7ff86a70fa1ad05054783b22e458f27730a34ba399f3acf745c770128b0dc9bdd1f1c7f0308c19d5fff385949fbc5db23ac3ffd9d1744f",
+    "expected_effect": "exactly 2.100200 XRP reaches the bound locally controlled XRPL Mainnet proof address with no destination tag and durable evidence",
+    "expected_exit_code": 0,
+    "expires_at": 1787810746.2073128,
+    "objective": "fund the frozen SCQOS XRPL Mainnet proof source from the owner's Coinbase XRP account",
+    "previous_receipt_hash": "900f9fe16c2fd8b5b96d34f20888915102d2e75912a9c5b88c7db5e039aeb0de3a8d336a2444431f7e15babbd851d05ebe1f0e2dc6470e86a9e3c9b26174b0fd",
+    "runtime": "/usr/bin/python3.14",
+    "runtime_sha256": "b8d8288faefdd300201f43fcf00f6f539a27218eeed3a3dff5ab10b9c4c99700",
+    "schema": "scqos.full-terminal.v1",
+    "sequence": 4,
+    "stdin_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timeout_seconds": 300.0,
+    "transition_id": "terminal-2a743a19fc7a47edb93fd168cec28f16",
+    "uid": 1000
+  },
+  "pre_execution": {
+    "command_hash": "37bbaf651e32f7d55d359abe5059068e7a96686c055770811c46660cb8a0f8a09e4ac7f2e16d3c8bf8711cc46a261865f0d7b577217bdd34c4920a01e4643c4f",
+    "decision": "PERMIT",
+    "findings": [],
+    "gate_status": {
+      "alignment": true,
+      "boundary": true,
+      "causality": true,
+      "coherence": true,
+      "consciousness": true,
+      "continuity": true,
+      "genesis": true,
+      "reference": true,
+      "time": true
+    },
+    "intent_hash": "434490c5914758d64a94691d83896566e7367534879b17b2afae47b50fd9b1d8817b91d8b1d4131e6b5462126009186b4a5acc373afc98c0eedaaea5e875a4e2",
+    "root_proof": {
+      "admitted": true,
+      "alignment_hash": "7ed8077c618bbd6dea5b1b4f3c859173fc97a66ead82d072baeddf75b4c16eb2",
+      "boundary_hash": "069648d146e7aa51eaeab743c314e7553d1f7bd1ae5eaac082cae4a6ecbdedbf",
+      "causality_hash": "013a2f2d7a29c255565f132ed9e27ebf64b518310f87884326f6d1ee7a79a329",
+      "coherence_hash": "651a440deb7c0e2a49da9c23b259e2ef0ffcd81e10a98f1d0bfa7987d3865eb5",
+      "consciousness_hash": "863903a08d9d9c2b13ec67066c18fa4dc82066f2841ad9a8621c937a06b532c0",
+      "continuity_hash": "cda9b67f500e7c6277cc9f9ce44d2f31c0c8c51c537945755c85beec7ce2fe0d",
+      "final_proof": "651a440deb7c0e2a",
+      "genesis_hash": "4d6bb09ea5beee15b168daf92b90664ea00afa839ea5afbe98b7d97371b60d40",
+      "packet_hash": "db721efcea2d320db352fd8f4517e9dca607d20fd10711ba1bb54bfb2f45a527",
+      "reason": "external state admitted after nine-gate coherence",
+      "reference_hash": "0cc6db4f3fee3d3c6530c49ec5cb3dfcb8f6f1b1b93c5007eb4c09647b7a20a3",
+      "time_hash": "ce0817ef4253b0aa3b10d13ab82923ea8ec021bd1c63fd5caa6b638cae20b90a"
+    },
+    "runtime_hash": "b8d8288faefdd300201f43fcf00f6f539a27218eeed3a3dff5ab10b9c4c99700",
+    "transition_id": "terminal-2a743a19fc7a47edb93fd168cec28f16"
+  },
+  "receipt_hash": "fb35bccd397fe70d333a918fee03b553ed82950f45fa8bd96d42d9c2754418442304df063f28889de686a0318ccc722b63e4423a62a6d26765a9452eb2414f63",
+  "receipt_hmac_sha256": "2504f43827f8e79a2f29c521cd7acfd1aa52ed47941016308adb0b7ee6ad1774",
+  "schema": "scqos.full-terminal.v1"
+}

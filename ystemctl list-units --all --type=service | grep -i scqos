@@ -1,0 +1,287 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Dedicated SCQOS Grok inference authority for Grassroots AI.",
+    "Parameters": {
+        "StackNamePrefix": {
+            "Type": "String",
+            "Default": "grassroots-ai-scqos-grok-inference"
+        },
+        "ValidatorCodeS3Bucket": {
+            "Type": "String"
+        },
+        "ValidatorCodeS3Key": {
+            "Type": "String"
+        },
+        "PolicyHash": {
+            "Type": "String",
+            "AllowedPattern": "^[0-9a-f]{64}$"
+        },
+        "ValidatorCodeDigest": {
+            "Type": "String",
+            "AllowedPattern": "^[0-9a-f]{64}$"
+        },
+        "ContractUniverseHash": {
+            "Type": "String",
+            "AllowedPattern": "^sha256:[0-9a-f]{64}$"
+        }
+    },
+    "Resources": {
+        "GrokInferenceDecisionKey": {
+            "Type": "AWS::KMS::Key",
+            "Properties": {
+                "Description": "SCQOS Grok inference decision signing key",
+                "Enabled": true,
+                "EnableKeyRotation": false,
+                "KeySpec": "ML_DSA_87",
+                "KeyUsage": "SIGN_VERIFY",
+                "KeyPolicy": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "EnableAccountAdministration",
+                            "Effect": "Allow",
+                            "Principal": {
+                                "AWS": {
+                                    "Fn::Sub": "arn:${AWS::Partition}:iam::${AWS::AccountId}:root"
+                                }
+                            },
+                            "Action": "kms:*",
+                            "Resource": "*"
+                        }
+                    ]
+                },
+                "Tags": [
+                    {
+                        "Key": "scqos:boundary",
+                        "Value": "grok-inference"
+                    },
+                    {
+                        "Key": "scqos:production",
+                        "Value": "false"
+                    }
+                ]
+            }
+        },
+        "GrokInferenceDecisionKeyAlias": {
+            "Type": "AWS::KMS::Alias",
+            "Properties": {
+                "AliasName": {
+                    "Fn::Sub": "alias/${StackNamePrefix}-decision"
+                },
+                "TargetKeyId": {
+                    "Ref": "GrokInferenceDecisionKey"
+                }
+            }
+        },
+        "GrokInferenceEvidenceBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketEncryption": {
+                    "ServerSideEncryptionConfiguration": [
+                        {
+                            "ServerSideEncryptionByDefault": {
+                                "SSEAlgorithm": "aws:kms"
+                            },
+                            "BucketKeyEnabled": true
+                        }
+                    ]
+                },
+                "PublicAccessBlockConfiguration": {
+                    "BlockPublicAcls": true,
+                    "IgnorePublicAcls": true,
+                    "BlockPublicPolicy": true,
+                    "RestrictPublicBuckets": true
+                },
+                "VersioningConfiguration": {
+                    "Status": "Enabled"
+                },
+                "Tags": [
+                    {
+                        "Key": "scqos:boundary",
+                        "Value": "grok-inference"
+                    },
+                    {
+                        "Key": "scqos:production",
+                        "Value": "false"
+                    }
+                ]
+            }
+        },
+        "GrokInferenceValidatorRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "RoleName": {
+                    "Fn::Sub": "${StackNamePrefix}-validator"
+                },
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "lambda.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Policies": [
+                    {
+                        "PolicyName": "grok-validator-runtime",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Sid": "WriteGrokValidatorLogs",
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "logs:CreateLogStream",
+                                        "logs:PutLogEvents"
+                                    ],
+                                    "Resource": {
+                                        "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${StackNamePrefix}-validator:*"
+                                    }
+                                },
+                                {
+                                    "Sid": "SignGrokInferenceDecisionOnly",
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "kms:Sign"
+                                    ],
+                                    "Resource": {
+                                        "Fn::GetAtt": [
+                                            "GrokInferenceDecisionKey",
+                                            "Arn"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Sid": "WriteGrokInferenceEvidenceOnly",
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "s3:PutObject"
+                                    ],
+                                    "Resource": {
+                                        "Fn::Sub": "${GrokInferenceEvidenceBucket.Arn}/grok-inference-decisions/*"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "scqos:boundary",
+                        "Value": "grok-inference"
+                    }
+                ]
+            }
+        },
+        "GrokInferenceValidatorLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+                "LogGroupName": {
+                    "Fn::Sub": "/aws/lambda/${StackNamePrefix}-validator"
+                },
+                "RetentionInDays": 30
+            }
+        },
+        "GrokInferenceValidatorFunction": {
+            "Type": "AWS::Lambda::Function",
+            "DependsOn": [
+                "GrokInferenceValidatorLogGroup"
+            ],
+            "Properties": {
+                "FunctionName": {
+                    "Fn::Sub": "${StackNamePrefix}-validator"
+                },
+                "Runtime": "python3.14",
+                "Handler": "grassroots_ai.scqos_inference_lambda.lambda_handler",
+                "Role": {
+                    "Fn::GetAtt": [
+                        "GrokInferenceValidatorRole",
+                        "Arn"
+                    ]
+                },
+                "Code": {
+                    "S3Bucket": {
+                        "Ref": "ValidatorCodeS3Bucket"
+                    },
+                    "S3Key": {
+                        "Ref": "ValidatorCodeS3Key"
+                    }
+                },
+                "MemorySize": 256,
+                "Timeout": 30,
+                "Environment": {
+                    "Variables": {
+                        "SCQOS_EXPECTED_AUTHORITY": {
+                            "Fn::GetAtt": [
+                                "GrokInferenceDecisionKey",
+                                "Arn"
+                            ]
+                        },
+                        "SCQOS_DECISION_KEY_ARN": {
+                            "Fn::GetAtt": [
+                                "GrokInferenceDecisionKey",
+                                "Arn"
+                            ]
+                        },
+                        "SCQOS_POLICY_HASH": {
+                            "Ref": "PolicyHash"
+                        },
+                        "SCQOS_VALIDATOR_CODE_DIGEST": {
+                            "Ref": "ValidatorCodeDigest"
+                        },
+                        "SCQOS_CONTRACT_UNIVERSE_HASH": {
+                            "Ref": "ContractUniverseHash"
+                        },
+                        "SCQOS_RUNTIME": "python3.14",
+                        "SCQOS_EVIDENCE_BUCKET": {
+                            "Ref": "GrokInferenceEvidenceBucket"
+                        },
+                        "SCQOS_EVIDENCE_KEY_PREFIX": "grok-inference-decisions",
+                        "SCQOS_DECISION_VALIDITY_SECONDS": "300",
+                        "SCQOS_APPROVED_TARGET": "grassroots-ai/bedrock-mantle/responses",
+                        "SCQOS_APPROVED_MODEL_ID": "xai.grok-4.3",
+                        "SCQOS_APPROVED_MODEL_CONFIGURATION": "{\"max_tokens\":64,\"reasoning_effort\":\"none\"}"
+                    }
+                },
+                "Tags": [
+                    {
+                        "Key": "scqos:boundary",
+                        "Value": "grok-inference"
+                    },
+                    {
+                        "Key": "scqos:production",
+                        "Value": "false"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "GrokInferenceValidatorFunctionName": {
+            "Value": {
+                "Ref": "GrokInferenceValidatorFunction"
+            }
+        },
+        "GrokInferenceDecisionKeyArn": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "GrokInferenceDecisionKey",
+                    "Arn"
+                ]
+            }
+        },
+        "GrokInferenceEvidenceBucketName": {
+            "Value": {
+                "Ref": "GrokInferenceEvidenceBucket"
+            }
+        }
+    }
+}

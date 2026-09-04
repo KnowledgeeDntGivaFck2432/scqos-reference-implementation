@@ -1,0 +1,164 @@
+{
+  "executed_at": 1787811152.974853,
+  "funds": {
+    "correct_transfer_drops": "1",
+    "only_fees_destroyed": true,
+    "ownership": "both wallets controlled by the same local proof authority",
+    "wrong_control_transfer_drops": "1000000"
+  },
+  "live_snapshot": {
+    "base_fee_drops": 10,
+    "ledger_closed_at": 1787811140.0,
+    "ledger_hash": "AB1D7F4613C0560C56CE1E08FB58DF30D663C2FFDFB19E130F9E9B9EDE42DB3D",
+    "ledger_index": 106572001,
+    "network_id": 0,
+    "reserve_base_drops": 1000000,
+    "reserve_increment_drops": 200000,
+    "server_state": "full"
+  },
+  "network": "xrpl_mainnet",
+  "public_wallets": {
+    "destination": "r4sGL5ZnpHdfoCF3ioFdcux1VhaxziFMP6",
+    "source": "rwEZsqSjFHR3Q6cxUefCA5WRfVe6HsjrNL"
+  },
+  "receipt_hash": "ad27efd38fcc1ecbe2a6724283c316936d84f23ef71f35c71d2fa3e96f6234899e4d42b5753529614f131616f979de038296e0571d4ae41cde262761e96d975c",
+  "receipt_hmac_sha256": "610240e2b203098485fb9cfd988d6c0217424e93a0068afc0eeb7db87615c7c1",
+  "schema": "scqos.xrpl-mainnet-supreme-proof.v1",
+  "valid_transaction": {
+    "consequence_closure": {
+      "decision": "PERMIT",
+      "evaluated_at": 1787811152.9748437,
+      "evidence_hash": "e26083508fcd90df49362ac81a36339c8ab776e8270e27a21be3ba623ed3709efaae2f705f17f5e66dabe582a7c1a4cedad15625d01533021488a939643a747a",
+      "findings": [],
+      "gate_status": {
+        "alignment": true,
+        "boundary": true,
+        "causality": true,
+        "coherence": true,
+        "consciousness": true,
+        "continuity": true,
+        "genesis": true,
+        "reference": true,
+        "time": true
+      },
+      "intent_hash": "4a3f6b220fb954af53bd456f8fec91c8231eedfd92649fbf18b1002a99ace933eabf0eedc552b281d29f8c2b0d314956f218cb8641b3c066cab75a5e7a442ddd",
+      "policy_hash": "7e8eebc0c122de9b685e9f65aa4b5ee48ad2b04f53a27bd4131461000df0be88cb92d4fc1c91f83abf3654b3c8e8a1b97f52520c014f9c4e36dc875fb20d6b73",
+      "root_proof": {
+        "admitted": true,
+        "mode": "consequence-closure"
+      },
+      "transaction_hash": "D13EDAED96354DD2CF16382BA815367A37F5408D64B362FC24C19DEDF6775AD7"
+    },
+    "scqos_decision": {
+      "decision": "PERMIT",
+      "evaluated_at": 1787811144.284952,
+      "evidence_hash": "99629a20e9e714036d95ee1975ad6c0620d5f3a2fc09f32d9ec56f30d22eae1f38a016d523bce7f6607055114aa7738d539b33d88ef67f00838726173aa69803",
+      "findings": [],
+      "gate_status": {
+        "alignment": true,
+        "boundary": true,
+        "causality": true,
+        "coherence": true,
+        "consciousness": true,
+        "continuity": true,
+        "genesis": true,
+        "reference": true,
+        "time": true
+      },
+      "intent_hash": "4a3f6b220fb954af53bd456f8fec91c8231eedfd92649fbf18b1002a99ace933eabf0eedc552b281d29f8c2b0d314956f218cb8641b3c066cab75a5e7a442ddd",
+      "policy_hash": "10667b8109f6e678b85292ce0c33fd86dea15596923aebca2cf73be0044c14bcbd53113cf1b4b7dccd0b4bccf567cb219d4995a7113b26f6e2bb81a8a27d1e54",
+      "root_proof": {
+        "admitted": true,
+        "alignment_hash": "4b6c34689d8d2b8148a4a66940f623b5608a4798431cbb29417ae5f8e4b1ed8d",
+        "boundary_hash": "ce399d588769225fe792c266b41f8d973c6c851ed538214aff8edb0686251165",
+        "causality_hash": "c740c8988dba28439a1a54a017ea928450fb5a20f05ffba8e67db116be167575",
+        "coherence_hash": "794bce7605988e71683ba225614f4d6ac0f263792506fc5b27d951cae738a5d8",
+        "consciousness_hash": "e23ed11c8fe3a2a7f116fc26f9549e400771a08ef4fc194f31d6750e906e258d",
+        "continuity_hash": "ea3c650f0113181342fb3f74f9f0feff9d9c9968995bb3fce4b82502e144c288",
+        "final_proof": "794bce7605988e71",
+        "genesis_hash": "9bd0e31590aa30cef827884dac2cef9e1e3b3292bd26c07fe187fd161506e2ef",
+        "packet_hash": "b713fc9589eea352d67d3c9bb30cbf7db37249d403db960d8241545f61d27a61",
+        "reason": "external state admitted after nine-gate coherence",
+        "reference_hash": "dfa7af969532d503cfe6e6337a524129742168ac39725fd9ff1d3ad4bc5d6180",
+        "time_hash": "b2de3044218d72d6dbe657cfc09a038131613666a492b637836c84e57824d355"
+      },
+      "transaction_hash": "a7a0d7a9dfcd498a5d5a4f4e1b971c7a8b57955ad52f3e10690b2756eb4584da2e53a5b70deca2101ca3babbb29188f00c37590ddc1a17a3e574e5a3ce12dcfa"
+    },
+    "validated_ledger_result": {
+      "account": "rwEZsqSjFHR3Q6cxUefCA5WRfVe6HsjrNL",
+      "amount": "1",
+      "destination": "r4sGL5ZnpHdfoCF3ioFdcux1VhaxziFMP6",
+      "destination_tag": 111,
+      "engine_result": "tesSUCCESS",
+      "ledger_hash": "D3AC2C932AD608106D0A406C455F371476BE7083437347F3DD1C77E4A571E65E",
+      "ledger_index": 106572004,
+      "transaction_hash": "D13EDAED96354DD2CF16382BA815367A37F5408D64B362FC24C19DEDF6775AD7",
+      "transaction_type": "Payment",
+      "validated": true
+    }
+  },
+  "wrong_transaction": {
+    "actual_destination_tag": 222,
+    "intent_destination_tag": 111,
+    "same_exact_transaction_without_scqos": {
+      "account": "rwEZsqSjFHR3Q6cxUefCA5WRfVe6HsjrNL",
+      "amount": "1000000",
+      "destination": "r4sGL5ZnpHdfoCF3ioFdcux1VhaxziFMP6",
+      "destination_tag": 222,
+      "engine_result": "tesSUCCESS",
+      "ledger_hash": "AB1D7F4613C0560C56CE1E08FB58DF30D663C2FFDFB19E130F9E9B9EDE42DB3D",
+      "ledger_index": 106572001,
+      "transaction_hash": "C474989DFE4354CBB9A1F0B977BAF473EE91345DC6387F84C80F5A3B5F1110F9",
+      "transaction_type": "Payment",
+      "validated": true
+    },
+    "scqos_decision": {
+      "decision": "REJECT",
+      "evaluated_at": 1787811132.6998317,
+      "evidence_hash": "a5afe11ba3b2184ee55ebe4b31b5925fddc8f555f39bdebecf668e9f5427d9db1b83de3b5d12bfd433217654087656e54ee446f0403af9d43be033edfb0a38ff",
+      "findings": [
+        {
+          "code": "DESTINATION_TAG_MISMATCH",
+          "decision": "REJECT",
+          "gate": "alignment",
+          "message": "transaction destination_tag contradicts declared intent"
+        },
+        {
+          "code": "EXPECTED_EFFECT_MISMATCH",
+          "decision": "REJECT",
+          "gate": "alignment",
+          "message": "proposed consequence differs from declared consequence"
+        }
+      ],
+      "gate_status": {
+        "alignment": false,
+        "boundary": true,
+        "causality": true,
+        "coherence": false,
+        "consciousness": true,
+        "continuity": true,
+        "genesis": true,
+        "reference": true,
+        "time": true
+      },
+      "intent_hash": "8589b64d4c89c6b134c34899c478181dc9ccb94e8512e7b03e6c17873b077c1fbcd117ae106f0e4c14de59e77d1662eb5c0fd995b92a5baba8e56299f2339115",
+      "policy_hash": "10667b8109f6e678b85292ce0c33fd86dea15596923aebca2cf73be0044c14bcbd53113cf1b4b7dccd0b4bccf567cb219d4995a7113b26f6e2bb81a8a27d1e54",
+      "root_proof": {
+        "admitted": true,
+        "alignment_hash": "5cac4ddf786073ae68292aa705279fdefb25ee82760b93eaa5805314fc4c16cc",
+        "boundary_hash": "a5ba69f2dde61c35b61c40e36bb61b1df5a0645521489c81009f37276497b76a",
+        "causality_hash": "c9e55caf76762dcb886b0ceb7ece9cdbcdecb3bf6dc461cb45ba2ed6a5cd0b01",
+        "coherence_hash": "02a70867fef49e940855c6e57b233fac7a0be20cf8e985d43a126f960c08935c",
+        "consciousness_hash": "386902c7574bdc2ce4d8510784d0540fa15c2e9b4f698d6e9416b44aa02f62cb",
+        "continuity_hash": "f943aa267bcbad6c4664c0689a3a937d658994ba480c6c3f84c0eefea5c25bad",
+        "final_proof": "02a70867fef49e94",
+        "genesis_hash": "ac51ba8ea5e3e8b04b383346abebcd96904aafe6fe024ee324e5d95d13fc3c80",
+        "packet_hash": "821072595c85c1e789710221cbf088b6067bf315af445e81e4be70c488d90cfa",
+        "reason": "external state admitted after nine-gate coherence",
+        "reference_hash": "15bb6471c8510548b6eaaeb9228770e468d8f52e8cd976c6e037d5704b5fab06",
+        "time_hash": "1714c245958ad5020d03c8b40ded3e7ece07486c78d864ac3b86f160b54f6835"
+      },
+      "transaction_hash": "5f664e313591733ad47fc2fbf89af255cc45b392d00ed81561fa03288e77afaeb7bd2c47b3c7fb11fc7f22c85a07abcb187e9fdfaa7dd835a78ee9e88bbbd2ec"
+    }
+  }
+}

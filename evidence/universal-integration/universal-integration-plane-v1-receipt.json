@@ -1,0 +1,22 @@
+{
+  "artifact": "SCQOS Universal Commercial Integration Plane v1",
+  "architecture": "external-system -> universal-contract -> SCQOS -> decision -> receipt",
+  "business_specific_core_changes": false,
+  "proofs": {
+    "collision_repair_workflow": "PASS",
+    "logistics_workflow": "PASS",
+    "unknown_future_customer_http_workflow": "PASS",
+    "unauthorized_transition": "REJECT",
+    "nine_gate_proof_generation": "PASS",
+    "durable_receipt_ledger": "PASS"
+  },
+  "core_commit_at_creation": "7400e217027f545c63a4935e4920538b61a339c5",
+  "source_sha256": {
+    "integration/SCQOS-UNIVERSAL-TRANSITION-v1.schema.json": "480ae136a48c450bee88e06dd40aa6061fdecc88c14394ea6536af5fc8dc8929",
+    "integration/universal_gateway.py": "2d558f812b4fa9a311350790800ab91a10af602494e8c95bc667316a8b851a1b",
+    "integration/scqos_transition.py": "d2e68e565d60a4c515a8b6b4cadd358eb0ac0f68ce271268c8dd3687816f50bf",
+    "tests/test_universal_integration.py": "d067fe134a1b3d1245ef694a6ab2dae77475d04c4b6259090aa44dcf68a46d61"
+  },
+  "generated_utc": "2026-08-17T13:19:09.057396+00:00",
+  "receipt_sha256": "6762ff69ba7b63b4554395b022359ecdd4b50f65be09d1b49ac66a407f7333c7"
+}

@@ -20,6 +20,11 @@ from typing import Any, Mapping
 import boto3
 from botocore.config import Config
 
+from sports_analysis.contract import (
+    CONTRACT_ID as SPORTS_CONTRACT_ID,
+    evaluate_sports_analysis,
+)
+
 try:
     from .protocol import (
         ARCHITECTURE_ID,
@@ -462,6 +467,9 @@ def execute_payload(payload: Mapping[str, Any]) -> dict[str, Any]:
     prompt = build_prompt(payload, role, birth, shared_memory(role["role_id"]), admission)
     raw = invoke_harness(prompt, str(birth["clone_id"]))
     result = parse_result(raw)
+    arguments = payload.get("arguments") if isinstance(payload.get("arguments"), dict) else {}
+    if arguments.get("response_contract") == SPORTS_CONTRACT_ID:
+        result["sports_decision"] = evaluate_sports_analysis(result.get("sports_analysis"))
     result["invariant_qualification"] = evaluate_result_invariants(
         result["invariant_assessment"],
         result=result,
@@ -493,6 +501,8 @@ def execute_payload(payload: Mapping[str, Any]) -> dict[str, Any]:
         "evidence": _limited(result.get("evidence", []), 30000),
         "consequence": _limited(result.get("consequence", ""), 12000),
         "invariant_qualification": result["invariant_qualification"],
+        "sports_analysis": _limited(result.get("sports_analysis", {}), 120000),
+        "sports_decision": _limited(result.get("sports_decision", {}), 90000),
     })
     child_outcomes: list[dict[str, Any]] = []
     if consequence_state == "PERMIT":
@@ -503,7 +513,7 @@ def execute_payload(payload: Mapping[str, Any]) -> dict[str, Any]:
         child_outcomes = propose_children(role, birth, result)
     STATE.update_item(
         Key={"pk": "TASK#" + str(birth["task_id"]), "sk": "CLONE#" + str(birth["clone_id"])},
-        UpdateExpression="SET #state=:state, decision_state=:decision, decision_reason=:reason, completed_at=:completed, result_sha256=:digest, summary=:summary, child_outcomes=:children, consequence_receipt_id=:receipt",
+        UpdateExpression="SET #state=:state, decision_state=:decision, decision_reason=:reason, completed_at=:completed, result_sha256=:digest, summary=:summary, child_outcomes=:children, consequence_receipt_id=:receipt, sports_decision=:sports",
         ExpressionAttributeNames={"#state": "state"},
         ExpressionAttributeValues={
             ":state": "COMPLETED",
@@ -514,6 +524,7 @@ def execute_payload(payload: Mapping[str, Any]) -> dict[str, Any]:
             ":summary": _limited(result.get("summary", ""), 12000),
             ":children": _limited(child_outcomes, 30000),
             ":receipt": consequence_receipt_id,
+            ":sports": _limited(result.get("sports_decision", {}), 90000),
         },
     )
     return {
@@ -544,6 +555,24 @@ def failure_receipt(payload: Mapping[str, Any], exc: Exception) -> dict[str, Any
         "traceback_sha256": sha256(traceback.format_exc()),
     }
     put_receipt(item)
+    arguments = payload.get("arguments") if isinstance(payload.get("arguments"), dict) else {}
+    shadow = arguments.get("_shadow") if isinstance(arguments.get("_shadow"), dict) else {}
+    task_id = str(shadow.get("task_id") or payload.get("receipt_id") or item["receipt_id"])
+    STATE.put_item(
+        Item={
+            "pk": "TASK#" + task_id,
+            "sk": "FAILURE#" + str(payload.get("receipt_id") or item["receipt_id"]),
+            "architecture_id": ARCHITECTURE_ID,
+            "protocol": SHADOW_CLONE_PROTOCOL,
+            "state": "FAILED",
+            "decision_state": "HOLD",
+            "decision_reason": item["reason"],
+            "error_type": item["error_type"],
+            "error": item["error"],
+            "failure_receipt_id": item["receipt_id"],
+            "completed_at": utc(),
+        }
+    )
     return item
 
 

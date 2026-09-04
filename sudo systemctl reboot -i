@@ -1,0 +1,14 @@
+[4mWHO                         [0m[4m [0m[4mUID [0m[4m [0m[4mUSER          [0m[4m [0m[4mPID [0m[4m [0m[4mCOMM           [0m[4m [0m[4mWHAT                                                    [0m[4m [0m[4mWHY                                                      [0m[4m [0m[4mMODE [0m
+ModemManager                 0    root           1702 ModemManager    sleep                                                    ModemManager needs to reset devices                       delay
+NetworkManager               0    root           1666 NetworkManager  sleep                                                    NetworkManager needs to turn off networks                 delay
+Realtime Kit                 0    root           2064 rtkit-daemon    sleep                                                    Demote realtime scheduling and stop canary.               delay
+UPower                       0    root           2108 upowerd         sleep                                                    Pause device polling                                      delay
+Unattended Upgrades Shutdown 0    root           1780 unattended-upgr shutdown                                                 Stop ongoing upgrades or perform upgrades before shutdown delay
+GNOME Shell                  1000 knowledgee-kza 3506 gnome-shell     sleep                                                    GNOME needs to lock the screen                            delay
+GNOME Shell                  1000 knowledgee-kza 3506 gnome-shell     sleep                                                    GNOME needs to save screen time data                      delay
+knowledgee-kza               1000 knowledgee-kza 3635 gsd-media-keys  handle-power-key:handle-suspend-key:handle-hibernate-key GNOME handling keypresses                                 block
+knowledgee-kza               1000 knowledgee-kza 3490 gnome-session-s shutdown                                                 user session inhibited                                    block
+knowledgee-kza               1000 knowledgee-kza 3635 gsd-media-keys  sleep                                                    GNOME handling keypresses                                 delay
+knowledgee-kza               1000 knowledgee-kza 3640 gsd-power       sleep                                                    GNOME needs to lock the screen                            delay
+
+11 inhibitors listed.

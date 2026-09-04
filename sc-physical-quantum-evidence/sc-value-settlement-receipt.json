@@ -1,0 +1,444 @@
+{
+  "schema": "sc-value-settlement-v1",
+  "transaction": "17ff633a-8d7c-490e-8196-0d57d78f7c21",
+  "model": "amazon.nova-lite-v1:0",
+  "state": {
+    "transaction_id": "17ff633a-8d7c-490e-8196-0d57d78f7c21",
+    "timestamp_utc": "2026-08-15T16:50:05.829494+00:00",
+    "account": "327453383912",
+    "region": "us-east-1",
+    "aws_cost_30d_usd": 101.3411,
+    "consequence_surface": [
+      {
+        "function": "sc-gatekeeper",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 3,
+        "last_modified": "2026-05-15T13:32:38.000+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {},
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-phase4-9-executor",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T11:18:32.264+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {},
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-public-proof-abc123-validator",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T22:08:16.623+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-abc123/9c18aed0-8ad0-11f1-ae5a-0affcabc89fb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-abc123",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "validator",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-terra-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-03T07:11:03.235+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "TerraInferenceValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-terra-inference/5fb4ded0-8f0a-11f1-afa5-0afff42c7521",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-terra-inference",
+          "scqos:boundary": "terra-inference",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-ipfs-publisher",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T12:52:13.000+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {},
+        "event_source_count": 1
+      },
+      {
+        "function": "scqos-public-proof-202607282156-validator",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T21:58:20.190+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-202607282156/385a9580-8acf-11f1-93e5-12e3e10c7ccb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-202607282156",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "validator",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-phase4-9-validator",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T11:19:37.598+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {},
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-public-proof-abc123-executor",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T22:07:29.770+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofExecutorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-abc123/9c18aed0-8ad0-11f1-ae5a-0affcabc89fb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-abc123",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "executor",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-public-proof-abc123-publisher",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-29T15:22:08.000+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofPublisherFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-abc123/9c18aed0-8ad0-11f1-ae5a-0affcabc89fb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-abc123",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "publisher",
+          "scqos:production": "false"
+        },
+        "event_source_count": 1
+      },
+      {
+        "function": "grassroots-ai-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "last_modified": "2026-08-13T21:38:03.000+0000",
+        "invocations_7d": 23,
+        "errors_7d": 2,
+        "error_rate": 0.086957,
+        "avg_duration_ms": 9210.11,
+        "tags": {
+          "aws:cloudformation:logical-id": "ServiceFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-service/06101050-8e2b-11f1-b81d-0e4da90aa417",
+          "aws:cloudformation:stack-name": "grassroots-ai-service"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-grok-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-14T12:17:29.000+0000",
+        "invocations_7d": 48,
+        "errors_7d": 1,
+        "error_rate": 0.020833,
+        "avg_duration_ms": 1253.03,
+        "tags": {
+          "aws:cloudformation:logical-id": "GrokInferenceValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-grok-inference/164e6110-8f7f-11f1-837a-0e428f79081d",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-grok-inference",
+          "scqos:boundary": "grok-inference",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "grassroots-ai-terra-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "last_modified": "2026-08-03T11:29:46.000+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "ServiceFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-terra-service/71919870-8f0d-11f1-9df1-12508baf7cfb",
+          "aws:cloudformation:stack-name": "grassroots-ai-terra-service"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-public-proof-202607282156-publisher",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T21:58:20.093+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofPublisherFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-202607282156/385a9580-8acf-11f1-93e5-12e3e10c7ccb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-202607282156",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "publisher",
+          "scqos:production": "false"
+        },
+        "event_source_count": 1
+      },
+      {
+        "function": "grassroots-ai-scqos-inference-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-13T11:04:23.000+0000",
+        "invocations_7d": 21,
+        "errors_7d": 2,
+        "error_rate": 0.095238,
+        "avg_duration_ms": 1449.46,
+        "tags": {
+          "aws:cloudformation:logical-id": "InferenceValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-inference/dc998750-8dcc-11f1-960d-0affd3548659",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-inference",
+          "scqos:boundary": "inference",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-router",
+        "runtime": "python3.14",
+        "memory_mb": 128,
+        "timeout_s": 30,
+        "last_modified": "2026-06-05T14:41:46.000+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {},
+        "event_source_count": 0
+      },
+      {
+        "function": "grassroots-ai-grok-service-service",
+        "runtime": "python3.14",
+        "memory_mb": 512,
+        "timeout_s": 120,
+        "last_modified": "2026-08-14T12:40:46.000+0000",
+        "invocations_7d": 47,
+        "errors_7d": 0,
+        "error_rate": 0.0,
+        "avg_duration_ms": 17370.45,
+        "tags": {
+          "aws:cloudformation:logical-id": "ServiceFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-grok-service/935277f0-8f7f-11f1-a5e3-1229f76eacc3",
+          "aws:cloudformation:stack-name": "grassroots-ai-grok-service"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "scqos-public-proof-202607282156-executor",
+        "runtime": "python3.11",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-07-28T21:57:40.581+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {
+          "aws:cloudformation:logical-id": "PublicProofExecutorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/scqos-public-proof-202607282156/385a9580-8acf-11f1-93e5-12e3e10c7ccb",
+          "aws:cloudformation:stack-name": "scqos-public-proof-202607282156",
+          "scqos:boundary": "public-proof",
+          "scqos:component": "executor",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "grassroots-ai-scqos-release-validator",
+        "runtime": "python3.14",
+        "memory_mb": 256,
+        "timeout_s": 30,
+        "last_modified": "2026-08-13T11:06:21.000+0000",
+        "invocations_7d": 44,
+        "errors_7d": 5,
+        "error_rate": 0.113636,
+        "avg_duration_ms": 255.5,
+        "tags": {
+          "aws:cloudformation:logical-id": "ReleaseValidatorFunction",
+          "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-release/42a0b200-8de9-11f1-bbcc-0eab4fe6dfb5",
+          "aws:cloudformation:stack-name": "grassroots-ai-scqos-release",
+          "scqos:boundary": "release",
+          "scqos:production": "false"
+        },
+        "event_source_count": 0
+      },
+      {
+        "function": "sc-auth",
+        "runtime": "python3.11",
+        "memory_mb": 512,
+        "timeout_s": 30,
+        "last_modified": "2026-05-19T01:58:37.000+0000",
+        "invocations_7d": 0,
+        "errors_7d": 0,
+        "error_rate": 0,
+        "avg_duration_ms": 0,
+        "tags": {},
+        "event_source_count": 0
+      }
+    ]
+  },
+  "proposal": {
+    "options": [
+      {
+        "action": "Optimize memory allocation for Lambda functions",
+        "target": "Lambda functions with memory_mb greater than 128 MB",
+        "evidence": "Several Lambda functions are allocated more memory than necessary, such as 'grassroots-ai-service-service', 'grassroots-ai-grok-service-service', and 'grassroots-ai-scqos-inference-validator'.",
+        "expected_value": "Reduced memory costs by potentially lowering memory allocation for functions that do not require high memory usage.",
+        "downside": "Potential performance degradation if memory allocation is too low for certain functions.",
+        "reversibility": "Memory allocation can be reverted to the original settings if performance issues arise.",
+        "missing_evidence": "Lack of performance metrics to determine the exact impact of memory reduction."
+      },
+      {
+        "action": "Implement auto-scaling for high-invocation functions",
+        "target": "Lambda functions with high invocation counts such as 'grassroots-ai-grok-service-service' and 'grassroots-ai-scqos-grok-inference-validator'",
+        "evidence": "Functions like 'grassroots-ai-grok-service-service' and 'grassroots-ai-scqos-grok-inference-validator' have high invocation counts, indicating potential for cost savings through auto-scaling.",
+        "expected_value": "Cost savings by reducing the number of provisioned instances during low-traffic periods.",
+        "downside": "Possible cold start latency issues with auto-scaling.",
+        "reversibility": "Auto-scaling settings can be adjusted or disabled if issues arise.",
+        "missing_evidence": "Lack of detailed invocation patterns to fine-tune auto-scaling settings."
+      },
+      {
+        "action": "Consolidate similar Lambda functions",
+        "target": "Similar Lambda functions such as'scqos-public-proof-abc123-validator' and'scqos-public-proof-202607282156-validator'",
+        "evidence": "There are multiple Lambda functions with similar purposes and configurations, such as'scqos-public-proof-abc123-validator' and'scqos-public-proof-202607282156-validator'.",
+        "expected_value": "Reduced management overhead and potential cost savings by eliminating redundant functions.",
+        "downside": "Risk of introducing bugs or performance issues during the consolidation process.",
+        "reversibility": "Functions can be restored individually if issues are detected post-consolidation.",
+        "missing_evidence": "Lack of detailed function usage patterns to ensure consolidation does not impact performance."
+      }
+    ]
+  },
+  "settlement": {
+    "before_state_sha256": "06da049c5b96f51863a89a6d657977444b767f959411524d5e836d84ff3bc63d",
+    "authority": {
+      "model_can_propose": true,
+      "model_can_authorize": false,
+      "model_can_execute": false,
+      "production_mutation_authorized": false
+    },
+    "objective_signal": {
+      "function": "grassroots-ai-scqos-release-validator",
+      "runtime": "python3.14",
+      "memory_mb": 256,
+      "timeout_s": 30,
+      "last_modified": "2026-08-13T11:06:21.000+0000",
+      "invocations_7d": 44,
+      "errors_7d": 5,
+      "error_rate": 0.113636,
+      "avg_duration_ms": 255.5,
+      "tags": {
+        "aws:cloudformation:logical-id": "ReleaseValidatorFunction",
+        "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:327453383912:stack/grassroots-ai-scqos-release/42a0b200-8de9-11f1-bbcc-0eab4fe6dfb5",
+        "aws:cloudformation:stack-name": "grassroots-ai-scqos-release",
+        "scqos:boundary": "release",
+        "scqos:production": "false"
+      },
+      "event_source_count": 0
+    },
+    "competing_actions": [
+      {
+        "action": "Optimize memory allocation for Lambda functions",
+        "target": "Lambda functions with memory_mb greater than 128 MB",
+        "evidence": "Several Lambda functions are allocated more memory than necessary, such as 'grassroots-ai-service-service', 'grassroots-ai-grok-service-service', and 'grassroots-ai-scqos-inference-validator'.",
+        "expected_value": "Reduced memory costs by potentially lowering memory allocation for functions that do not require high memory usage.",
+        "downside": "Potential performance degradation if memory allocation is too low for certain functions.",
+        "reversibility": "Memory allocation can be reverted to the original settings if performance issues arise.",
+        "missing_evidence": "Lack of performance metrics to determine the exact impact of memory reduction.",
+        "sc_authorized": false,
+        "sc_boundary": "HOLD"
+      },
+      {
+        "action": "Implement auto-scaling for high-invocation functions",
+        "target": "Lambda functions with high invocation counts such as 'grassroots-ai-grok-service-service' and 'grassroots-ai-scqos-grok-inference-validator'",
+        "evidence": "Functions like 'grassroots-ai-grok-service-service' and 'grassroots-ai-scqos-grok-inference-validator' have high invocation counts, indicating potential for cost savings through auto-scaling.",
+        "expected_value": "Cost savings by reducing the number of provisioned instances during low-traffic periods.",
+        "downside": "Possible cold start latency issues with auto-scaling.",
+        "reversibility": "Auto-scaling settings can be adjusted or disabled if issues arise.",
+        "missing_evidence": "Lack of detailed invocation patterns to fine-tune auto-scaling settings.",
+        "sc_authorized": false,
+        "sc_boundary": "HOLD"
+      },
+      {
+        "action": "Consolidate similar Lambda functions",
+        "target": "Similar Lambda functions such as'scqos-public-proof-abc123-validator' and'scqos-public-proof-202607282156-validator'",
+        "evidence": "There are multiple Lambda functions with similar purposes and configurations, such as'scqos-public-proof-abc123-validator' and'scqos-public-proof-202607282156-validator'.",
+        "expected_value": "Reduced management overhead and potential cost savings by eliminating redundant functions.",
+        "downside": "Risk of introducing bugs or performance issues during the consolidation process.",
+        "reversibility": "Functions can be restored individually if issues are detected post-consolidation.",
+        "missing_evidence": "Lack of detailed function usage patterns to ensure consolidation does not impact performance.",
+        "sc_authorized": false,
+        "sc_boundary": "HOLD"
+      }
+    ],
+    "required_before_execution": [
+      "specific consequence to change",
+      "evidence proving necessity",
+      "bounded authority",
+      "reversible execution plan",
+      "expected consequence",
+      "verification predicate"
+    ],
+    "decision": "HOLD",
+    "reason": "No external consequence may change until one option proves necessity, authority, reversibility and a measurable post-condition."
+  },
+  "receipt_sha256": "155700daffdab2bc2b9f8257db97673b595f8497f9ca862740e07f250e2bcc19"
+}

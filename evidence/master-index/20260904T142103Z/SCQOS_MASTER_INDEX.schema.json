@@ -1,0 +1,53 @@
+{
+  "$id": "https://knowledgeekza3224.github.io/scqos/schema/master-index/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "artifacts": {
+      "minItems": 1,
+      "type": "array"
+    },
+    "decision": {
+      "enum": [
+        "PERMIT",
+        "HOLD",
+        "REJECT"
+      ]
+    },
+    "invariant_evaluation": {
+      "minItems": 9,
+      "type": "array"
+    },
+    "lifecycle": {
+      "minItems": 6,
+      "type": "array"
+    },
+    "object_type": {
+      "const": "SCQOS_MASTER_EVIDENCE_INDEX"
+    },
+    "repositories": {
+      "minItems": 1,
+      "type": "array"
+    },
+    "source_state_root": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "$schema",
+    "object_type",
+    "version",
+    "canonicalization_authority",
+    "transition_id",
+    "generated_at",
+    "decision",
+    "source_state_root",
+    "repositories",
+    "lifecycle",
+    "invariant_evaluation",
+    "artifacts"
+  ],
+  "title": "SCQOS Master Evidence Index v1",
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "sc-closed-causal-execution-v1",
+  "timestamp": "2026-08-15T18:02:43.114619+00:00",
+  "stack": "Infra-ECS-Cluster-scqos-docker-cluster-588ae167",
+  "service_linked_role": "AWSServiceRoleForECS",
+  "mutation_performed": false,
+  "deployment_retried": true,
+  "initial_stack_status": "CREATE_FAILED",
+  "failure": {
+    "resource": "ECSCluster",
+    "type": "AWS::ECS::Cluster",
+    "status": "CREATE_FAILED",
+    "reason": "Resource handler returned message: \"Invalid request provided: CreateCluster Invalid Request: Unable to assume the service linked role. Please verify that the ECS service linked role exists. (Service: AmazonECS; Status Code: 400; Error Code: InvalidParameterException; Request ID: c3c2f25b-b97b-4583-a31c-d7fed3001bf2; Proxy: null)\" (RequestToken: 04c3ce2f-c0d4-6403-5774-11e51eb28cf4, HandlerErrorCode: InvalidRequest)"
+  },
+  "role_before": {
+    "exists": true,
+    "trust_valid": true
+  },
+  "role_after": {
+    "exists": true,
+    "arn": "arn:aws:iam::327453383912:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+    "trust_valid": true
+  },
+  "final_stack_status": "CREATE_COMPLETE",
+  "failed_resources_after": [],
+  "success": true,
+  "sha256": "c907698c43ca8b2f37a51259a08fa23cc2aed6dd30e42b613bb00f3385d62f42"
+}

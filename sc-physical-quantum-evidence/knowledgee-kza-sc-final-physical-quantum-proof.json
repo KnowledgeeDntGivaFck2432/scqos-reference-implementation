@@ -1,0 +1,70 @@
+{
+  "schema": "sc-final-physical-quantum-proof-v1",
+  "observed_at": "2026-08-15T21:16:12.302150+00:00",
+  "physical_device": "arn:aws:braket:us-west-1::device/qpu/rigetti/Cepheus-1-108Q",
+  "new_tasks_submitted": false,
+  "task_identity": {
+    "A1B0": "arn:aws:braket:us-west-1:327453383912:quantum-task/c4dfcf25-4ec2-4061-b4e3-03c167fa9e23",
+    "A1B1": "arn:aws:braket:us-west-1:327453383912:quantum-task/4159642d-d4d8-4484-8a08-b7bd1f1c4b2f",
+    "A0B0": "arn:aws:braket:us-west-1:327453383912:quantum-task/3b504b14-6527-4c55-8503-73bcb9f3a426",
+    "A0B1": "arn:aws:braket:us-west-1:327453383912:quantum-task/c7907baf-ce70-46cf-97d5-719cd4b0ce8e"
+  },
+  "task3_identity_recovered_from_aws_history": true,
+  "physical_results": {
+    "A0B0": {
+      "arn": "arn:aws:braket:us-west-1:327453383912:quantum-task/3b504b14-6527-4c55-8503-73bcb9f3a426",
+      "counts": {
+        "01": 42,
+        "00": 233,
+        "11": 199,
+        "10": 26
+      },
+      "shots": 500
+    },
+    "A0B1": {
+      "arn": "arn:aws:braket:us-west-1:327453383912:quantum-task/c7907baf-ce70-46cf-97d5-719cd4b0ce8e",
+      "counts": {
+        "11": 163,
+        "00": 221,
+        "01": 55,
+        "10": 61
+      },
+      "shots": 500
+    },
+    "A1B0": {
+      "arn": "arn:aws:braket:us-west-1:327453383912:quantum-task/c4dfcf25-4ec2-4061-b4e3-03c167fa9e23",
+      "counts": {
+        "00": 196,
+        "11": 194,
+        "10": 55,
+        "01": 55
+      },
+      "shots": 500
+    },
+    "A1B1": {
+      "arn": "arn:aws:braket:us-west-1:327453383912:quantum-task/4159642d-d4d8-4484-8a08-b7bd1f1c4b2f",
+      "counts": {
+        "10": 205,
+        "01": 180,
+        "11": 50,
+        "00": 65
+      },
+      "shots": 500
+    }
+  },
+  "independent_falsification": {
+    "E_A0B0": 0.728,
+    "E_A0B1": 0.536,
+    "E_A1B0": 0.56,
+    "E_A1B1": -0.54,
+    "CHSH_S": 2.364,
+    "absolute_CHSH_S": 2.364,
+    "classical_bound": 2.0,
+    "standard_error": 0.0717986072288314,
+    "sigma_above_classical_bound": 5.06973622538227,
+    "classical_bound_violated": true,
+    "two_sigma_supported": true
+  },
+  "state_sha256": "902b58d583270c72f8fcb6883e4f3ee7e8b786160d577929bd196d5e731b38f2",
+  "receipt_sha256": "e60150546c50f7c5a2f3116c82647eb880acfdf2c67918ebb950a7cd4646275f"
+}

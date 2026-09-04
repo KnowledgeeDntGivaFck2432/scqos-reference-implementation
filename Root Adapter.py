@@ -160,7 +160,7 @@ class SCUniversalStatePacket:
         return asdict(self)
 
     def hash(self) -> str:
-        return KERNEL.sha3_hash(KERNEL.canonical_bytes(self.canonical()))
+        return KERNEL.sha256_hash(KERNEL.canonical_bytes(self.canonical()))
 
 
 @dataclass(frozen=True)
@@ -387,8 +387,7 @@ class SCQOSRootAdmissionAdapter:
             boundary_hash = boundary_result.state_hash
 
             # 6. REFERENCE
-            reference_anchor = KERNEL.sha3_hash(
-                KERNEL.canonical_bytes(
+            reference_anchor = KERNEL.sha256_hash(KERNEL.canonical_bytes(
                     {
                         "packet_hash": packet_hash,
                         "external_reference": packet.external_reference,
@@ -408,8 +407,7 @@ class SCQOSRootAdmissionAdapter:
             reference_hash = reference_result.state_hash
 
             # 7. CAUSALITY
-            cause_hash = KERNEL.sha3_hash(
-                KERNEL.canonical_bytes(
+            cause_hash = KERNEL.sha256_hash(KERNEL.canonical_bytes(
                     {
                         "cause_id": packet.cause_id,
                         "packet_hash": packet_hash,
