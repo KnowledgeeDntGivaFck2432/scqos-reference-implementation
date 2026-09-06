@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     AWS_DEFAULT_REGION: us-east-1
-    SC_MODEL: us.openai.gpt-5.6-terra
+    SC_MODEL: us.anthropic.claude-sonnet-4-5-20250929-v1:0
     SC_REPO: https://github.com/KnowledgeeKZA3224/scqos-reference-implementation.git
 
 phases:
