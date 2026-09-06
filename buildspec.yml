@@ -1,0 +1,192 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_DEFAULT_REGION: us-east-1
+    SC_MODEL: us.openai.gpt-5.6-terra
+    SC_REPO: https://github.com/KnowledgeeKZA3224/scqos-reference-implementation.git
+
+phases:
+
+  install:
+    commands:
+      - echo "=== TOTALITY / GENESIS ==="
+      - aws sts get-caller-identity
+      - python3 -m pip install --quiet --disable-pip-version-check boto3==1.43.82
+
+  pre_build:
+    commands:
+      - echo "=== TOTALITY / REFERENCE ==="
+      - rm -rf /tmp/sc-totality
+      - git clone --depth 1 --branch main "$SC_REPO" /tmp/sc-totality
+      - cd /tmp/sc-totality
+      - export SC_SOURCE_COMMIT="$(git rev-parse HEAD)"
+      - echo "SOURCE_COMMIT=$SC_SOURCE_COMMIT"
+      - test "$(python3 -c "import json;print(len(json.load(open('supreme_mind/v1/supreme_mind_manifest.json'))['roles']))")" = "59"
+      - python3 -m unittest discover -s tests -p 'test_shadow_clone_protocol.py' -v
+      - 'echo "PERMIT: Genesis Reference Boundary tests coherent"'
+  build:
+    commands:
+      - cd /tmp/sc-totality
+      - echo "=== TOTALITY / CLOUD EXECUTION ==="
+      - |
+        python3 tools/deploy_shadow_clone.py \
+          --region "$AWS_DEFAULT_REGION" \
+          --model-id "$SC_MODEL" \
+          --max-concurrency 10
+      - 'echo "PERMIT: Shadow Clone cloud execution plane deployed"'
+  post_build:
+    commands:
+      - cd /tmp/sc-totality
+      - echo "=== TOTALITY / 8-INVARIANT DIGITAL-TWIN RECONCILIATION ==="
+      - |
+        python3 - <<'PY2'
+        import boto3, json, time, uuid, hashlib
+        from datetime import datetime, timezone
+
+        REGION="us-east-1"
+        GOV="supreme-mind-v1-governor"
+
+        lam=boto3.client("lambda",region_name=REGION)
+        ddb=boto3.resource("dynamodb",region_name=REGION)
+
+        gov=lam.get_function_configuration(FunctionName=GOV)
+        env=gov["Environment"]["Variables"]
+        state=ddb.Table(env["SUPREME_MIND_TABLE"])
+        receipts=ddb.Table(env["SUPREME_MIND_RECEIPT_TABLE"])
+
+        # This is the cloud's Totality intent.
+        # R27 is Digital Twin Architect; it may recursively spawn the other
+        # faculties only where bounded parallel work is materially needed.
+        intent={
+          "principal_id":"SOVEREIGN_HUMAN",
+          "business_id":"annabelle-totality-v1",
+          "role_id":"R27",
+          "intent":
+            "Apply Supreme Computation's complete 8-invariant framework simultaneously "
+            "against the CURRENT live AWS environment and CURRENT authoritative GitHub main. "
+            "Determine the verified delta between the environment that exists now and "
+            "ANNABELLE_TOTALITY_V1. Use the existing 59-faculty architecture and every already-"
+            "deployed relevant software capability instead of inventing parallel systems. "
+            "Spawn bounded child digital twins for infrastructure, technology, operations, "
+            "memory, consequence/evidence, product, Gekyume, Linux, Kubernetes, GitHub, "
+            "Bedrock/AgentCore and other actually-observed capabilities where needed. "
+            "Continue until all read-only discovery, verification, dependency mapping and "
+            "candidate work is exhausted. Produce exact evidence and candidate evolution "
+            "proposals for anything that cannot legally execute because a registered "
+            "mutation adapter or requalification boundary is still missing.",
+          "action":"analyze",
+          "tool":"shadow-clone-internet-body",
+          "evidence_refs":[
+            "https://github.com/KnowledgeeKZA3224/scqos-reference-implementation",
+            "aws:account:live",
+            "sc:architecture:SUPREME-MIND-59-FACULTY-UNIVERSE-V1"
+          ],
+          "arguments":{
+            "objective":
+              "Close Annabelle from totality as far as existing constitutional authority "
+              "permits without human manual discovery. Apply Time, Continuity, Alignment, "
+              "Genesis, Boundary, Reference, Causality, and Consciousness/Accountability "
+              "together; Coherence is true only when the resulting verified state remains "
+              "consistent across all eight.",
+            "expected_output":
+              "One source-to-consequence Totality report with exact live resources, "
+              "verified completed work, remaining HOLD boundaries, child outcomes, "
+              "and versioned learning/evolution candidates. No guesses and no duplicated stack.",
+            "constraints":[
+              "live-data-only",
+              "reuse-existing-software",
+              "no-duplicate-subsystems",
+              "fail-closed",
+              "receipts-required",
+              "qualified-state-only",
+              "evolution-requires-versioned-requalification"
+            ]
+          }
+        }
+
+        r=lam.invoke(
+            FunctionName=GOV,
+            InvocationType="RequestResponse",
+            Payload=json.dumps(intent).encode()
+        )
+
+        envelope=json.loads(r["Payload"].read())
+        body=json.loads(envelope.get("body","{}"))
+
+        print("ROOT_ADMISSION="+json.dumps(body,default=str))
+
+        if body.get("state")!="PERMIT":
+            raise SystemExit("HOLD: R27 Totality reconciliation was not admitted")
+
+        task_id=body["receipt_id"]
+
+        # Cloud waits for the root twin; child twins continue through the
+        # same governor/SQS/executor circuit independently.
+        deadline=time.time()+900
+        final=None
+
+        while time.time()<deadline:
+            q=state.query(
+                KeyConditionExpression="pk = :pk",
+                ExpressionAttributeValues={":pk":"TASK#"+task_id}
+            )
+            items=q.get("Items",[])
+            completed=[
+                x for x in items
+                if x.get("state") in ("COMPLETED","FAILED","REJECT")
+            ]
+            if completed:
+                final=completed[0]
+                break
+            time.sleep(10)
+
+        if final is None:
+            raise SystemExit("HOLD: Totality root task did not reach a terminal state in 15m")
+
+        print("ROOT_RESULT="+json.dumps(final,default=str))
+
+        totality_receipt={
+          "receipt_id":str(uuid.uuid4()),
+          "timestamp":datetime.now(timezone.utc).isoformat(),
+          "architecture_id":"SUPREME-MIND-59-FACULTY-UNIVERSE-V1",
+          "phase":"ANNABELLE_TOTALITY_RECONCILIATION",
+          "parent_receipt_id":task_id,
+          "state":final.get("decision_state","HOLD"),
+          "reason":final.get("decision_reason","TOTALITY_RESULT"),
+          "task_state":final.get("state"),
+          "result_sha256":final.get("result_sha256"),
+          "consequence_receipt_id":final.get("consequence_receipt_id"),
+          "constitutional_rule":
+            "Verified consequence becomes input to the next decision; "
+            "mutation/evolution remains HOLD until its registered adapter "
+            "and versioned requalification prove authority."
+        }
+
+        raw=json.dumps(
+            totality_receipt,
+            sort_keys=True,
+            separators=(",",":"),
+            default=str
+        ).encode()
+
+        totality_receipt["receipt_sha256"]=hashlib.sha256(raw).hexdigest()
+        receipts.put_item(Item=totality_receipt)
+
+        state.put_item(Item={
+          "pk":"SYSTEM",
+          "sk":"ANNABELLE_TOTALITY_V1",
+          "architecture_id":"SUPREME-MIND-59-FACULTY-UNIVERSE-V1",
+          "state":totality_receipt["state"],
+          "root_task_id":task_id,
+          "totality_receipt_id":totality_receipt["receipt_id"],
+          "updated_at":totality_receipt["timestamp"]
+        })
+
+        print("TOTALITY_RECEIPT="+json.dumps(totality_receipt,default=str))
+        print("=== CLOUD TOTALITY RECONCILIATION COMPLETE ===")
+        PY2
+
+artifacts:
+  files: []
+
