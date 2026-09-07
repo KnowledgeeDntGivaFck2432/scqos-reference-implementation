@@ -258,3 +258,7 @@ Before a machine does something important, it checks whether the information, ti
 Supreme Computation is the larger architecture that keeps the person, machine, decision, evidence, action, and consequence inside one continuous system.
 
 Nothing Executes Until It Proves Itself.
+
+## Live five-part execution proof
+
+A plain-English explanation of the live Supreme Computation execution: [Read the proof](docs/SUPREME-COMPUTATION-LIVE-FIVE-PART-PROOF.md).
